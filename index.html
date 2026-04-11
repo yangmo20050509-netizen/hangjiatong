@@ -506,7 +506,7 @@
       </div>
 
       <!-- MONITOR TAB -->
-      <div class="tab-content" id="tab-monitor">
+      <div class="tab-content" id="tab-monitor" style="padding-top:3.5rem;">
         <div class="section-header">
           <div><h2>订阅中心</h2><p>实时追踪您心仪航线的价格波动</p></div>
           <button class="btn-search" style="padding:0.75rem 1.75rem;font-size:0.875rem;" onclick="showToast('添加监控功能即将上线')">
@@ -613,6 +613,27 @@
       BASE_URL: 'data',  // ← 改为相对路径 data
       USE_MOCK: false
     };
+
+    /* =============================================
+       APP STATE & PERSISTENCE
+       ============================================= */
+    const CITY_MAP = {
+      'SHA': '上海', 'PVG': '上海', 'PEK': '北京', 'PKX': '北京', 'CAN': '广州', 'SZX': '深圳',
+      'CTU': '成都', 'CKG': '重庆', 'HGH': '杭州', 'XIY': '西安', 'KMG': '昆明', 'SIA': '西安',
+      'KIX': '大阪', 'NRT': '东京', 'HND': '东京', 'ICN': '首尔', 'HKG': '香港', 'TPE': '台北',
+      'LHR': '伦敦', 'CDG': '巴黎', 'FRA': '法兰克福', 'JFK': '纽约', 'LAX': '洛杉矶', 'SYD': '悉尼',
+      'SIN': '新加坡', 'BKK': '曼谷'
+    };
+
+    const APP_STATE = {
+      monitors: JSON.parse(localStorage.getItem('hjt_monitors')) || null,
+      isSubscribed: localStorage.getItem('hjt_subscribed') === 'true'
+    };
+
+    function saveAppState() {
+      localStorage.setItem('hjt_monitors', JSON.stringify(APP_STATE.monitors));
+      localStorage.setItem('hjt_subscribed', APP_STATE.isSubscribed);
+    }
 
     /* =============================================
        MOCK DATA (后端未就绪时的兜底数据)
@@ -795,23 +816,36 @@
       let data = await fetchData(`search/${from}-${to}.json`);
       if (!data) {
         data = JSON.parse(JSON.stringify(MOCK.search));
-        data.route.from.city = from || '上海';
-        data.route.to.city = to || '北京';
+        const fromCity = CITY_MAP[from.toUpperCase()] || from;
+        const toCity = CITY_MAP[to.toUpperCase()] || to;
+        data.route.from.city = fromCity;
+        data.route.to.city = toCity;
+        data.route.from.code = from.toUpperCase();
+        data.route.to.code = to.toUpperCase();
+        
         const seed = (from + to).split('').reduce((a, b) => a + b.charCodeAt(0), 0);
         data.flights.forEach((f, i) => {
             let offset = (seed * 13 + i * 293) % 1500 - 400; 
             f.price = Math.max(500, f.price + offset);
             f.originalPrice = f.price + 1200 + (seed % 800);
             f.durationText = `${2 + (seed%8)} 小时 ${((seed*i)%50)+10} 分`;
-            f.departure.airport = data.route.from.city;
-            f.arrival.airport = data.route.to.city;
+            f.departure.airport = fromCity + (seed % 2 === 0 ? '国际机场' : '机场');
+            f.arrival.airport = toCity + (seed % 2 === 0 ? '国际机场' : '机场');
+            f.departure.code = from.toUpperCase();
+            f.arrival.code = to.toUpperCase();
         });
         if(data.trend) data.trend.lowestPrice = Math.min(...data.flights.map(f=>f.price)) - Math.floor(Math.random()*200);
       }
       return data;
     }
     async function getFlightDetail(id) { return (await fetchData(`flights/${id}.json`)) || MOCK.detail; }
-    async function getMonitors() { return (await fetchData('monitors.json')) || MOCK.monitors; }
+    async function getMonitors() { 
+      if (APP_STATE.monitors) return { monitors: APP_STATE.monitors };
+      const data = (await fetchData('monitors.json')) || MOCK.monitors;
+      APP_STATE.monitors = data.monitors;
+      saveAppState();
+      return data;
+    }
 
     /* =============================================
        RENDER FUNCTIONS
@@ -972,13 +1006,30 @@
               </div>
               <div class="source-disclaimer" style="text-align:center;margin-top:0.75rem;">数据更新于 ${new Date(f.updatedAt || Date.now()).toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})} · 来自${f.source||'携程'}</div>
             </div>
-            <div class="alert-card" onclick="showToast('降价提醒已开启')">
+            <div class="alert-card" onclick="addMonitorFromDetail()">
               <div class="alert-icon"><span class="material-symbols-outlined icon-filled">notifications_active</span></div>
               <div class="alert-text"><h4>降价提醒</h4><p>该航线价格波动较大，建议开启监控</p></div>
               <div class="alert-add"><span class="material-symbols-outlined" style="font-size:1rem;">add</span></div>
             </div>
           </div>
         </div>
+        <script>
+          // Local helper for detail page logic if needed, but easier to use global
+          function addMonitorFromDetail() {
+            const f = window.currentDetailFlight;
+            if(f) {
+              addMonitor({
+                from: f.departure.airport,
+                fromCode: f.departure.code,
+                to: f.arrival.airport,
+                toCode: f.arrival.code,
+                airline: f.airline,
+                currentPrice: f.price,
+                targetPrice: Math.floor(f.price * 0.9)
+              });
+            }
+          }
+        </script>
         <div class="detail-bottom">
           <div class="detail-trend-card">
             <div class="trend-conclusion"><span class="material-symbols-outlined">trending_down</span>当前价格低于近 30 天均价，建议尽早锁票</div>
@@ -1126,7 +1177,7 @@
         renderDeals({ deals: deals });
         container.style.opacity = '1';
         container.style.transform = 'translateY(0)';
-      }, 300);
+      }, 50);
     }
 
     async function doSearch() {
@@ -1151,13 +1202,50 @@
       }, 600);
     }
 
+    function addMonitor(m) {
+      if(!APP_STATE.monitors) APP_STATE.monitors = [];
+      const exists = APP_STATE.monitors.some(item => item.from.code === m.fromCode && item.to.code === m.toCode);
+      if(exists) {
+        showToast('该航线已在监控列表中');
+        return;
+      }
+      
+      const newMonitor = {
+        id: 'monitor_' + Date.now(),
+        from: { code: m.fromCode || 'SHA', city: m.from || '上海' },
+        to: { code: m.toCode || 'PEK', city: m.to || '北京' },
+        airline: m.airline || '航司载入中',
+        currentPrice: m.currentPrice || 2000,
+        targetPrice: m.targetPrice || 1800,
+        status: 'monitoring',
+        trend: [60, 55, 65, 50, 45, 60, 55, 40],
+        lastUpdated: '刚才',
+        bookingUrl: '#'
+      };
+      
+      APP_STATE.monitors.unshift(newMonitor);
+      saveAppState();
+      showToast('监控已开启，降价将第一时间通知您');
+      
+      if(document.getElementById('tab-monitor').classList.contains('active')) {
+        renderMonitors({ monitors: APP_STATE.monitors });
+      }
+    }
+
     function removeMonitor(btn) {
       const card = btn.closest('.monitor-card');
       if(card) {
+        // Find ID from some attribute if we added it, but let's just find by route for now
+        const routeText = card.querySelector('.monitor-route').innerText;
         card.style.transition = 'all 0.3s ease';
         card.style.opacity = '0';
         card.style.transform = 'scale(0.9)';
+        
         setTimeout(() => {
+          if(APP_STATE.monitors) {
+            APP_STATE.monitors = APP_STATE.monitors.filter(m => `${m.from.city} (${m.from.code}) → ${m.to.city} (${m.to.code})` !== routeText);
+            saveAppState();
+          }
           card.remove();
           showToast('监控已取消');
         }, 300);
@@ -1167,6 +1255,7 @@
     async function showFlightDetail(id) {
       navigateTo('detail');
       const data = await getFlightDetail(id);
+      window.currentDetailFlight = data.flight;
       renderDetail(data);
     }
 
@@ -1181,16 +1270,21 @@
        INIT
        ============================================= */
     document.addEventListener('DOMContentLoaded', async () => {
-      // 加载首页数据
-      const deals = await getDeals();
+      // Check subscription status
+      if(APP_STATE.isSubscribed) {
+        const banner = document.querySelector('.cta-banner');
+        if(banner) banner.style.display = 'none';
+      }
+
+      // 并行加载首页数据，大幅提升初始化速度
+      const [deals, monitors, search] = await Promise.all([
+        getDeals(),
+        getMonitors(),
+        getSearch('SHA', 'PEK')
+      ]);
+
       renderDeals(deals);
-
-      // 预加载监控数据
-      const monitors = await getMonitors();
       renderMonitors(monitors);
-
-      // 预加载搜索结果
-      const search = await getSearch('SHA', 'PEK');
       renderFlights(search);
 
       // 滚动动画
@@ -1210,7 +1304,7 @@
           el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
           observer.observe(el);
         });
-      }, 100);
+      }, 20);
     });
 
     function toggleNotif() {
@@ -1238,7 +1332,20 @@
         btn.innerText = '已订阅';
         btn.style.background = '#2e7d32';
         btn.style.boxShadow = '0 4px 16px rgba(46,125,50,0.3)';
+        APP_STATE.isSubscribed = true;
+        saveAppState();
         showToast('订阅成功！我们将第一时间通知您');
+        
+        // Optionally hide banner after a short delay
+        setTimeout(() => {
+          const banner = document.querySelector('.cta-banner');
+          if(banner) {
+            banner.style.transition = 'all 0.5s ease';
+            banner.style.opacity = '0';
+            banner.style.transform = 'scale(0.95)';
+            setTimeout(() => banner.style.display = 'none', 500);
+          }
+        }, 1500);
       }, 800);
     }
 
