@@ -94,7 +94,7 @@ function renderDeals(data) {
   container.innerHTML = (data.deals || data.items || []).map(d => `
     <div class="deal-card" onclick="openBooking('${d.bookingUrl}')">
       <div class="deal-card-img">
-        <img src="${d.imageUrl}" alt="${d.to.city}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';" />
+        <img src="${d.imageUrl}" alt="${d.to.city}" onerror="this.onerror=null; this.src='https://picsum.photos/seed/${encodeURIComponent(d.to.city)}/800/600';">
         <span class="discount-badge">${d.discount}</span>
         <span class="source-badge">来自${d.source}</span>
       </div>
@@ -137,7 +137,11 @@ function renderTrend(trend, conclusion, priceHistory) {
       <div class="price"><div class="price-label">最低价格</div><div class="price-value">¥${lowest.toLocaleString()}</div></div>
     </div>
     <div class="trend-chart">
-      ${bars.map(b => `<div class="trend-bar-wrap ${b.isToday?'today':''}"><div class="trend-bar ${b.isLowest?'lowest':''}" style="height:${b.height}%"><div class="trend-tooltip">¥${b.price}<br/>${b.date}</div></div></div>`).join('')}
+      ${bars.map(b => {
+        const p = b.price || trend.lowestPrice || 0;
+        const d = b.date || b.day || '';
+        return `<div class="trend-bar-wrap ${b.isToday?'today':''}"><div class="trend-bar ${b.isLowest?'lowest':''}" style="height:${b.height}%"><div class="trend-tooltip">¥${p.toLocaleString()}<br/>${d}</div></div></div>`;
+      }).join('')}
     </div>`;
 }
 

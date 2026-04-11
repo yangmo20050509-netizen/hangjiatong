@@ -104,12 +104,12 @@ const MOCK = {
       lowestPrice: 2340,
       hint: '近 18 日价格走势',
       bars: [
-        {day:'1',height:55,type:'normal'},{day:'2',height:65,type:'normal'},{day:'3',height:70,type:'normal'},
-        {day:'4',height:45,type:'low'},{day:'5',height:60,type:'normal'},{day:'6',height:40,type:'low'},
-        {day:'7',height:55,type:'normal'},{day:'8',height:50,type:'normal'},{day:'9',height:58,type:'normal'},
-        {day:'今天',height:38,type:'today'},{day:'11',height:65,type:'normal'},{day:'12',height:72,type:'normal'},
-        {day:'13',height:68,type:'normal'},{day:'14',height:58,type:'normal'},{day:'15',height:62,type:'normal'},
-        {day:'16',height:75,type:'normal'},{day:'17',height:80,type:'normal'},{day:'18',height:70,type:'normal'}
+        {day:'1',height:55,type:'normal',price:2850,date:'4-01'},{day:'2',height:65,type:'normal',price:2920,date:'4-02'},{day:'3',height:70,type:'normal',price:3050,date:'4-03'},
+        {day:'4',height:45,type:'low',price:1850,date:'4-04'},{day:'5',height:60,type:'normal',price:2700,date:'4-05'},{day:'6',height:40,type:'low',price:1620,date:'4-06'},
+        {day:'7',height:55,type:'normal',price:2480,date:'4-07'},{day:'8',height:50,type:'normal',price:2300,date:'4-08'},{day:'9',height:58,type:'normal',price:2650,date:'4-09'},
+        {day:'今天',height:38,type:'today',price:1450,date:'4-10'},{day:'11',height:65,type:'normal',price:2920,date:'4-11'},{day:'12',height:72,type:'normal',price:3250,date:'4-12'},
+        {day:'13',height:68,type:'normal',price:3050,date:'4-13'},{day:'14',height:58,type:'normal',price:2650,date:'4-14'},{day:'15',height:62,type:'normal',price:2800,date:'4-15'},
+        {day:'16',height:75,type:'normal',price:3400,date:'4-16'},{day:'17',height:80,type:'normal',price:3650,date:'4-17'},{day:'18',height:70,type:'normal',price:3100,date:'4-18'}
       ]
     },
     flights: [
