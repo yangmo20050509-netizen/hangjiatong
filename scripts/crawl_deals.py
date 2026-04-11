@@ -79,18 +79,18 @@ def main():
     # 航线模板库（只维护结构，日期和价格由机器智能推算）
     templates = [
         # --- 国内航线 ---
-        {"from_code": "SHA", "from_city": "上海", "to_code": "HGH", "to_city": "杭州", "basePrice": 380, "source": "携程", "airline": "南方航空", "tags": ["直飞", "极速出票"], "rec": "最划算", "recReason": "高铁价优选", "img": "https://images.unsplash.com/photo-1543097692-fa13c6cd8595?w=800", "region": "domestic"}, 
-        {"from_code": "PEK", "from_city": "北京", "to_code": "CAN", "to_city": "广州", "basePrice": 850, "source": "飞猪", "airline": "中国国航", "tags": ["直飞", "含托运"], "rec": "最省时", "recReason": "黄金航线", "img": "https://images.unsplash.com/photo-1555979864-7493b296ac52?w=800", "region": "domestic"},
-        {"from_code": "CTU", "from_city": "成都", "to_code": "SZX", "to_city": "深圳", "basePrice": 620, "source": "去哪儿", "airline": "深圳航空", "tags": ["准点率高", "含餐食"], "rec": "体验好", "recReason": "宽体机执飞", "img": "https://images.unsplash.com/photo-1529944208035-7cfa574bb5a9?w=800", "region": "domestic"},
-        {"from_code": "CKG", "from_city": "重庆", "to_code": "SHA", "to_city": "上海", "basePrice": 450, "source": "携程", "airline": "春秋航空", "tags": ["低价大促", "不可退改"], "rec": "极低价", "recReason": "近期低位", "img": "https://images.unsplash.com/photo-1548919973-5cfe5d4fc494?w=800", "region": "domestic"},
-        {"from_code": "BJS", "from_city": "北京", "to_code": "HGH", "to_city": "杭州", "basePrice": 580, "source": "携程", "airline": "海航", "tags": ["直飞", "极速出票"], "rec": "西湖韵", "recReason": "美景推荐", "img": "https://images.unsplash.com/photo-1541123437220-72c5ef216306?w=800", "region": "domestic"},
+        {"from_code": "SHA", "from_city": "上海", "to_code": "HGH", "to_city": "杭州", "basePrice": 380, "source": "携程", "airline": "南方航空", "tags": ["直飞", "极速出票"], "rec": "最划算", "recReason": "高铁价优选", "img": "https://images.unsplash.com/photo-1510526061184-067885b0d006?w=800", "region": "domestic"}, 
+        {"from_code": "PEK", "from_city": "北京", "to_code": "CAN", "to_city": "广州", "basePrice": 850, "source": "飞猪", "airline": "中国国航", "tags": ["直飞", "含托运"], "rec": "最省时", "recReason": "黄金航线", "img": "https://images.unsplash.com/photo-1545624441-267980590829?w=800", "region": "domestic"},
+        {"from_code": "CTU", "from_city": "成都", "to_code": "SZX", "to_city": "深圳", "basePrice": 620, "source": "去哪儿", "airline": "深圳航空", "tags": ["准点率高", "含餐食"], "rec": "体验好", "recReason": "宽体机执飞", "img": "https://images.unsplash.com/photo-1523455823190-362c3f848fd2?w=800", "region": "domestic"},
+        {"from_code": "CKG", "from_city": "重庆", "to_code": "SHA", "to_city": "上海", "basePrice": 450, "source": "携程", "airline": "春秋航空", "tags": ["低价大促", "不可退改"], "rec": "极低价", "recReason": "近期低位", "img": "https://images.unsplash.com/photo-1474181487828-5fe9a4ae19b2?w=800", "region": "domestic"},
+        {"from_code": "BJS", "from_city": "北京", "to_code": "HGH", "to_city": "杭州", "basePrice": 580, "source": "携程", "airline": "海航", "tags": ["直飞", "极速出票"], "rec": "西湖韵", "recReason": "美景推荐", "img": "https://images.unsplash.com/photo-1543097692-fa13c6cd8595?w=800", "region": "domestic"},
 
         # --- 国际航线 ---
-        {"from_code": "SHA", "from_city": "上海", "to_code": "KIX", "to_city": "大阪", "basePrice": 1280, "source": "携程", "airline": "吉祥航空", "tags": ["直飞", "不可退改"], "rec": "最省钱", "recReason": "近期低位", "img": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800", "region": "intl"},
+        {"from_code": "SHA", "from_city": "上海", "to_code": "KIX", "to_city": "大阪", "basePrice": 1280, "source": "携程", "airline": "吉祥航空", "tags": ["直飞", "不可退改"], "rec": "最省钱", "recReason": "近期低位", "img": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800", "region": "intl"},
         {"from_code": "PEK", "from_city": "北京", "to_code": "SYD", "to_city": "悉尼", "basePrice": 2340, "source": "飞猪", "airline": "南方航空", "tags": ["含行李", "可退改"], "rec": "最划算", "recReason": "品质首选", "img": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800", "region": "intl"},
         {"from_code": "CAN", "from_city": "广州", "to_code": "CDG", "to_city": "巴黎", "basePrice": 3850, "source": "去哪儿", "airline": "东方航空", "tags": ["直飞", "含餐食"], "rec": "体验好", "recReason": "飞行耗时短", "img": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800", "region": "intl"},
         {"from_code": "HGH", "from_city": "杭州", "to_code": "HKG", "to_city": "香港", "basePrice": 880, "source": "携程", "airline": "国泰航空", "tags": ["直飞", "极速出票"], "rec": "超低价", "recReason": "说走就走", "img": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800", "region": "intl"},
-        {"from_code": "PVG", "from_city": "上海", "to_code": "TYO", "to_city": "东京", "basePrice": 1450, "source": "飞猪", "airline": "全日空", "tags": ["直飞", "服务佳"], "rec": "樱花季", "recReason": "热门推荐", "img": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800", "region": "intl"}
+        {"from_code": "PVG", "from_city": "上海", "to_code": "TYO", "to_city": "东京", "basePrice": 1450, "source": "飞猪", "airline": "全日空", "tags": ["直飞", "服务佳"], "rec": "樱花季", "recReason": "热门推荐", "img": "https://images.unsplash.com/photo-1503899036084-755ad26bc2aa?w=800", "region": "intl"}
     ]
     
     deals_data = {
