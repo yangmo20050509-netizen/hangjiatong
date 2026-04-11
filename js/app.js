@@ -187,7 +187,7 @@ function renderFlights(data) {
         <div class="fc-airline-logo">
           <img src="https://img.logo.dev/${encodeURIComponent(f.airline)}?token=placeholder&size=100" 
                alt="${f.airline}" class="fc-airline-img" 
-               onerror="this.onerror=null; this.src='https://picsum.photos/seed/${encodeURIComponent(f.airline)}/100/100';">
+               onerror="this.onerror=null; this.src='https://picsum.photos/seed/${encodeURIComponent(f.airline + 'logo')}/100/100';">
         </div>
         <div>
           <div class="fc-airline-name">${f.airline}</div>
