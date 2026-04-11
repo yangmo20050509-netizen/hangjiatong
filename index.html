@@ -98,7 +98,9 @@
     .nav-right { display: flex; align-items: center; gap: 1.25rem; }
     .nav-icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background var(--transition-fast); color: var(--outline); }
     .nav-icon:hover { background: var(--surface-low); }
-    .avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.875rem; }
+    .avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center; color: white; border:none; cursor:pointer; }
+    .avatar .material-symbols-outlined { font-size: 1.5rem; }
+    .avatar:hover { transform: scale(1.05); filter: brightness(1.1); transition: all 0.2s; }
     .notif-badge { position: relative; }
     .notif-badge::after { content: '3'; position: absolute; top: 4px; right: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--tertiary-accent); color: white; font-size: 0.55rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 
@@ -437,7 +439,26 @@
       </div>
       <div class="nav-right" style="position:relative;">
         <button class="nav-icon notif-badge" id="notif-btn" title="通知" onclick="toggleNotif()"><span class="material-symbols-outlined">notifications</span></button>
-        <div class="avatar"><span>Y</span></div>
+        <button class="avatar" id="user-btn" onclick="toggleUserMenu()"><span class="material-symbols-outlined">account_circle</span></button>
+        <div class="notif-dropdown" id="user-dropdown" style="right: -4px;">
+           <div class="notif-header">
+             <h3>个人中心</h3>
+           </div>
+           <div>
+             <div class="notif-item" onclick="showToast('个人资料功能即将上线'); toggleUserMenu()">
+               <div class="notif-item-title"><span class="material-symbols-outlined" style="font-size:1.1rem;">person</span> 个人资料</div>
+               <div class="notif-item-desc">查看并编辑您的个人信息与偏好设置</div>
+             </div>
+             <div class="notif-item" onclick="showToast('设置功能开发中'); toggleUserMenu()">
+               <div class="notif-item-title"><span class="material-symbols-outlined" style="font-size:1.1rem;">settings</span> 系统设置</div>
+               <div class="notif-item-desc">管理通知提醒及账户安全选项</div>
+             </div>
+             <div class="notif-item" onclick="showToast('正在退出...'); setTimeout(()=>location.reload(),1000)">
+               <div class="notif-item-title" style="color:var(--error);"><span class="material-symbols-outlined" style="font-size:1.1rem;">logout</span> 退出登录</div>
+               <div class="notif-item-desc">安全清除本次会话并返回至首页</div>
+             </div>
+           </div>
+        </div>
         <div class="notif-dropdown" id="notif-dropdown">
           <div class="notif-header">
             <h3>消息中心</h3>
@@ -1302,7 +1323,13 @@
     });
 
     function toggleNotif() {
+      document.getElementById('user-dropdown').classList.remove('show');
       document.getElementById('notif-dropdown').classList.toggle('show');
+    }
+
+    function toggleUserMenu() {
+      document.getElementById('notif-dropdown').classList.remove('show');
+      document.getElementById('user-dropdown').classList.toggle('show');
     }
     
     function clearNotifs() {
