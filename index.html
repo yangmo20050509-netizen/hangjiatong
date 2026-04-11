@@ -410,7 +410,7 @@
     }
     
     /* ============================================ NOTIFICATION DROPDOWN ============================================ */
-    .notif-dropdown { position: absolute; top: 60px; right: 0; width: 320px; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-lift); display: none; flex-direction: column; overflow: hidden; z-index: 200; border: 1px solid var(--outline-variant); text-align: left; }
+    .notif-dropdown { position: absolute; top: 60px; right: 0; width: 320px; background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-radius: var(--radius-lg); box-shadow: var(--shadow-lift); display: none; flex-direction: column; overflow: hidden; z-index: 200; border: 1px solid var(--outline-variant); text-align: left; }
     .notif-dropdown.show { display: flex; animation: slideDown 0.3s ease; }
     @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     .notif-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--outline-variant); display: flex; justify-content: space-between; align-items: center; }
