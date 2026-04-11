@@ -1019,7 +1019,7 @@
             <button onclick="removeMonitor(this)" title="取消监控" style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--outline-variant);cursor:pointer;padding:0.25rem;border-radius:4px;transition:all 0.2s;z-index:2;" onmouseover="this.style.color='#d32f2f';this.style.background='rgba(211,47,47,0.08)'" onmouseout="this.style.color='var(--outline-variant)';this.style.background='none'">
               <span class="material-symbols-outlined">delete</span>
             </button>
-            ${m.badge ? `<span class="monitor-badge">${m.badge}</span>` : ''}
+            ${m.badge ? `<span class="monitor-badge" style="right:3.5rem; top:1.15rem;">${m.badge}</span>` : ''}
             <div class="monitor-icon"><span class="material-symbols-outlined">flight_takeoff</span></div>
             <div class="monitor-route">${m.from.city} (${m.from.code}) → ${m.to.city} (${m.to.code})</div>
             <div class="monitor-airline">${m.airline}</div>
