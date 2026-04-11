@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ethereal-voyager-v1';
+const CACHE_NAME = 'ethereal-voyager-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',

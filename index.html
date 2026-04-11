@@ -143,9 +143,19 @@
 
   <!-- PAGE 2: SEARCH RESULTS -->
   <div class="page" id="page-results">
-    <div class="page-body" style="padding-top:1.5rem;">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
-        <button class="back-btn" onclick="navigateTo('home')" style="padding:0;"><span class="material-symbols-outlined">arrow_back</span> 返回首页</button>
+    <div class="results-hero">
+      <div class="results-hero-bg" id="results-hero-bg"></div>
+      <div class="page-body">
+        <div class="results-top-nav">
+          <button class="back-btn" onclick="navigateTo('home')"><span class="material-symbols-outlined">arrow_back</span> 返回首页</button>
+        </div>
+        <div class="results-hero-content">
+          <h2 id="results-title">上海 (SHA) → 北京 (PEK)</h2>
+          <p class="results-summary" id="results-count">找到 3 个航班 · 数据来自各大主流平台</p>
+        </div>
+      </div>
+    </div>
+    <div class="page-body" style="padding-top:0;">
         <div class="sort-controls">
           <span style="font-size:0.85rem;color:var(--outline);margin-right:0.5rem;">排序方式</span>
           <select id="sort-select" onchange="runFilterUI()" style="background:var(--surface);border:1px solid var(--outline-variant);padding:0.35rem 0.75rem;border-radius:var(--radius-sm);font-size:0.85rem;color:var(--on-surface);">

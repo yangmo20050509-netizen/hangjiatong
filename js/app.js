@@ -60,7 +60,22 @@ async function getSearch(from, to) {
         f.departure.code = from.toUpperCase();
         f.arrival.code = to.toUpperCase();
     });
-    if(data.trend) data.trend.lowestPrice = Math.min(...data.flights.map(f=>f.price)) - Math.floor(Math.random()*200);
+    if(data.trend) {
+        data.trend.lowestPrice = Math.min(...data.flights.map(f=>f.price));
+        // 动态生成趋势柱状图数据，增加真实感
+        data.trend.bars = Array.from({length: 15}, (_, i) => {
+            const isToday = i === 12;
+            const price = data.trend.lowestPrice + Math.floor(Math.random() * 800);
+            return {
+                day: isToday ? '今天' : (i + 1).toString(),
+                height: 30 + Math.floor(Math.random() * 60),
+                price: price,
+                date: `04-${(i + 1).toString().padStart(2, '0')}`,
+                isToday: isToday,
+                isLowest: price === data.trend.lowestPrice
+            };
+        });
+    }
   }
   return data;
 }
@@ -168,7 +183,11 @@ function renderFlights(data) {
     <div class="flight-card" onclick="showFlightDetail('${f.id}')">
       ${f.badge ? `<div class="flight-card-badge ${badgeClass}">${f.badge}</div>` : ''}
       <div class="fc-airline">
-        <div class="fc-airline-logo"><img src="${f.airlineLogo || 'https://images.unsplash.com/photo-1436491865332-7a61a109c055?w=100'}" class="fc-airline-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1436491865332-7a61a109c055?w=100';"></div>
+        <div class="fc-airline-logo">
+          <img src="https://img.logo.dev/航空?token=placeholder&size=100&name=${encodeURIComponent(f.airline)}" 
+               alt="${f.airline}" class="fc-airline-img" 
+               onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\"material-symbols-outlined\" style=\"color:var(--primary);\">flight</span>';">
+        </div>
         <div>
           <div class="fc-airline-name">${f.airline}</div>
           <div class="fc-airline-detail">${f.flightNo} | ${f.aircraft}</div>
@@ -424,12 +443,40 @@ async function filterDeals(el) {
 }
 
 async function doSearch() {
-  const from = (document.getElementById('input-from')?.value || 'SHA').trim();
-  const to = (document.getElementById('input-to')?.value || 'PEK').trim();
+  const fromInput = document.getElementById('input-from')?.value;
+  const toInput = document.getElementById('input-to')?.value;
+  
+  const from = (fromInput || 'SHA').trim();
+  const to = (toInput || 'PEK').trim();
+  const toCity = CITY_MAP[to.toUpperCase()] || to;
+  
+  // 动态设置搜索页 Hero 背景图
+  const bg = document.getElementById('results-hero-bg');
+  if (bg) {
+    const seed = encodeURIComponent(toCity);
+    bg.style.backgroundImage = `url('https://picsum.photos/seed/${seed}/1600/900')`;
+    // 异步尝试换成更高质的 Unsplash（如有）
+    const curatedIds = {
+      '北京': '1541123437220-72c5ef216306',
+      '上海': '1474181487828-5fe9a4ae19b2',
+      '杭州': '1543097692-fa13c6cd8595',
+      '东京': '1540959733332-eab4deabeeaf',
+      '大坂': '1493976040374-85c8e12f0c0e',
+      '巴黎': '1502602898657-3e91760cbb34',
+      '伦敦': '1513635269975-59663e0ac1ad'
+    };
+    if (curatedIds[toCity]) {
+      const img = new Image();
+      const unsplashUrl = `https://images.unsplash.com/photo-${curatedIds[toCity]}?w=1600&q=80`;
+      img.src = unsplashUrl;
+      img.onload = () => bg.style.backgroundImage = `url('${unsplashUrl}')`;
+    }
+  }
+
   navigateTo('results');
   
   const data = await getSearch(from, to);
-  APP_STATE.currentResults = data.flights; // 缓存原始结果
+  APP_STATE.currentResults = data.flights; 
   applyFiltersAndSort();
 }
 

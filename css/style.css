@@ -222,7 +222,16 @@ ul { list-style: none; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
 /* ============================================ SEARCH RESULTS ============================================ */
-.results-layout { display: grid; grid-template-columns: 220px 1fr; gap: 2rem; padding-top: 2rem; }
+.results-hero { position: relative; padding: 4rem 0 3.5rem; background: var(--primary); overflow: hidden; margin-bottom: 2rem; }
+.results-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; filter: saturate(1.2) brightness(0.8); z-index: 1; transition: background 0.8s ease; background-size: cover; background-position: center; }
+.results-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,6,102,0.6) 0%, var(--surface) 100%); z-index: 2; }
+.results-hero .page-body { position: relative; z-index: 3; display: flex; flex-direction: column; gap: 1.5rem; }
+.results-top-nav .back-btn { color: white; padding: 0.5rem 1rem; background: rgba(255,255,255,0.12); border-radius: var(--radius-full); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s; }
+.results-top-nav .back-btn:hover { background: rgba(255,255,255,0.2); transform: translateX(-4px); }
+.results-hero-content h2 { font-size: 2.75rem; font-weight: 900; color: white; margin-bottom: 0.5rem; text-shadow: 0 4px 12px rgba(0,0,0,0.3); letter-spacing: -0.01em; }
+.results-summary { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-fixed-dim); font-size: 0.95rem; font-weight: 600; padding: 0.5rem 1rem; background: rgba(255,255,255,0.08); border-radius: var(--radius-md); backdrop-filter: blur(8px); }
+
+.results-layout { display: grid; grid-template-columns: 240px 1fr; gap: 2.5rem; }
 .filter-panel { position: sticky; top: 92px; align-self: start; }
 .filter-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tertiary-accent); margin-bottom: 0.25rem; }
 .filter-subtitle { font-size: 0.7rem; color: var(--outline); margin-bottom: 1.5rem; }

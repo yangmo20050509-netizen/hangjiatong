@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-04-11T12:58:09.762644Z",
+  "updatedAt": "2026-04-11T13:07:50.189782Z",
   "count": 20,
   "deals": [
     {
-      "id": "deal_SHA_HGH_20260420",
+      "id": "deal_SHA_HGH_20260417",
       "from": {
         "code": "SHA",
         "city": "上海"
@@ -13,179 +13,179 @@
         "city": "杭州"
       },
       "airline": "南方航空",
-      "price": 370,
+      "price": 442,
       "originalPrice": 950,
-      "discount": "3.9折",
+      "discount": "4.7折",
       "tags": [
         "直飞",
         "极速出票"
       ],
-      "hotTag": "⏰ 尾单特价",
-      "departDate": "2026-04-20",
+      "hotTag": "✨ 极致性价比",
+      "departDate": "2026-04-17",
       "imageUrl": "https://images.unsplash.com/photo-1543097692-fa13c6cd8595?w=800",
       "region": "domestic",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-HGH?depdate=2026-04-20",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-HGH?depdate=2026-04-17",
       "source": "携程",
       "recommendation": "最划算",
       "recommendationReason": "高铁价优选",
-      "priceStatus": "当前价格较均价低 30%",
-      "priceStatusPercent": 25,
+      "priceStatus": "当前价格较均价低 15%",
+      "priceStatusPercent": 20,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 434,
-          "height": 39
+          "price": 428,
+          "height": 49
         },
         {
           "date": "2026-03-13",
-          "price": 453,
+          "price": 465,
+          "height": 47
+        },
+        {
+          "date": "2026-03-14",
+          "price": 273,
+          "height": 56
+        },
+        {
+          "date": "2026-03-15",
+          "price": 297,
           "height": 41
         },
         {
-          "date": "2026-03-14",
-          "price": 427,
-          "height": 37
-        },
-        {
-          "date": "2026-03-15",
-          "price": 385,
-          "height": 48
-        },
-        {
           "date": "2026-03-16",
-          "price": 314,
-          "height": 30
+          "price": 472,
+          "height": 31
         },
         {
           "date": "2026-03-17",
-          "price": 304,
-          "height": 80
-        },
-        {
-          "date": "2026-03-18",
-          "price": 337,
-          "height": 66
-        },
-        {
-          "date": "2026-03-19",
-          "price": 384,
-          "height": 65
-        },
-        {
-          "date": "2026-03-20",
-          "price": 383,
-          "height": 45
-        },
-        {
-          "date": "2026-03-21",
-          "price": 471,
-          "height": 31
-        },
-        {
-          "date": "2026-03-22",
-          "price": 421,
+          "price": 382,
           "height": 77
         },
         {
+          "date": "2026-03-18",
+          "price": 358,
+          "height": 30
+        },
+        {
+          "date": "2026-03-19",
+          "price": 364,
+          "height": 77
+        },
+        {
+          "date": "2026-03-20",
+          "price": 289,
+          "height": 37
+        },
+        {
+          "date": "2026-03-21",
+          "price": 431,
+          "height": 33
+        },
+        {
+          "date": "2026-03-22",
+          "price": 484,
+          "height": 60
+        },
+        {
           "date": "2026-03-23",
-          "price": 414,
-          "height": 32
+          "price": 412,
+          "height": 72
         },
         {
           "date": "2026-03-24",
-          "price": 269,
-          "height": 45
-        },
-        {
-          "date": "2026-03-25",
-          "price": 449,
-          "height": 31
-        },
-        {
-          "date": "2026-03-26",
-          "price": 435,
-          "height": 69
-        },
-        {
-          "date": "2026-03-27",
-          "price": 366,
-          "height": 36
-        },
-        {
-          "date": "2026-03-28",
-          "price": 350,
-          "height": 43
-        },
-        {
-          "date": "2026-03-29",
-          "price": 457,
-          "height": 74
-        },
-        {
-          "date": "2026-03-30",
-          "price": 452,
-          "height": 61
-        },
-        {
-          "date": "2026-03-31",
-          "price": 318,
-          "height": 39
-        },
-        {
-          "date": "2026-04-01",
-          "price": 296,
-          "height": 76
-        },
-        {
-          "date": "2026-04-02",
-          "price": 346,
-          "height": 38
-        },
-        {
-          "date": "2026-04-03",
-          "price": 288,
+          "price": 365,
           "height": 79
         },
         {
+          "date": "2026-03-25",
+          "price": 384,
+          "height": 71
+        },
+        {
+          "date": "2026-03-26",
+          "price": 356,
+          "height": 40
+        },
+        {
+          "date": "2026-03-27",
+          "price": 400,
+          "height": 55
+        },
+        {
+          "date": "2026-03-28",
+          "price": 289,
+          "height": 53
+        },
+        {
+          "date": "2026-03-29",
+          "price": 431,
+          "height": 53
+        },
+        {
+          "date": "2026-03-30",
+          "price": 389,
+          "height": 68
+        },
+        {
+          "date": "2026-03-31",
+          "price": 283,
+          "height": 46
+        },
+        {
+          "date": "2026-04-01",
+          "price": 400,
+          "height": 31
+        },
+        {
+          "date": "2026-04-02",
+          "price": 462,
+          "height": 39
+        },
+        {
+          "date": "2026-04-03",
+          "price": 269,
+          "height": 36
+        },
+        {
           "date": "2026-04-04",
-          "price": 323,
+          "price": 308,
           "height": 53
         },
         {
           "date": "2026-04-05",
-          "price": 283,
-          "height": 71
+          "price": 356,
+          "height": 59
         },
         {
           "date": "2026-04-06",
-          "price": 476,
-          "height": 77
+          "price": 314,
+          "height": 42
         },
         {
           "date": "2026-04-07",
-          "price": 460,
-          "height": 57
+          "price": 376,
+          "height": 33
         },
         {
           "date": "2026-04-08",
-          "price": 411,
-          "height": 64
+          "price": 340,
+          "height": 72
         },
         {
           "date": "2026-04-09",
-          "price": 310,
-          "height": 54
+          "price": 297,
+          "height": 66
         },
         {
           "date": "2026-04-10",
-          "price": 379,
-          "height": 67
+          "price": 484,
+          "height": 73
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.762849Z"
+      "updatedAt": "2026-04-11T13:07:50.190006Z"
     },
     {
-      "id": "deal_SHA_HGH_20260506",
+      "id": "deal_SHA_HGH_20260422",
       "from": {
         "code": "SHA",
         "city": "上海"
@@ -195,361 +195,179 @@
         "city": "杭州"
       },
       "airline": "南方航空",
-      "price": 290,
+      "price": 461,
       "originalPrice": 950,
-      "discount": "3.1折",
+      "discount": "4.9折",
       "tags": [
         "直飞",
         "极速出票"
       ],
-      "hotTag": "",
-      "departDate": "2026-05-06",
+      "hotTag": "🔥 限时大促",
+      "departDate": "2026-04-22",
       "imageUrl": "https://images.unsplash.com/photo-1543097692-fa13c6cd8595?w=800",
       "region": "domestic",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-HGH?depdate=2026-05-06",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-HGH?depdate=2026-04-22",
       "source": "携程",
       "recommendation": "最划算",
       "recommendationReason": "高铁价优选",
-      "priceStatus": "当前价格较均价低 16%",
-      "priceStatusPercent": 19,
+      "priceStatus": "当前价格较均价低 15%",
+      "priceStatusPercent": 40,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 357,
-          "height": 79
+          "price": 486,
+          "height": 80
         },
         {
           "date": "2026-03-13",
-          "price": 292,
-          "height": 40
+          "price": 440,
+          "height": 69
         },
         {
           "date": "2026-03-14",
-          "price": 281,
-          "height": 48
+          "price": 473,
+          "height": 58
         },
         {
           "date": "2026-03-15",
-          "price": 472,
-          "height": 34
+          "price": 276,
+          "height": 74
         },
         {
           "date": "2026-03-16",
-          "price": 377,
-          "height": 64
+          "price": 336,
+          "height": 76
         },
         {
           "date": "2026-03-17",
-          "price": 391,
-          "height": 60
+          "price": 305,
+          "height": 37
         },
         {
           "date": "2026-03-18",
-          "price": 466,
-          "height": 49
+          "price": 270,
+          "height": 40
         },
         {
           "date": "2026-03-19",
-          "price": 333,
+          "price": 482,
           "height": 71
         },
         {
           "date": "2026-03-20",
-          "price": 317,
-          "height": 52
+          "price": 277,
+          "height": 49
         },
         {
           "date": "2026-03-21",
-          "price": 375,
-          "height": 61
+          "price": 460,
+          "height": 65
         },
         {
           "date": "2026-03-22",
-          "price": 274,
-          "height": 33
-        },
-        {
-          "date": "2026-03-23",
-          "price": 305,
-          "height": 49
-        },
-        {
-          "date": "2026-03-24",
-          "price": 324,
-          "height": 46
-        },
-        {
-          "date": "2026-03-25",
-          "price": 474,
-          "height": 45
-        },
-        {
-          "date": "2026-03-26",
-          "price": 442,
-          "height": 59
-        },
-        {
-          "date": "2026-03-27",
-          "price": 294,
-          "height": 67
-        },
-        {
-          "date": "2026-03-28",
-          "price": 347,
-          "height": 73
-        },
-        {
-          "date": "2026-03-29",
-          "price": 452,
-          "height": 63
-        },
-        {
-          "date": "2026-03-30",
-          "price": 425,
-          "height": 74
-        },
-        {
-          "date": "2026-03-31",
-          "price": 379,
-          "height": 37
-        },
-        {
-          "date": "2026-04-01",
-          "price": 440,
-          "height": 62
-        },
-        {
-          "date": "2026-04-02",
-          "price": 358,
-          "height": 36
-        },
-        {
-          "date": "2026-04-03",
-          "price": 298,
-          "height": 62
-        },
-        {
-          "date": "2026-04-04",
-          "price": 350,
-          "height": 61
-        },
-        {
-          "date": "2026-04-05",
-          "price": 441,
-          "height": 50
-        },
-        {
-          "date": "2026-04-06",
-          "price": 450,
-          "height": 73
-        },
-        {
-          "date": "2026-04-07",
-          "price": 338,
-          "height": 68
-        },
-        {
-          "date": "2026-04-08",
-          "price": 300,
-          "height": 50
-        },
-        {
-          "date": "2026-04-09",
-          "price": 296,
-          "height": 68
-        },
-        {
-          "date": "2026-04-10",
-          "price": 457,
-          "height": 44
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.762958Z"
-    },
-    {
-      "id": "deal_PEK_CAN_20260421",
-      "from": {
-        "code": "PEK",
-        "city": "北京"
-      },
-      "to": {
-        "code": "CAN",
-        "city": "广州"
-      },
-      "airline": "中国国航",
-      "price": 1030,
-      "originalPrice": 2125,
-      "discount": "4.8折",
-      "tags": [
-        "直飞",
-        "含托运"
-      ],
-      "hotTag": "✨ 极致性价比",
-      "departDate": "2026-04-21",
-      "imageUrl": "https://images.unsplash.com/photo-1555979864-7493b296ac52?w=800",
-      "region": "domestic",
-      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E5%8C%97%E4%BA%AC-%E5%B9%BF%E5%B7%9E&departDate=2026-04-21",
-      "source": "飞猪",
-      "recommendation": "最省时",
-      "recommendationReason": "黄金航线",
-      "priceStatus": "当前价格较均价低 35%",
-      "priceStatusPercent": 31,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 749,
-          "height": 52
-        },
-        {
-          "date": "2026-03-13",
-          "price": 842,
-          "height": 38
-        },
-        {
-          "date": "2026-03-14",
-          "price": 739,
-          "height": 51
-        },
-        {
-          "date": "2026-03-15",
-          "price": 849,
-          "height": 32
-        },
-        {
-          "date": "2026-03-16",
-          "price": 773,
-          "height": 49
-        },
-        {
-          "date": "2026-03-17",
-          "price": 853,
-          "height": 72
-        },
-        {
-          "date": "2026-03-18",
-          "price": 896,
-          "height": 62
-        },
-        {
-          "date": "2026-03-19",
-          "price": 916,
-          "height": 55
-        },
-        {
-          "date": "2026-03-20",
-          "price": 824,
-          "height": 56
-        },
-        {
-          "date": "2026-03-21",
-          "price": 851,
-          "height": 68
-        },
-        {
-          "date": "2026-03-22",
-          "price": 956,
-          "height": 40
-        },
-        {
-          "date": "2026-03-23",
-          "price": 732,
-          "height": 53
-        },
-        {
-          "date": "2026-03-24",
-          "price": 690,
-          "height": 40
-        },
-        {
-          "date": "2026-03-25",
-          "price": 771,
-          "height": 80
-        },
-        {
-          "date": "2026-03-26",
-          "price": 726,
-          "height": 31
-        },
-        {
-          "date": "2026-03-27",
-          "price": 990,
-          "height": 67
-        },
-        {
-          "date": "2026-03-28",
-          "price": 926,
-          "height": 49
-        },
-        {
-          "date": "2026-03-29",
-          "price": 614,
-          "height": 67
-        },
-        {
-          "date": "2026-03-30",
-          "price": 771,
-          "height": 77
-        },
-        {
-          "date": "2026-03-31",
-          "price": 755,
-          "height": 58
-        },
-        {
-          "date": "2026-04-01",
-          "price": 787,
-          "height": 79
-        },
-        {
-          "date": "2026-04-02",
-          "price": 733,
+          "price": 284,
           "height": 42
         },
         {
-          "date": "2026-04-03",
-          "price": 611,
+          "date": "2026-03-23",
+          "price": 336,
+          "height": 59
+        },
+        {
+          "date": "2026-03-24",
+          "price": 478,
+          "height": 44
+        },
+        {
+          "date": "2026-03-25",
+          "price": 337,
+          "height": 37
+        },
+        {
+          "date": "2026-03-26",
+          "price": 430,
+          "height": 45
+        },
+        {
+          "date": "2026-03-27",
+          "price": 448,
+          "height": 49
+        },
+        {
+          "date": "2026-03-28",
+          "price": 362,
+          "height": 41
+        },
+        {
+          "date": "2026-03-29",
+          "price": 383,
+          "height": 44
+        },
+        {
+          "date": "2026-03-30",
+          "price": 484,
+          "height": 44
+        },
+        {
+          "date": "2026-03-31",
+          "price": 323,
           "height": 38
+        },
+        {
+          "date": "2026-04-01",
+          "price": 276,
+          "height": 44
+        },
+        {
+          "date": "2026-04-02",
+          "price": 452,
+          "height": 49
+        },
+        {
+          "date": "2026-04-03",
+          "price": 346,
+          "height": 75
         },
         {
           "date": "2026-04-04",
-          "price": 1001,
-          "height": 51
+          "price": 342,
+          "height": 39
         },
         {
           "date": "2026-04-05",
-          "price": 767,
-          "height": 33
+          "price": 481,
+          "height": 63
         },
         {
           "date": "2026-04-06",
-          "price": 618,
-          "height": 50
+          "price": 272,
+          "height": 52
         },
         {
           "date": "2026-04-07",
-          "price": 1014,
-          "height": 56
+          "price": 422,
+          "height": 68
         },
         {
           "date": "2026-04-08",
-          "price": 670,
-          "height": 40
+          "price": 343,
+          "height": 55
         },
         {
           "date": "2026-04-09",
-          "price": 751,
-          "height": 48
+          "price": 386,
+          "height": 77
         },
         {
           "date": "2026-04-10",
-          "price": 1010,
-          "height": 38
+          "price": 428,
+          "height": 76
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.763357Z"
+      "updatedAt": "2026-04-11T13:07:50.190128Z"
     },
     {
-      "id": "deal_PEK_CAN_20260426",
+      "id": "deal_PEK_CAN_20260415",
       "from": {
         "code": "PEK",
         "city": "北京"
@@ -559,176 +377,358 @@
         "city": "广州"
       },
       "airline": "中国国航",
-      "price": 1011,
+      "price": 1388,
       "originalPrice": 2125,
-      "discount": "4.8折",
+      "discount": "6.5折",
       "tags": [
         "直飞",
         "含托运"
       ],
       "hotTag": "🔥 限时大促",
-      "departDate": "2026-04-26",
+      "departDate": "2026-04-15",
       "imageUrl": "https://images.unsplash.com/photo-1555979864-7493b296ac52?w=800",
       "region": "domestic",
-      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E5%8C%97%E4%BA%AC-%E5%B9%BF%E5%B7%9E&departDate=2026-04-26",
+      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E5%8C%97%E4%BA%AC-%E5%B9%BF%E5%B7%9E&departDate=2026-04-15",
       "source": "飞猪",
       "recommendation": "最省时",
       "recommendationReason": "黄金航线",
-      "priceStatus": "当前价格较均价低 19%",
-      "priceStatusPercent": 24,
+      "priceStatus": "当前价格较均价低 21%",
+      "priceStatusPercent": 23,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 807,
-          "height": 62
+          "price": 963,
+          "height": 35
         },
         {
           "date": "2026-03-13",
-          "price": 696,
-          "height": 68
+          "price": 700,
+          "height": 67
         },
         {
           "date": "2026-03-14",
-          "price": 791,
-          "height": 69
+          "price": 795,
+          "height": 38
         },
         {
           "date": "2026-03-15",
-          "price": 842,
-          "height": 57
+          "price": 768,
+          "height": 63
         },
         {
           "date": "2026-03-16",
-          "price": 640,
-          "height": 64
+          "price": 634,
+          "height": 55
         },
         {
           "date": "2026-03-17",
+          "price": 764,
+          "height": 49
+        },
+        {
+          "date": "2026-03-18",
+          "price": 599,
+          "height": 35
+        },
+        {
+          "date": "2026-03-19",
+          "price": 605,
+          "height": 45
+        },
+        {
+          "date": "2026-03-20",
+          "price": 898,
+          "height": 72
+        },
+        {
+          "date": "2026-03-21",
+          "price": 1062,
+          "height": 42
+        },
+        {
+          "date": "2026-03-22",
+          "price": 843,
+          "height": 34
+        },
+        {
+          "date": "2026-03-23",
+          "price": 790,
+          "height": 65
+        },
+        {
+          "date": "2026-03-24",
+          "price": 1066,
+          "height": 46
+        },
+        {
+          "date": "2026-03-25",
+          "price": 940,
+          "height": 61
+        },
+        {
+          "date": "2026-03-26",
           "price": 773,
+          "height": 77
+        },
+        {
+          "date": "2026-03-27",
+          "price": 699,
+          "height": 80
+        },
+        {
+          "date": "2026-03-28",
+          "price": 908,
+          "height": 64
+        },
+        {
+          "date": "2026-03-29",
+          "price": 767,
+          "height": 45
+        },
+        {
+          "date": "2026-03-30",
+          "price": 1066,
+          "height": 75
+        },
+        {
+          "date": "2026-03-31",
+          "price": 1060,
+          "height": 74
+        },
+        {
+          "date": "2026-04-01",
+          "price": 1075,
+          "height": 46
+        },
+        {
+          "date": "2026-04-02",
+          "price": 831,
+          "height": 58
+        },
+        {
+          "date": "2026-04-03",
+          "price": 1002,
+          "height": 44
+        },
+        {
+          "date": "2026-04-04",
+          "price": 735,
+          "height": 61
+        },
+        {
+          "date": "2026-04-05",
+          "price": 991,
+          "height": 40
+        },
+        {
+          "date": "2026-04-06",
+          "price": 741,
+          "height": 39
+        },
+        {
+          "date": "2026-04-07",
+          "price": 604,
+          "height": 71
+        },
+        {
+          "date": "2026-04-08",
+          "price": 795,
+          "height": 57
+        },
+        {
+          "date": "2026-04-09",
+          "price": 609,
+          "height": 61
+        },
+        {
+          "date": "2026-04-10",
+          "price": 1064,
+          "height": 31
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.190450Z"
+    },
+    {
+      "id": "deal_PEK_CAN_20260506",
+      "from": {
+        "code": "PEK",
+        "city": "北京"
+      },
+      "to": {
+        "code": "CAN",
+        "city": "广州"
+      },
+      "airline": "中国国航",
+      "price": 676,
+      "originalPrice": 2125,
+      "discount": "3.2折",
+      "tags": [
+        "直飞",
+        "含托运"
+      ],
+      "hotTag": "⏰ 尾单特价",
+      "departDate": "2026-05-06",
+      "imageUrl": "https://images.unsplash.com/photo-1555979864-7493b296ac52?w=800",
+      "region": "domestic",
+      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E5%8C%97%E4%BA%AC-%E5%B9%BF%E5%B7%9E&departDate=2026-05-06",
+      "source": "飞猪",
+      "recommendation": "最省时",
+      "recommendationReason": "黄金航线",
+      "priceStatus": "当前价格较均价低 35%",
+      "priceStatusPercent": 23,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 988,
+          "height": 51
+        },
+        {
+          "date": "2026-03-13",
+          "price": 701,
+          "height": 35
+        },
+        {
+          "date": "2026-03-14",
+          "price": 888,
+          "height": 44
+        },
+        {
+          "date": "2026-03-15",
+          "price": 901,
+          "height": 56
+        },
+        {
+          "date": "2026-03-16",
+          "price": 967,
+          "height": 72
+        },
+        {
+          "date": "2026-03-17",
+          "price": 1020,
           "height": 48
         },
         {
           "date": "2026-03-18",
-          "price": 671,
-          "height": 36
-        },
-        {
-          "date": "2026-03-19",
-          "price": 865,
-          "height": 75
-        },
-        {
-          "date": "2026-03-20",
-          "price": 771,
-          "height": 51
-        },
-        {
-          "date": "2026-03-21",
-          "price": 1103,
-          "height": 47
-        },
-        {
-          "date": "2026-03-22",
-          "price": 928,
-          "height": 78
-        },
-        {
-          "date": "2026-03-23",
-          "price": 1061,
-          "height": 31
-        },
-        {
-          "date": "2026-03-24",
-          "price": 614,
-          "height": 44
-        },
-        {
-          "date": "2026-03-25",
-          "price": 820,
-          "height": 57
-        },
-        {
-          "date": "2026-03-26",
-          "price": 739,
-          "height": 74
-        },
-        {
-          "date": "2026-03-27",
-          "price": 1052,
-          "height": 78
-        },
-        {
-          "date": "2026-03-28",
-          "price": 792,
-          "height": 54
-        },
-        {
-          "date": "2026-03-29",
-          "price": 739,
-          "height": 32
-        },
-        {
-          "date": "2026-03-30",
-          "price": 1006,
-          "height": 63
-        },
-        {
-          "date": "2026-03-31",
-          "price": 955,
-          "height": 71
-        },
-        {
-          "date": "2026-04-01",
-          "price": 1084,
-          "height": 77
-        },
-        {
-          "date": "2026-04-02",
-          "price": 779,
+          "price": 621,
           "height": 79
         },
         {
-          "date": "2026-04-03",
+          "date": "2026-03-19",
+          "price": 1004,
+          "height": 43
+        },
+        {
+          "date": "2026-03-20",
+          "price": 795,
+          "height": 46
+        },
+        {
+          "date": "2026-03-21",
+          "price": 758,
+          "height": 55
+        },
+        {
+          "date": "2026-03-22",
+          "price": 1042,
+          "height": 47
+        },
+        {
+          "date": "2026-03-23",
+          "price": 778,
+          "height": 61
+        },
+        {
+          "date": "2026-03-24",
+          "price": 656,
+          "height": 46
+        },
+        {
+          "date": "2026-03-25",
+          "price": 1014,
+          "height": 30
+        },
+        {
+          "date": "2026-03-26",
+          "price": 1063,
+          "height": 41
+        },
+        {
+          "date": "2026-03-27",
+          "price": 691,
+          "height": 57
+        },
+        {
+          "date": "2026-03-28",
+          "price": 1067,
+          "height": 76
+        },
+        {
+          "date": "2026-03-29",
+          "price": 1024,
+          "height": 48
+        },
+        {
+          "date": "2026-03-30",
           "price": 988,
-          "height": 69
+          "height": 41
+        },
+        {
+          "date": "2026-03-31",
+          "price": 997,
+          "height": 47
+        },
+        {
+          "date": "2026-04-01",
+          "price": 931,
+          "height": 57
+        },
+        {
+          "date": "2026-04-02",
+          "price": 809,
+          "height": 51
+        },
+        {
+          "date": "2026-04-03",
+          "price": 829,
+          "height": 67
         },
         {
           "date": "2026-04-04",
-          "price": 985,
-          "height": 58
+          "price": 1047,
+          "height": 48
         },
         {
           "date": "2026-04-05",
-          "price": 844,
-          "height": 70
+          "price": 983,
+          "height": 49
         },
         {
           "date": "2026-04-06",
-          "price": 1086,
-          "height": 72
+          "price": 1006,
+          "height": 71
         },
         {
           "date": "2026-04-07",
-          "price": 1098,
-          "height": 34
+          "price": 1085,
+          "height": 38
         },
         {
           "date": "2026-04-08",
-          "price": 1013,
-          "height": 42
+          "price": 664,
+          "height": 31
         },
         {
           "date": "2026-04-09",
-          "price": 760,
-          "height": 36
+          "price": 859,
+          "height": 58
         },
         {
           "date": "2026-04-10",
-          "price": 718,
-          "height": 67
+          "price": 951,
+          "height": 32
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.763487Z"
+      "updatedAt": "2026-04-11T13:07:50.190569Z"
     },
     {
       "id": "deal_CTU_SZX_20260418",
@@ -741,9 +741,9 @@
         "city": "深圳"
       },
       "airline": "深圳航空",
-      "price": 879,
+      "price": 903,
       "originalPrice": 1550,
-      "discount": "5.7折",
+      "discount": "5.8折",
       "tags": [
         "准点率高",
         "含餐食"
@@ -756,164 +756,164 @@
       "source": "去哪儿",
       "recommendation": "体验好",
       "recommendationReason": "宽体机执飞",
-      "priceStatus": "当前价格较均价低 40%",
-      "priceStatusPercent": 20,
+      "priceStatus": "当前价格较均价低 17%",
+      "priceStatusPercent": 35,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 716,
-          "height": 70
+          "price": 597,
+          "height": 43
         },
         {
           "date": "2026-03-13",
-          "price": 711,
-          "height": 30
+          "price": 586,
+          "height": 45
         },
         {
           "date": "2026-03-14",
-          "price": 535,
-          "height": 74
+          "price": 682,
+          "height": 66
         },
         {
           "date": "2026-03-15",
-          "price": 490,
-          "height": 50
+          "price": 515,
+          "height": 66
         },
         {
           "date": "2026-03-16",
-          "price": 757,
-          "height": 52
+          "price": 597,
+          "height": 36
         },
         {
           "date": "2026-03-17",
-          "price": 650,
-          "height": 58
-        },
-        {
-          "date": "2026-03-18",
-          "price": 730,
-          "height": 62
-        },
-        {
-          "date": "2026-03-19",
-          "price": 718,
-          "height": 76
-        },
-        {
-          "date": "2026-03-20",
-          "price": 767,
-          "height": 70
-        },
-        {
-          "date": "2026-03-21",
-          "price": 735,
-          "height": 61
-        },
-        {
-          "date": "2026-03-22",
-          "price": 802,
-          "height": 72
-        },
-        {
-          "date": "2026-03-23",
-          "price": 452,
-          "height": 46
-        },
-        {
-          "date": "2026-03-24",
-          "price": 552,
+          "price": 556,
           "height": 65
         },
         {
+          "date": "2026-03-18",
+          "price": 561,
+          "height": 49
+        },
+        {
+          "date": "2026-03-19",
+          "price": 727,
+          "height": 41
+        },
+        {
+          "date": "2026-03-20",
+          "price": 435,
+          "height": 77
+        },
+        {
+          "date": "2026-03-21",
+          "price": 447,
+          "height": 70
+        },
+        {
+          "date": "2026-03-22",
+          "price": 561,
+          "height": 46
+        },
+        {
+          "date": "2026-03-23",
+          "price": 625,
+          "height": 42
+        },
+        {
+          "date": "2026-03-24",
+          "price": 518,
+          "height": 39
+        },
+        {
           "date": "2026-03-25",
-          "price": 628,
-          "height": 58
+          "price": 570,
+          "height": 41
         },
         {
           "date": "2026-03-26",
-          "price": 690,
+          "price": 723,
           "height": 33
         },
         {
           "date": "2026-03-27",
-          "price": 586,
-          "height": 72
+          "price": 525,
+          "height": 30
         },
         {
           "date": "2026-03-28",
-          "price": 582,
-          "height": 53
+          "price": 800,
+          "height": 70
         },
         {
           "date": "2026-03-29",
-          "price": 572,
-          "height": 51
+          "price": 643,
+          "height": 39
         },
         {
           "date": "2026-03-30",
-          "price": 657,
+          "price": 484,
           "height": 79
         },
         {
           "date": "2026-03-31",
-          "price": 465,
-          "height": 71
+          "price": 507,
+          "height": 72
         },
         {
           "date": "2026-04-01",
-          "price": 672,
-          "height": 43
+          "price": 488,
+          "height": 67
         },
         {
           "date": "2026-04-02",
-          "price": 769,
-          "height": 66
+          "price": 658,
+          "height": 58
         },
         {
           "date": "2026-04-03",
-          "price": 615,
-          "height": 79
+          "price": 641,
+          "height": 42
         },
         {
           "date": "2026-04-04",
-          "price": 570,
-          "height": 76
+          "price": 748,
+          "height": 39
         },
         {
           "date": "2026-04-05",
-          "price": 524,
-          "height": 55
+          "price": 700,
+          "height": 58
         },
         {
           "date": "2026-04-06",
-          "price": 766,
-          "height": 80
-        },
-        {
-          "date": "2026-04-07",
-          "price": 474,
-          "height": 43
-        },
-        {
-          "date": "2026-04-08",
-          "price": 579,
+          "price": 612,
           "height": 74
         },
         {
+          "date": "2026-04-07",
+          "price": 623,
+          "height": 52
+        },
+        {
+          "date": "2026-04-08",
+          "price": 619,
+          "height": 50
+        },
+        {
           "date": "2026-04-09",
-          "price": 523,
-          "height": 30
+          "price": 498,
+          "height": 65
         },
         {
           "date": "2026-04-10",
-          "price": 596,
-          "height": 68
+          "price": 548,
+          "height": 45
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.763604Z"
+      "updatedAt": "2026-04-11T13:07:50.190691Z"
     },
     {
-      "id": "deal_CTU_SZX_20260425",
+      "id": "deal_CTU_SZX_20260503",
       "from": {
         "code": "CTU",
         "city": "成都"
@@ -923,179 +923,179 @@
         "city": "深圳"
       },
       "airline": "深圳航空",
-      "price": 627,
+      "price": 487,
       "originalPrice": 1550,
-      "discount": "4.0折",
+      "discount": "3.1折",
       "tags": [
         "准点率高",
         "含餐食"
       ],
       "hotTag": "",
-      "departDate": "2026-04-25",
+      "departDate": "2026-05-03",
       "imageUrl": "https://images.unsplash.com/photo-1529944208035-7cfa574bb5a9?w=800",
       "region": "domestic",
-      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=%E6%88%90%E9%83%BD&searchArrivalAirport=%E6%B7%B1%E5%9C%B3&searchDepartureTime=2026-04-25",
+      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=%E6%88%90%E9%83%BD&searchArrivalAirport=%E6%B7%B1%E5%9C%B3&searchDepartureTime=2026-05-03",
       "source": "去哪儿",
       "recommendation": "体验好",
       "recommendationReason": "宽体机执飞",
-      "priceStatus": "当前价格较均价低 37%",
+      "priceStatus": "当前价格较均价低 15%",
       "priceStatusPercent": 25,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 458,
-          "height": 39
+          "price": 680,
+          "height": 54
         },
         {
           "date": "2026-03-13",
-          "price": 757,
-          "height": 75
+          "price": 528,
+          "height": 47
         },
         {
           "date": "2026-03-14",
-          "price": 650,
+          "price": 459,
           "height": 51
         },
         {
           "date": "2026-03-15",
-          "price": 589,
-          "height": 55
+          "price": 550,
+          "height": 76
         },
         {
           "date": "2026-03-16",
-          "price": 753,
-          "height": 66
+          "price": 757,
+          "height": 52
         },
         {
           "date": "2026-03-17",
-          "price": 767,
-          "height": 47
+          "price": 453,
+          "height": 45
         },
         {
           "date": "2026-03-18",
-          "price": 638,
-          "height": 32
+          "price": 706,
+          "height": 52
         },
         {
           "date": "2026-03-19",
-          "price": 533,
-          "height": 53
+          "price": 651,
+          "height": 34
         },
         {
           "date": "2026-03-20",
-          "price": 535,
-          "height": 42
-        },
-        {
-          "date": "2026-03-21",
-          "price": 785,
-          "height": 57
-        },
-        {
-          "date": "2026-03-22",
-          "price": 602,
+          "price": 525,
           "height": 62
         },
         {
+          "date": "2026-03-21",
+          "price": 760,
+          "height": 63
+        },
+        {
+          "date": "2026-03-22",
+          "price": 490,
+          "height": 76
+        },
+        {
           "date": "2026-03-23",
-          "price": 504,
-          "height": 60
+          "price": 492,
+          "height": 39
         },
         {
           "date": "2026-03-24",
-          "price": 627,
-          "height": 42
+          "price": 464,
+          "height": 74
         },
         {
           "date": "2026-03-25",
-          "price": 506,
+          "price": 440,
           "height": 75
         },
         {
           "date": "2026-03-26",
-          "price": 439,
-          "height": 47
-        },
-        {
-          "date": "2026-03-27",
-          "price": 681,
-          "height": 76
-        },
-        {
-          "date": "2026-03-28",
-          "price": 490,
-          "height": 58
-        },
-        {
-          "date": "2026-03-29",
-          "price": 677,
-          "height": 35
-        },
-        {
-          "date": "2026-03-30",
-          "price": 596,
+          "price": 561,
           "height": 50
         },
         {
+          "date": "2026-03-27",
+          "price": 607,
+          "height": 45
+        },
+        {
+          "date": "2026-03-28",
+          "price": 624,
+          "height": 54
+        },
+        {
+          "date": "2026-03-29",
+          "price": 602,
+          "height": 75
+        },
+        {
+          "date": "2026-03-30",
+          "price": 576,
+          "height": 63
+        },
+        {
           "date": "2026-03-31",
-          "price": 460,
-          "height": 48
+          "price": 538,
+          "height": 39
         },
         {
           "date": "2026-04-01",
-          "price": 471,
-          "height": 76
+          "price": 510,
+          "height": 54
         },
         {
           "date": "2026-04-02",
-          "price": 536,
-          "height": 48
+          "price": 701,
+          "height": 59
         },
         {
           "date": "2026-04-03",
-          "price": 452,
-          "height": 62
+          "price": 760,
+          "height": 69
         },
         {
           "date": "2026-04-04",
           "price": 477,
-          "height": 64
+          "height": 59
         },
         {
           "date": "2026-04-05",
-          "price": 796,
-          "height": 39
-        },
-        {
-          "date": "2026-04-06",
-          "price": 511,
+          "price": 696,
           "height": 67
         },
         {
+          "date": "2026-04-06",
+          "price": 498,
+          "height": 59
+        },
+        {
           "date": "2026-04-07",
-          "price": 447,
-          "height": 64
+          "price": 538,
+          "height": 40
         },
         {
           "date": "2026-04-08",
-          "price": 536,
-          "height": 76
+          "price": 784,
+          "height": 62
         },
         {
           "date": "2026-04-09",
-          "price": 537,
-          "height": 31
+          "price": 643,
+          "height": 44
         },
         {
           "date": "2026-04-10",
-          "price": 722,
-          "height": 76
+          "price": 749,
+          "height": 77
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.763703Z"
+      "updatedAt": "2026-04-11T13:07:50.190802Z"
     },
     {
-      "id": "deal_CKG_SHA_20260419",
+      "id": "deal_CKG_SHA_20260415",
       "from": {
         "code": "CKG",
         "city": "重庆"
@@ -1105,7 +1105,7 @@
         "city": "上海"
       },
       "airline": "春秋航空",
-      "price": 591,
+      "price": 597,
       "originalPrice": 1125,
       "discount": "5.3折",
       "tags": [
@@ -1113,171 +1113,171 @@
         "不可退改"
       ],
       "hotTag": "✨ 极致性价比",
-      "departDate": "2026-04-19",
+      "departDate": "2026-04-15",
       "imageUrl": "https://images.unsplash.com/photo-1548919973-5cfe5d4fc494?w=800",
       "region": "domestic",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-CKG-SHA?depdate=2026-04-19",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-CKG-SHA?depdate=2026-04-15",
       "source": "携程",
       "recommendation": "极低价",
       "recommendationReason": "近期低位",
-      "priceStatus": "当前价格较均价低 44%",
-      "priceStatusPercent": 38,
+      "priceStatus": "当前价格较均价低 35%",
+      "priceStatusPercent": 12,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 508,
-          "height": 52
+          "price": 342,
+          "height": 46
         },
         {
           "date": "2026-03-13",
-          "price": 333,
-          "height": 35
+          "price": 354,
+          "height": 31
         },
         {
           "date": "2026-03-14",
-          "price": 508,
-          "height": 71
+          "price": 379,
+          "height": 75
         },
         {
           "date": "2026-03-15",
-          "price": 533,
-          "height": 80
+          "price": 525,
+          "height": 61
         },
         {
           "date": "2026-03-16",
-          "price": 511,
+          "price": 370,
           "height": 44
         },
         {
           "date": "2026-03-17",
-          "price": 480,
-          "height": 58
+          "price": 548,
+          "height": 66
         },
         {
           "date": "2026-03-18",
-          "price": 446,
-          "height": 70
+          "price": 530,
+          "height": 41
         },
         {
           "date": "2026-03-19",
-          "price": 408,
-          "height": 39
-        },
-        {
-          "date": "2026-03-20",
-          "price": 519,
-          "height": 50
-        },
-        {
-          "date": "2026-03-21",
-          "price": 417,
-          "height": 65
-        },
-        {
-          "date": "2026-03-22",
-          "price": 468,
-          "height": 30
-        },
-        {
-          "date": "2026-03-23",
-          "price": 364,
-          "height": 42
-        },
-        {
-          "date": "2026-03-24",
-          "price": 482,
-          "height": 64
-        },
-        {
-          "date": "2026-03-25",
-          "price": 533,
-          "height": 78
-        },
-        {
-          "date": "2026-03-26",
-          "price": 459,
-          "height": 69
-        },
-        {
-          "date": "2026-03-27",
-          "price": 575,
-          "height": 32
-        },
-        {
-          "date": "2026-03-28",
-          "price": 518,
+          "price": 411,
           "height": 40
         },
         {
+          "date": "2026-03-20",
+          "price": 539,
+          "height": 74
+        },
+        {
+          "date": "2026-03-21",
+          "price": 525,
+          "height": 61
+        },
+        {
+          "date": "2026-03-22",
+          "price": 416,
+          "height": 34
+        },
+        {
+          "date": "2026-03-23",
+          "price": 395,
+          "height": 52
+        },
+        {
+          "date": "2026-03-24",
+          "price": 321,
+          "height": 69
+        },
+        {
+          "date": "2026-03-25",
+          "price": 361,
+          "height": 53
+        },
+        {
+          "date": "2026-03-26",
+          "price": 583,
+          "height": 79
+        },
+        {
+          "date": "2026-03-27",
+          "price": 468,
+          "height": 41
+        },
+        {
+          "date": "2026-03-28",
+          "price": 549,
+          "height": 73
+        },
+        {
           "date": "2026-03-29",
-          "price": 356,
+          "price": 371,
           "height": 35
         },
         {
           "date": "2026-03-30",
-          "price": 549,
-          "height": 34
+          "price": 468,
+          "height": 77
         },
         {
           "date": "2026-03-31",
-          "price": 583,
-          "height": 63
+          "price": 523,
+          "height": 76
         },
         {
           "date": "2026-04-01",
-          "price": 317,
-          "height": 49
+          "price": 531,
+          "height": 35
         },
         {
           "date": "2026-04-02",
-          "price": 397,
-          "height": 41
+          "price": 345,
+          "height": 49
         },
         {
           "date": "2026-04-03",
-          "price": 485,
-          "height": 74
+          "price": 524,
+          "height": 64
         },
         {
           "date": "2026-04-04",
-          "price": 376,
-          "height": 65
+          "price": 541,
+          "height": 47
         },
         {
           "date": "2026-04-05",
-          "price": 556,
-          "height": 68
+          "price": 521,
+          "height": 57
         },
         {
           "date": "2026-04-06",
-          "price": 499,
-          "height": 53
+          "price": 565,
+          "height": 71
         },
         {
           "date": "2026-04-07",
-          "price": 329,
-          "height": 48
+          "price": 571,
+          "height": 43
         },
         {
           "date": "2026-04-08",
-          "price": 405,
-          "height": 66
+          "price": 347,
+          "height": 79
         },
         {
           "date": "2026-04-09",
-          "price": 516,
-          "height": 30
+          "price": 325,
+          "height": 66
         },
         {
           "date": "2026-04-10",
-          "price": 356,
-          "height": 65
+          "price": 553,
+          "height": 30
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.763800Z"
+      "updatedAt": "2026-04-11T13:07:50.190967Z"
     },
     {
-      "id": "deal_CKG_SHA_20260502",
+      "id": "deal_CKG_SHA_20260427",
       "from": {
         "code": "CKG",
         "city": "重庆"
@@ -1287,361 +1287,179 @@
         "city": "上海"
       },
       "airline": "春秋航空",
-      "price": 310,
+      "price": 433,
       "originalPrice": 1125,
-      "discount": "2.8折",
+      "discount": "3.8折",
       "tags": [
         "低价大促",
         "不可退改"
       ],
       "hotTag": "⏰ 尾单特价",
-      "departDate": "2026-05-02",
+      "departDate": "2026-04-27",
       "imageUrl": "https://images.unsplash.com/photo-1548919973-5cfe5d4fc494?w=800",
       "region": "domestic",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-CKG-SHA?depdate=2026-05-02",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-CKG-SHA?depdate=2026-04-27",
       "source": "携程",
       "recommendation": "极低价",
       "recommendationReason": "近期低位",
-      "priceStatus": "当前价格较均价低 15%",
-      "priceStatusPercent": 13,
+      "priceStatus": "当前价格较均价低 29%",
+      "priceStatusPercent": 16,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 548,
-          "height": 44
+          "price": 350,
+          "height": 73
         },
         {
           "date": "2026-03-13",
-          "price": 366,
-          "height": 58
+          "price": 490,
+          "height": 33
         },
         {
           "date": "2026-03-14",
-          "price": 342,
-          "height": 73
+          "price": 374,
+          "height": 69
         },
         {
           "date": "2026-03-15",
-          "price": 562,
-          "height": 73
+          "price": 420,
+          "height": 71
         },
         {
           "date": "2026-03-16",
-          "price": 357,
-          "height": 49
+          "price": 488,
+          "height": 79
         },
         {
           "date": "2026-03-17",
-          "price": 477,
-          "height": 60
+          "price": 325,
+          "height": 54
         },
         {
           "date": "2026-03-18",
-          "price": 349,
-          "height": 78
+          "price": 574,
+          "height": 50
         },
         {
           "date": "2026-03-19",
-          "price": 410,
-          "height": 31
-        },
-        {
-          "date": "2026-03-20",
-          "price": 551,
-          "height": 52
-        },
-        {
-          "date": "2026-03-21",
-          "price": 368,
+          "price": 542,
           "height": 41
         },
         {
-          "date": "2026-03-22",
-          "price": 521,
-          "height": 34
+          "date": "2026-03-20",
+          "price": 414,
+          "height": 76
         },
         {
-          "date": "2026-03-23",
-          "price": 550,
-          "height": 36
-        },
-        {
-          "date": "2026-03-24",
-          "price": 560,
-          "height": 59
-        },
-        {
-          "date": "2026-03-25",
-          "price": 548,
-          "height": 65
-        },
-        {
-          "date": "2026-03-26",
-          "price": 576,
-          "height": 78
-        },
-        {
-          "date": "2026-03-27",
-          "price": 521,
+          "date": "2026-03-21",
+          "price": 380,
           "height": 51
         },
         {
-          "date": "2026-03-28",
+          "date": "2026-03-22",
+          "price": 410,
+          "height": 60
+        },
+        {
+          "date": "2026-03-23",
           "price": 580,
-          "height": 78
+          "height": 62
+        },
+        {
+          "date": "2026-03-24",
+          "price": 542,
+          "height": 45
+        },
+        {
+          "date": "2026-03-25",
+          "price": 325,
+          "height": 32
+        },
+        {
+          "date": "2026-03-26",
+          "price": 495,
+          "height": 76
+        },
+        {
+          "date": "2026-03-27",
+          "price": 362,
+          "height": 56
+        },
+        {
+          "date": "2026-03-28",
+          "price": 441,
+          "height": 54
         },
         {
           "date": "2026-03-29",
-          "price": 404,
+          "price": 542,
           "height": 53
         },
         {
           "date": "2026-03-30",
-          "price": 444,
-          "height": 62
+          "price": 429,
+          "height": 57
         },
         {
           "date": "2026-03-31",
-          "price": 351,
-          "height": 54
-        },
-        {
-          "date": "2026-04-01",
-          "price": 478,
-          "height": 37
-        },
-        {
-          "date": "2026-04-02",
-          "price": 425,
-          "height": 30
-        },
-        {
-          "date": "2026-04-03",
-          "price": 430,
-          "height": 58
-        },
-        {
-          "date": "2026-04-04",
-          "price": 516,
-          "height": 65
-        },
-        {
-          "date": "2026-04-05",
-          "price": 423,
-          "height": 49
-        },
-        {
-          "date": "2026-04-06",
-          "price": 431,
-          "height": 46
-        },
-        {
-          "date": "2026-04-07",
-          "price": 536,
-          "height": 52
-        },
-        {
-          "date": "2026-04-08",
-          "price": 577,
-          "height": 46
-        },
-        {
-          "date": "2026-04-09",
-          "price": 554,
-          "height": 74
-        },
-        {
-          "date": "2026-04-10",
-          "price": 570,
-          "height": 66
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.763901Z"
-    },
-    {
-      "id": "deal_BJS_HGH_20260418",
-      "from": {
-        "code": "BJS",
-        "city": "北京"
-      },
-      "to": {
-        "code": "HGH",
-        "city": "杭州"
-      },
-      "airline": "海航",
-      "price": 831,
-      "originalPrice": 1450,
-      "discount": "5.7折",
-      "tags": [
-        "直飞",
-        "极速出票"
-      ],
-      "hotTag": "⏰ 尾单特价",
-      "departDate": "2026-04-18",
-      "imageUrl": "https://images.unsplash.com/photo-1541123437220-72c5ef216306?w=800",
-      "region": "domestic",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-BJS-HGH?depdate=2026-04-18",
-      "source": "携程",
-      "recommendation": "西湖韵",
-      "recommendationReason": "美景推荐",
-      "priceStatus": "当前价格较均价低 16%",
-      "priceStatusPercent": 22,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 713,
-          "height": 36
-        },
-        {
-          "date": "2026-03-13",
-          "price": 519,
-          "height": 46
-        },
-        {
-          "date": "2026-03-14",
-          "price": 539,
-          "height": 72
-        },
-        {
-          "date": "2026-03-15",
-          "price": 553,
-          "height": 58
-        },
-        {
-          "date": "2026-03-16",
-          "price": 596,
+          "price": 388,
           "height": 75
         },
         {
-          "date": "2026-03-17",
-          "price": 742,
-          "height": 78
-        },
-        {
-          "date": "2026-03-18",
-          "price": 534,
-          "height": 54
-        },
-        {
-          "date": "2026-03-19",
-          "price": 623,
-          "height": 70
-        },
-        {
-          "date": "2026-03-20",
-          "price": 600,
-          "height": 63
-        },
-        {
-          "date": "2026-03-21",
-          "price": 556,
-          "height": 67
-        },
-        {
-          "date": "2026-03-22",
-          "price": 411,
-          "height": 71
-        },
-        {
-          "date": "2026-03-23",
-          "price": 622,
-          "height": 52
-        },
-        {
-          "date": "2026-03-24",
-          "price": 487,
-          "height": 31
-        },
-        {
-          "date": "2026-03-25",
-          "price": 436,
-          "height": 54
-        },
-        {
-          "date": "2026-03-26",
-          "price": 642,
-          "height": 77
-        },
-        {
-          "date": "2026-03-27",
-          "price": 423,
-          "height": 71
-        },
-        {
-          "date": "2026-03-28",
-          "price": 458,
-          "height": 69
-        },
-        {
-          "date": "2026-03-29",
-          "price": 599,
-          "height": 32
-        },
-        {
-          "date": "2026-03-30",
-          "price": 749,
-          "height": 41
-        },
-        {
-          "date": "2026-03-31",
-          "price": 544,
-          "height": 41
-        },
-        {
           "date": "2026-04-01",
-          "price": 591,
-          "height": 33
+          "price": 459,
+          "height": 59
         },
         {
           "date": "2026-04-02",
-          "price": 660,
-          "height": 30
+          "price": 318,
+          "height": 36
         },
         {
           "date": "2026-04-03",
-          "price": 516,
-          "height": 79
+          "price": 380,
+          "height": 65
         },
         {
           "date": "2026-04-04",
-          "price": 695,
-          "height": 55
+          "price": 405,
+          "height": 48
         },
         {
           "date": "2026-04-05",
-          "price": 559,
-          "height": 62
+          "price": 531,
+          "height": 70
         },
         {
           "date": "2026-04-06",
-          "price": 656,
-          "height": 76
+          "price": 471,
+          "height": 33
         },
         {
           "date": "2026-04-07",
-          "price": 683,
-          "height": 80
+          "price": 357,
+          "height": 47
         },
         {
           "date": "2026-04-08",
-          "price": 498,
-          "height": 79
+          "price": 446,
+          "height": 35
         },
         {
           "date": "2026-04-09",
-          "price": 595,
-          "height": 79
+          "price": 451,
+          "height": 45
         },
         {
           "date": "2026-04-10",
-          "price": 720,
-          "height": 34
+          "price": 364,
+          "height": 56
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.763995Z"
+      "updatedAt": "2026-04-11T13:07:50.191119Z"
     },
     {
-      "id": "deal_BJS_HGH_20260425",
+      "id": "deal_BJS_HGH_20260417",
       "from": {
         "code": "BJS",
         "city": "北京"
@@ -1651,1635 +1469,1817 @@
         "city": "杭州"
       },
       "airline": "海航",
-      "price": 714,
+      "price": 709,
       "originalPrice": 1450,
       "discount": "4.9折",
       "tags": [
         "直飞",
         "极速出票"
       ],
-      "hotTag": "⏰ 尾单特价",
-      "departDate": "2026-04-25",
+      "hotTag": "🔥 限时大促",
+      "departDate": "2026-04-17",
       "imageUrl": "https://images.unsplash.com/photo-1541123437220-72c5ef216306?w=800",
       "region": "domestic",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-BJS-HGH?depdate=2026-04-25",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-BJS-HGH?depdate=2026-04-17",
       "source": "携程",
       "recommendation": "西湖韵",
       "recommendationReason": "美景推荐",
-      "priceStatus": "当前价格较均价低 25%",
-      "priceStatusPercent": 10,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 743,
-          "height": 53
-        },
-        {
-          "date": "2026-03-13",
-          "price": 497,
-          "height": 36
-        },
-        {
-          "date": "2026-03-14",
-          "price": 702,
-          "height": 74
-        },
-        {
-          "date": "2026-03-15",
-          "price": 700,
-          "height": 54
-        },
-        {
-          "date": "2026-03-16",
-          "price": 556,
-          "height": 69
-        },
-        {
-          "date": "2026-03-17",
-          "price": 715,
-          "height": 79
-        },
-        {
-          "date": "2026-03-18",
-          "price": 631,
-          "height": 57
-        },
-        {
-          "date": "2026-03-19",
-          "price": 745,
-          "height": 68
-        },
-        {
-          "date": "2026-03-20",
-          "price": 566,
-          "height": 54
-        },
-        {
-          "date": "2026-03-21",
-          "price": 720,
-          "height": 66
-        },
-        {
-          "date": "2026-03-22",
-          "price": 588,
-          "height": 75
-        },
-        {
-          "date": "2026-03-23",
-          "price": 529,
-          "height": 34
-        },
-        {
-          "date": "2026-03-24",
-          "price": 627,
-          "height": 38
-        },
-        {
-          "date": "2026-03-25",
-          "price": 532,
-          "height": 62
-        },
-        {
-          "date": "2026-03-26",
-          "price": 559,
-          "height": 63
-        },
-        {
-          "date": "2026-03-27",
-          "price": 663,
-          "height": 51
-        },
-        {
-          "date": "2026-03-28",
-          "price": 425,
-          "height": 79
-        },
-        {
-          "date": "2026-03-29",
-          "price": 454,
-          "height": 30
-        },
-        {
-          "date": "2026-03-30",
-          "price": 617,
-          "height": 58
-        },
-        {
-          "date": "2026-03-31",
-          "price": 413,
-          "height": 76
-        },
-        {
-          "date": "2026-04-01",
-          "price": 662,
-          "height": 62
-        },
-        {
-          "date": "2026-04-02",
-          "price": 416,
-          "height": 71
-        },
-        {
-          "date": "2026-04-03",
-          "price": 414,
-          "height": 79
-        },
-        {
-          "date": "2026-04-04",
-          "price": 592,
-          "height": 74
-        },
-        {
-          "date": "2026-04-05",
-          "price": 709,
-          "height": 55
-        },
-        {
-          "date": "2026-04-06",
-          "price": 737,
-          "height": 33
-        },
-        {
-          "date": "2026-04-07",
-          "price": 425,
-          "height": 50
-        },
-        {
-          "date": "2026-04-08",
-          "price": 508,
-          "height": 50
-        },
-        {
-          "date": "2026-04-09",
-          "price": 424,
-          "height": 36
-        },
-        {
-          "date": "2026-04-10",
-          "price": 418,
-          "height": 30
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.764087Z"
-    },
-    {
-      "id": "deal_SHA_KIX_20260420",
-      "from": {
-        "code": "SHA",
-        "city": "上海"
-      },
-      "to": {
-        "code": "KIX",
-        "city": "大阪"
-      },
-      "airline": "吉祥航空",
-      "price": 1286,
-      "originalPrice": 3200,
-      "discount": "4.0折",
-      "tags": [
-        "直飞",
-        "不可退改"
-      ],
-      "hotTag": "⏰ 尾单特价",
-      "departDate": "2026-04-20",
-      "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800",
-      "region": "intl",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-KIX?depdate=2026-04-20",
-      "source": "携程",
-      "recommendation": "最省钱",
-      "recommendationReason": "近期低位",
-      "priceStatus": "当前价格较均价低 41%",
-      "priceStatusPercent": 18,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 1632,
-          "height": 59
-        },
-        {
-          "date": "2026-03-13",
-          "price": 1332,
-          "height": 65
-        },
-        {
-          "date": "2026-03-14",
-          "price": 1431,
-          "height": 39
-        },
-        {
-          "date": "2026-03-15",
-          "price": 940,
-          "height": 66
-        },
-        {
-          "date": "2026-03-16",
-          "price": 1609,
-          "height": 58
-        },
-        {
-          "date": "2026-03-17",
-          "price": 1212,
-          "height": 55
-        },
-        {
-          "date": "2026-03-18",
-          "price": 929,
-          "height": 68
-        },
-        {
-          "date": "2026-03-19",
-          "price": 1337,
-          "height": 66
-        },
-        {
-          "date": "2026-03-20",
-          "price": 1106,
-          "height": 58
-        },
-        {
-          "date": "2026-03-21",
-          "price": 1578,
-          "height": 66
-        },
-        {
-          "date": "2026-03-22",
-          "price": 1164,
-          "height": 39
-        },
-        {
-          "date": "2026-03-23",
-          "price": 1381,
-          "height": 60
-        },
-        {
-          "date": "2026-03-24",
-          "price": 1190,
-          "height": 44
-        },
-        {
-          "date": "2026-03-25",
-          "price": 1599,
-          "height": 43
-        },
-        {
-          "date": "2026-03-26",
-          "price": 978,
-          "height": 46
-        },
-        {
-          "date": "2026-03-27",
-          "price": 935,
-          "height": 69
-        },
-        {
-          "date": "2026-03-28",
-          "price": 1654,
-          "height": 59
-        },
-        {
-          "date": "2026-03-29",
-          "price": 951,
-          "height": 42
-        },
-        {
-          "date": "2026-03-30",
-          "price": 1615,
-          "height": 45
-        },
-        {
-          "date": "2026-03-31",
-          "price": 1503,
-          "height": 46
-        },
-        {
-          "date": "2026-04-01",
-          "price": 897,
-          "height": 68
-        },
-        {
-          "date": "2026-04-02",
-          "price": 1647,
-          "height": 51
-        },
-        {
-          "date": "2026-04-03",
-          "price": 1119,
-          "height": 36
-        },
-        {
-          "date": "2026-04-04",
-          "price": 1544,
-          "height": 47
-        },
-        {
-          "date": "2026-04-05",
-          "price": 1147,
-          "height": 64
-        },
-        {
-          "date": "2026-04-06",
-          "price": 1399,
-          "height": 33
-        },
-        {
-          "date": "2026-04-07",
-          "price": 1487,
-          "height": 36
-        },
-        {
-          "date": "2026-04-08",
-          "price": 1223,
-          "height": 59
-        },
-        {
-          "date": "2026-04-09",
-          "price": 1008,
-          "height": 75
-        },
-        {
-          "date": "2026-04-10",
-          "price": 1619,
-          "height": 31
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.764181Z"
-    },
-    {
-      "id": "deal_SHA_KIX_20260502",
-      "from": {
-        "code": "SHA",
-        "city": "上海"
-      },
-      "to": {
-        "code": "KIX",
-        "city": "大阪"
-      },
-      "airline": "吉祥航空",
-      "price": 1213,
-      "originalPrice": 3200,
-      "discount": "3.8折",
-      "tags": [
-        "直飞",
-        "不可退改"
-      ],
-      "hotTag": "⏰ 尾单特价",
-      "departDate": "2026-05-02",
-      "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800",
-      "region": "intl",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-KIX?depdate=2026-05-02",
-      "source": "携程",
-      "recommendation": "最省钱",
-      "recommendationReason": "近期低位",
-      "priceStatus": "当前价格较均价低 37%",
-      "priceStatusPercent": 37,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 1323,
-          "height": 66
-        },
-        {
-          "date": "2026-03-13",
-          "price": 929,
-          "height": 38
-        },
-        {
-          "date": "2026-03-14",
-          "price": 1116,
-          "height": 32
-        },
-        {
-          "date": "2026-03-15",
-          "price": 1152,
-          "height": 37
-        },
-        {
-          "date": "2026-03-16",
-          "price": 1487,
-          "height": 36
-        },
-        {
-          "date": "2026-03-17",
-          "price": 1505,
-          "height": 37
-        },
-        {
-          "date": "2026-03-18",
-          "price": 1016,
-          "height": 76
-        },
-        {
-          "date": "2026-03-19",
-          "price": 897,
-          "height": 62
-        },
-        {
-          "date": "2026-03-20",
-          "price": 1100,
-          "height": 78
-        },
-        {
-          "date": "2026-03-21",
-          "price": 1654,
-          "height": 51
-        },
-        {
-          "date": "2026-03-22",
-          "price": 1428,
-          "height": 59
-        },
-        {
-          "date": "2026-03-23",
-          "price": 1513,
-          "height": 68
-        },
-        {
-          "date": "2026-03-24",
-          "price": 1324,
-          "height": 75
-        },
-        {
-          "date": "2026-03-25",
-          "price": 1484,
-          "height": 61
-        },
-        {
-          "date": "2026-03-26",
-          "price": 1481,
-          "height": 76
-        },
-        {
-          "date": "2026-03-27",
-          "price": 1127,
-          "height": 70
-        },
-        {
-          "date": "2026-03-28",
-          "price": 1423,
-          "height": 71
-        },
-        {
-          "date": "2026-03-29",
-          "price": 1235,
-          "height": 40
-        },
-        {
-          "date": "2026-03-30",
-          "price": 1279,
-          "height": 71
-        },
-        {
-          "date": "2026-03-31",
-          "price": 1329,
-          "height": 61
-        },
-        {
-          "date": "2026-04-01",
-          "price": 903,
-          "height": 69
-        },
-        {
-          "date": "2026-04-02",
-          "price": 904,
-          "height": 57
-        },
-        {
-          "date": "2026-04-03",
-          "price": 940,
-          "height": 50
-        },
-        {
-          "date": "2026-04-04",
-          "price": 1604,
-          "height": 47
-        },
-        {
-          "date": "2026-04-05",
-          "price": 1312,
-          "height": 65
-        },
-        {
-          "date": "2026-04-06",
-          "price": 934,
-          "height": 52
-        },
-        {
-          "date": "2026-04-07",
-          "price": 1226,
-          "height": 41
-        },
-        {
-          "date": "2026-04-08",
-          "price": 1001,
-          "height": 30
-        },
-        {
-          "date": "2026-04-09",
-          "price": 1488,
-          "height": 36
-        },
-        {
-          "date": "2026-04-10",
-          "price": 1386,
-          "height": 32
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.764275Z"
-    },
-    {
-      "id": "deal_PEK_SYD_20260415",
-      "from": {
-        "code": "PEK",
-        "city": "北京"
-      },
-      "to": {
-        "code": "SYD",
-        "city": "悉尼"
-      },
-      "airline": "南方航空",
-      "price": 3507,
-      "originalPrice": 5850,
-      "discount": "6.0折",
-      "tags": [
-        "含行李",
-        "可退改"
-      ],
-      "hotTag": "✨ 极致性价比",
-      "departDate": "2026-04-15",
-      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800",
-      "region": "intl",
-      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E5%8C%97%E4%BA%AC-%E6%82%89%E5%B0%BC&departDate=2026-04-15",
-      "source": "飞猪",
-      "recommendation": "最划算",
-      "recommendationReason": "品质首选",
-      "priceStatus": "当前价格较均价低 41%",
-      "priceStatusPercent": 40,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 2317,
-          "height": 71
-        },
-        {
-          "date": "2026-03-13",
-          "price": 2137,
-          "height": 51
-        },
-        {
-          "date": "2026-03-14",
-          "price": 2668,
-          "height": 46
-        },
-        {
-          "date": "2026-03-15",
-          "price": 1851,
-          "height": 74
-        },
-        {
-          "date": "2026-03-16",
-          "price": 1933,
-          "height": 65
-        },
-        {
-          "date": "2026-03-17",
-          "price": 2815,
-          "height": 47
-        },
-        {
-          "date": "2026-03-18",
-          "price": 2439,
-          "height": 63
-        },
-        {
-          "date": "2026-03-19",
-          "price": 1914,
-          "height": 67
-        },
-        {
-          "date": "2026-03-20",
-          "price": 2736,
-          "height": 70
-        },
-        {
-          "date": "2026-03-21",
-          "price": 2201,
-          "height": 44
-        },
-        {
-          "date": "2026-03-22",
-          "price": 3038,
-          "height": 39
-        },
-        {
-          "date": "2026-03-23",
-          "price": 2236,
-          "height": 36
-        },
-        {
-          "date": "2026-03-24",
-          "price": 2024,
-          "height": 69
-        },
-        {
-          "date": "2026-03-25",
-          "price": 1978,
-          "height": 48
-        },
-        {
-          "date": "2026-03-26",
-          "price": 1881,
-          "height": 37
-        },
-        {
-          "date": "2026-03-27",
-          "price": 2856,
-          "height": 76
-        },
-        {
-          "date": "2026-03-28",
-          "price": 2527,
-          "height": 58
-        },
-        {
-          "date": "2026-03-29",
-          "price": 3001,
-          "height": 80
-        },
-        {
-          "date": "2026-03-30",
-          "price": 2789,
-          "height": 52
-        },
-        {
-          "date": "2026-03-31",
-          "price": 2017,
-          "height": 67
-        },
-        {
-          "date": "2026-04-01",
-          "price": 2751,
-          "height": 58
-        },
-        {
-          "date": "2026-04-02",
-          "price": 1669,
-          "height": 65
-        },
-        {
-          "date": "2026-04-03",
-          "price": 1918,
-          "height": 30
-        },
-        {
-          "date": "2026-04-04",
-          "price": 2648,
-          "height": 58
-        },
-        {
-          "date": "2026-04-05",
-          "price": 2423,
-          "height": 66
-        },
-        {
-          "date": "2026-04-06",
-          "price": 2989,
-          "height": 76
-        },
-        {
-          "date": "2026-04-07",
-          "price": 2821,
-          "height": 79
-        },
-        {
-          "date": "2026-04-08",
-          "price": 2350,
-          "height": 48
-        },
-        {
-          "date": "2026-04-09",
-          "price": 2623,
-          "height": 74
-        },
-        {
-          "date": "2026-04-10",
-          "price": 2792,
-          "height": 74
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.764371Z"
-    },
-    {
-      "id": "deal_PEK_SYD_20260506",
-      "from": {
-        "code": "PEK",
-        "city": "北京"
-      },
-      "to": {
-        "code": "SYD",
-        "city": "悉尼"
-      },
-      "airline": "南方航空",
-      "price": 1285,
-      "originalPrice": 5850,
-      "discount": "2.2折",
-      "tags": [
-        "含行李",
-        "可退改"
-      ],
-      "hotTag": "🔥 限时大促",
-      "departDate": "2026-05-06",
-      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800",
-      "region": "intl",
-      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E5%8C%97%E4%BA%AC-%E6%82%89%E5%B0%BC&departDate=2026-05-06",
-      "source": "飞猪",
-      "recommendation": "最划算",
-      "recommendationReason": "品质首选",
-      "priceStatus": "当前价格较均价低 34%",
-      "priceStatusPercent": 18,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 1654,
-          "height": 68
-        },
-        {
-          "date": "2026-03-13",
-          "price": 1721,
-          "height": 69
-        },
-        {
-          "date": "2026-03-14",
-          "price": 2045,
-          "height": 78
-        },
-        {
-          "date": "2026-03-15",
-          "price": 1666,
-          "height": 34
-        },
-        {
-          "date": "2026-03-16",
-          "price": 2749,
-          "height": 70
-        },
-        {
-          "date": "2026-03-17",
-          "price": 2201,
-          "height": 61
-        },
-        {
-          "date": "2026-03-18",
-          "price": 2952,
-          "height": 42
-        },
-        {
-          "date": "2026-03-19",
-          "price": 2557,
-          "height": 53
-        },
-        {
-          "date": "2026-03-20",
-          "price": 1652,
-          "height": 54
-        },
-        {
-          "date": "2026-03-21",
-          "price": 2953,
-          "height": 68
-        },
-        {
-          "date": "2026-03-22",
-          "price": 1666,
-          "height": 80
-        },
-        {
-          "date": "2026-03-23",
-          "price": 1936,
-          "height": 66
-        },
-        {
-          "date": "2026-03-24",
-          "price": 1932,
-          "height": 37
-        },
-        {
-          "date": "2026-03-25",
-          "price": 2616,
-          "height": 80
-        },
-        {
-          "date": "2026-03-26",
-          "price": 2477,
-          "height": 38
-        },
-        {
-          "date": "2026-03-27",
-          "price": 2197,
-          "height": 64
-        },
-        {
-          "date": "2026-03-28",
-          "price": 2274,
-          "height": 63
-        },
-        {
-          "date": "2026-03-29",
-          "price": 2473,
-          "height": 75
-        },
-        {
-          "date": "2026-03-30",
-          "price": 2844,
-          "height": 46
-        },
-        {
-          "date": "2026-03-31",
-          "price": 2061,
-          "height": 60
-        },
-        {
-          "date": "2026-04-01",
-          "price": 1781,
-          "height": 55
-        },
-        {
-          "date": "2026-04-02",
-          "price": 2207,
-          "height": 71
-        },
-        {
-          "date": "2026-04-03",
-          "price": 2872,
-          "height": 58
-        },
-        {
-          "date": "2026-04-04",
-          "price": 2925,
-          "height": 43
-        },
-        {
-          "date": "2026-04-05",
-          "price": 2106,
-          "height": 55
-        },
-        {
-          "date": "2026-04-06",
-          "price": 2836,
-          "height": 53
-        },
-        {
-          "date": "2026-04-07",
-          "price": 2142,
-          "height": 68
-        },
-        {
-          "date": "2026-04-08",
-          "price": 1728,
-          "height": 56
-        },
-        {
-          "date": "2026-04-09",
-          "price": 2276,
-          "height": 49
-        },
-        {
-          "date": "2026-04-10",
-          "price": 1908,
-          "height": 67
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.764467Z"
-    },
-    {
-      "id": "deal_CAN_CDG_20260418",
-      "from": {
-        "code": "CAN",
-        "city": "广州"
-      },
-      "to": {
-        "code": "CDG",
-        "city": "巴黎"
-      },
-      "airline": "东方航空",
-      "price": 5113,
-      "originalPrice": 9625,
-      "discount": "5.3折",
-      "tags": [
-        "直飞",
-        "含餐食"
-      ],
-      "hotTag": "⏰ 尾单特价",
-      "departDate": "2026-04-18",
-      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
-      "region": "intl",
-      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=%E5%B9%BF%E5%B7%9E&searchArrivalAirport=%E5%B7%B4%E9%BB%8E&searchDepartureTime=2026-04-18",
-      "source": "去哪儿",
-      "recommendation": "体验好",
-      "recommendationReason": "飞行耗时短",
-      "priceStatus": "当前价格较均价低 23%",
-      "priceStatusPercent": 30,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 3454,
-          "height": 47
-        },
-        {
-          "date": "2026-03-13",
-          "price": 3897,
-          "height": 62
-        },
-        {
-          "date": "2026-03-14",
-          "price": 3958,
-          "height": 64
-        },
-        {
-          "date": "2026-03-15",
-          "price": 3933,
-          "height": 37
-        },
-        {
-          "date": "2026-03-16",
-          "price": 3123,
-          "height": 32
-        },
-        {
-          "date": "2026-03-17",
-          "price": 3402,
-          "height": 79
-        },
-        {
-          "date": "2026-03-18",
-          "price": 4254,
-          "height": 34
-        },
-        {
-          "date": "2026-03-19",
-          "price": 2757,
-          "height": 41
-        },
-        {
-          "date": "2026-03-20",
-          "price": 3596,
-          "height": 50
-        },
-        {
-          "date": "2026-03-21",
-          "price": 5002,
-          "height": 54
-        },
-        {
-          "date": "2026-03-22",
-          "price": 4600,
-          "height": 43
-        },
-        {
-          "date": "2026-03-23",
-          "price": 4079,
-          "height": 64
-        },
-        {
-          "date": "2026-03-24",
-          "price": 4823,
-          "height": 60
-        },
-        {
-          "date": "2026-03-25",
-          "price": 3718,
-          "height": 70
-        },
-        {
-          "date": "2026-03-26",
-          "price": 3825,
-          "height": 54
-        },
-        {
-          "date": "2026-03-27",
-          "price": 3935,
-          "height": 36
-        },
-        {
-          "date": "2026-03-28",
-          "price": 2995,
-          "height": 46
-        },
-        {
-          "date": "2026-03-29",
-          "price": 3586,
-          "height": 67
-        },
-        {
-          "date": "2026-03-30",
-          "price": 3672,
-          "height": 65
-        },
-        {
-          "date": "2026-03-31",
-          "price": 4141,
-          "height": 49
-        },
-        {
-          "date": "2026-04-01",
-          "price": 3822,
-          "height": 30
-        },
-        {
-          "date": "2026-04-02",
-          "price": 3765,
-          "height": 35
-        },
-        {
-          "date": "2026-04-03",
-          "price": 4536,
-          "height": 58
-        },
-        {
-          "date": "2026-04-04",
-          "price": 4551,
-          "height": 52
-        },
-        {
-          "date": "2026-04-05",
-          "price": 3130,
-          "height": 30
-        },
-        {
-          "date": "2026-04-06",
-          "price": 3879,
-          "height": 71
-        },
-        {
-          "date": "2026-04-07",
-          "price": 4320,
-          "height": 32
-        },
-        {
-          "date": "2026-04-08",
-          "price": 4330,
-          "height": 68
-        },
-        {
-          "date": "2026-04-09",
-          "price": 3452,
-          "height": 47
-        },
-        {
-          "date": "2026-04-10",
-          "price": 3069,
-          "height": 38
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.764563Z"
-    },
-    {
-      "id": "deal_CAN_CDG_20260504",
-      "from": {
-        "code": "CAN",
-        "city": "广州"
-      },
-      "to": {
-        "code": "CDG",
-        "city": "巴黎"
-      },
-      "airline": "东方航空",
-      "price": 2923,
-      "originalPrice": 9625,
-      "discount": "3.0折",
-      "tags": [
-        "直飞",
-        "含餐食"
-      ],
-      "hotTag": "✨ 极致性价比",
-      "departDate": "2026-05-04",
-      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
-      "region": "intl",
-      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=%E5%B9%BF%E5%B7%9E&searchArrivalAirport=%E5%B7%B4%E9%BB%8E&searchDepartureTime=2026-05-04",
-      "source": "去哪儿",
-      "recommendation": "体验好",
-      "recommendationReason": "飞行耗时短",
-      "priceStatus": "当前价格较均价低 26%",
-      "priceStatusPercent": 25,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 3644,
-          "height": 47
-        },
-        {
-          "date": "2026-03-13",
-          "price": 4112,
-          "height": 58
-        },
-        {
-          "date": "2026-03-14",
-          "price": 2965,
-          "height": 80
-        },
-        {
-          "date": "2026-03-15",
-          "price": 4743,
-          "height": 52
-        },
-        {
-          "date": "2026-03-16",
-          "price": 4297,
-          "height": 59
-        },
-        {
-          "date": "2026-03-17",
-          "price": 3534,
-          "height": 50
-        },
-        {
-          "date": "2026-03-18",
-          "price": 4613,
-          "height": 62
-        },
-        {
-          "date": "2026-03-19",
-          "price": 3284,
-          "height": 46
-        },
-        {
-          "date": "2026-03-20",
-          "price": 3574,
-          "height": 57
-        },
-        {
-          "date": "2026-03-21",
-          "price": 4838,
-          "height": 47
-        },
-        {
-          "date": "2026-03-22",
-          "price": 3653,
-          "height": 46
-        },
-        {
-          "date": "2026-03-23",
-          "price": 2769,
-          "height": 52
-        },
-        {
-          "date": "2026-03-24",
-          "price": 3210,
-          "height": 35
-        },
-        {
-          "date": "2026-03-25",
-          "price": 3042,
-          "height": 59
-        },
-        {
-          "date": "2026-03-26",
-          "price": 2714,
-          "height": 67
-        },
-        {
-          "date": "2026-03-27",
-          "price": 3704,
-          "height": 66
-        },
-        {
-          "date": "2026-03-28",
-          "price": 3359,
-          "height": 52
-        },
-        {
-          "date": "2026-03-29",
-          "price": 4914,
-          "height": 33
-        },
-        {
-          "date": "2026-03-30",
-          "price": 3183,
-          "height": 32
-        },
-        {
-          "date": "2026-03-31",
-          "price": 4268,
-          "height": 54
-        },
-        {
-          "date": "2026-04-01",
-          "price": 4415,
-          "height": 69
-        },
-        {
-          "date": "2026-04-02",
-          "price": 2961,
-          "height": 77
-        },
-        {
-          "date": "2026-04-03",
-          "price": 3584,
-          "height": 72
-        },
-        {
-          "date": "2026-04-04",
-          "price": 3683,
-          "height": 31
-        },
-        {
-          "date": "2026-04-05",
-          "price": 4559,
-          "height": 38
-        },
-        {
-          "date": "2026-04-06",
-          "price": 3035,
-          "height": 66
-        },
-        {
-          "date": "2026-04-07",
-          "price": 4227,
-          "height": 75
-        },
-        {
-          "date": "2026-04-08",
-          "price": 2946,
-          "height": 59
-        },
-        {
-          "date": "2026-04-09",
-          "price": 4116,
-          "height": 70
-        },
-        {
-          "date": "2026-04-10",
-          "price": 3387,
-          "height": 58
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.764655Z"
-    },
-    {
-      "id": "deal_HGH_HKG_20260421",
-      "from": {
-        "code": "HGH",
-        "city": "杭州"
-      },
-      "to": {
-        "code": "HKG",
-        "city": "香港"
-      },
-      "airline": "国泰航空",
-      "price": 866,
-      "originalPrice": 2200,
-      "discount": "3.9折",
-      "tags": [
-        "直飞",
-        "极速出票"
-      ],
-      "hotTag": "🔥 限时大促",
-      "departDate": "2026-04-21",
-      "imageUrl": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800",
-      "region": "intl",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-HGH-HKG?depdate=2026-04-21",
-      "source": "携程",
-      "recommendation": "超低价",
-      "recommendationReason": "说走就走",
-      "priceStatus": "当前价格较均价低 44%",
-      "priceStatusPercent": 39,
-      "priceHistory": [
-        {
-          "date": "2026-03-12",
-          "price": 917,
-          "height": 32
-        },
-        {
-          "date": "2026-03-13",
-          "price": 715,
-          "height": 43
-        },
-        {
-          "date": "2026-03-14",
-          "price": 657,
-          "height": 43
-        },
-        {
-          "date": "2026-03-15",
-          "price": 759,
-          "height": 57
-        },
-        {
-          "date": "2026-03-16",
-          "price": 1142,
-          "height": 65
-        },
-        {
-          "date": "2026-03-17",
-          "price": 672,
-          "height": 67
-        },
-        {
-          "date": "2026-03-18",
-          "price": 790,
-          "height": 56
-        },
-        {
-          "date": "2026-03-19",
-          "price": 628,
-          "height": 53
-        },
-        {
-          "date": "2026-03-20",
-          "price": 791,
-          "height": 46
-        },
-        {
-          "date": "2026-03-21",
-          "price": 1058,
-          "height": 54
-        },
-        {
-          "date": "2026-03-22",
-          "price": 618,
-          "height": 44
-        },
-        {
-          "date": "2026-03-23",
-          "price": 764,
-          "height": 52
-        },
-        {
-          "date": "2026-03-24",
-          "price": 879,
-          "height": 71
-        },
-        {
-          "date": "2026-03-25",
-          "price": 853,
-          "height": 31
-        },
-        {
-          "date": "2026-03-26",
-          "price": 935,
-          "height": 51
-        },
-        {
-          "date": "2026-03-27",
-          "price": 938,
-          "height": 71
-        },
-        {
-          "date": "2026-03-28",
-          "price": 628,
-          "height": 68
-        },
-        {
-          "date": "2026-03-29",
-          "price": 752,
-          "height": 36
-        },
-        {
-          "date": "2026-03-30",
-          "price": 767,
-          "height": 53
-        },
-        {
-          "date": "2026-03-31",
-          "price": 1056,
-          "height": 53
-        },
-        {
-          "date": "2026-04-01",
-          "price": 962,
-          "height": 62
-        },
-        {
-          "date": "2026-04-02",
-          "price": 1055,
-          "height": 75
-        },
-        {
-          "date": "2026-04-03",
-          "price": 925,
-          "height": 52
-        },
-        {
-          "date": "2026-04-04",
-          "price": 860,
-          "height": 48
-        },
-        {
-          "date": "2026-04-05",
-          "price": 760,
-          "height": 57
-        },
-        {
-          "date": "2026-04-06",
-          "price": 793,
-          "height": 38
-        },
-        {
-          "date": "2026-04-07",
-          "price": 865,
-          "height": 47
-        },
-        {
-          "date": "2026-04-08",
-          "price": 684,
-          "height": 68
-        },
-        {
-          "date": "2026-04-09",
-          "price": 748,
-          "height": 40
-        },
-        {
-          "date": "2026-04-10",
-          "price": 1024,
-          "height": 56
-        }
-      ],
-      "updatedAt": "2026-04-11T12:58:09.764749Z"
-    },
-    {
-      "id": "deal_HGH_HKG_20260428",
-      "from": {
-        "code": "HGH",
-        "city": "杭州"
-      },
-      "to": {
-        "code": "HKG",
-        "city": "香港"
-      },
-      "airline": "国泰航空",
-      "price": 908,
-      "originalPrice": 2200,
-      "discount": "4.1折",
-      "tags": [
-        "直飞",
-        "极速出票"
-      ],
-      "hotTag": "🔥 限时大促",
-      "departDate": "2026-04-28",
-      "imageUrl": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800",
-      "region": "intl",
-      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-HGH-HKG?depdate=2026-04-28",
-      "source": "携程",
-      "recommendation": "超低价",
-      "recommendationReason": "说走就走",
-      "priceStatus": "当前价格较均价低 26%",
+      "priceStatus": "当前价格较均价低 21%",
       "priceStatusPercent": 26,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 742,
-          "height": 78
-        },
-        {
-          "date": "2026-03-13",
-          "price": 650,
-          "height": 31
-        },
-        {
-          "date": "2026-03-14",
-          "price": 633,
+          "price": 572,
           "height": 35
         },
         {
-          "date": "2026-03-15",
+          "date": "2026-03-13",
+          "price": 432,
+          "height": 55
+        },
+        {
+          "date": "2026-03-14",
           "price": 732,
-          "height": 68
+          "height": 80
+        },
+        {
+          "date": "2026-03-15",
+          "price": 510,
+          "height": 71
         },
         {
           "date": "2026-03-16",
-          "price": 789,
-          "height": 52
+          "price": 470,
+          "height": 47
         },
         {
           "date": "2026-03-17",
-          "price": 1075,
-          "height": 40
+          "price": 470,
+          "height": 41
         },
         {
           "date": "2026-03-18",
-          "price": 937,
-          "height": 51
+          "price": 544,
+          "height": 59
         },
         {
           "date": "2026-03-19",
-          "price": 764,
-          "height": 58
+          "price": 522,
+          "height": 59
         },
         {
           "date": "2026-03-20",
-          "price": 1026,
-          "height": 79
+          "price": 618,
+          "height": 30
         },
         {
           "date": "2026-03-21",
-          "price": 698,
-          "height": 63
+          "price": 593,
+          "height": 46
         },
         {
           "date": "2026-03-22",
-          "price": 987,
-          "height": 63
+          "price": 490,
+          "height": 72
         },
         {
           "date": "2026-03-23",
-          "price": 789,
-          "height": 43
+          "price": 540,
+          "height": 63
         },
         {
           "date": "2026-03-24",
-          "price": 817,
-          "height": 32
+          "price": 491,
+          "height": 46
         },
         {
           "date": "2026-03-25",
-          "price": 631,
+          "price": 666,
           "height": 60
         },
         {
           "date": "2026-03-26",
-          "price": 682,
-          "height": 34
-        },
-        {
-          "date": "2026-03-27",
-          "price": 888,
-          "height": 47
-        },
-        {
-          "date": "2026-03-28",
-          "price": 853,
-          "height": 53
-        },
-        {
-          "date": "2026-03-29",
-          "price": 1127,
-          "height": 58
-        },
-        {
-          "date": "2026-03-30",
-          "price": 956,
-          "height": 64
-        },
-        {
-          "date": "2026-03-31",
-          "price": 789,
-          "height": 51
-        },
-        {
-          "date": "2026-04-01",
-          "price": 926,
-          "height": 49
-        },
-        {
-          "date": "2026-04-02",
-          "price": 1006,
-          "height": 71
-        },
-        {
-          "date": "2026-04-03",
-          "price": 799,
-          "height": 30
-        },
-        {
-          "date": "2026-04-04",
-          "price": 780,
+          "price": 519,
           "height": 72
         },
         {
-          "date": "2026-04-05",
-          "price": 653,
+          "date": "2026-03-27",
+          "price": 531,
+          "height": 74
+        },
+        {
+          "date": "2026-03-28",
+          "price": 584,
+          "height": 45
+        },
+        {
+          "date": "2026-03-29",
+          "price": 547,
+          "height": 36
+        },
+        {
+          "date": "2026-03-30",
+          "price": 542,
           "height": 32
         },
         {
+          "date": "2026-03-31",
+          "price": 609,
+          "height": 53
+        },
+        {
+          "date": "2026-04-01",
+          "price": 437,
+          "height": 48
+        },
+        {
+          "date": "2026-04-02",
+          "price": 724,
+          "height": 56
+        },
+        {
+          "date": "2026-04-03",
+          "price": 609,
+          "height": 69
+        },
+        {
+          "date": "2026-04-04",
+          "price": 729,
+          "height": 34
+        },
+        {
+          "date": "2026-04-05",
+          "price": 599,
+          "height": 45
+        },
+        {
           "date": "2026-04-06",
-          "price": 630,
-          "height": 39
+          "price": 590,
+          "height": 65
         },
         {
           "date": "2026-04-07",
-          "price": 871,
-          "height": 50
+          "price": 553,
+          "height": 65
         },
         {
           "date": "2026-04-08",
-          "price": 865,
-          "height": 77
+          "price": 539,
+          "height": 40
         },
         {
           "date": "2026-04-09",
-          "price": 777,
+          "price": 513,
+          "height": 36
+        },
+        {
+          "date": "2026-04-10",
+          "price": 672,
+          "height": 42
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.191223Z"
+    },
+    {
+      "id": "deal_BJS_HGH_20260427",
+      "from": {
+        "code": "BJS",
+        "city": "北京"
+      },
+      "to": {
+        "code": "HGH",
+        "city": "杭州"
+      },
+      "airline": "海航",
+      "price": 544,
+      "originalPrice": 1450,
+      "discount": "3.8折",
+      "tags": [
+        "直飞",
+        "极速出票"
+      ],
+      "hotTag": "",
+      "departDate": "2026-04-27",
+      "imageUrl": "https://images.unsplash.com/photo-1541123437220-72c5ef216306?w=800",
+      "region": "domestic",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-BJS-HGH?depdate=2026-04-27",
+      "source": "携程",
+      "recommendation": "西湖韵",
+      "recommendationReason": "美景推荐",
+      "priceStatus": "当前价格较均价低 35%",
+      "priceStatusPercent": 22,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 604,
+          "height": 48
+        },
+        {
+          "date": "2026-03-13",
+          "price": 517,
+          "height": 38
+        },
+        {
+          "date": "2026-03-14",
+          "price": 422,
+          "height": 43
+        },
+        {
+          "date": "2026-03-15",
+          "price": 462,
+          "height": 44
+        },
+        {
+          "date": "2026-03-16",
+          "price": 691,
+          "height": 58
+        },
+        {
+          "date": "2026-03-17",
+          "price": 605,
+          "height": 60
+        },
+        {
+          "date": "2026-03-18",
+          "price": 526,
+          "height": 41
+        },
+        {
+          "date": "2026-03-19",
+          "price": 687,
+          "height": 57
+        },
+        {
+          "date": "2026-03-20",
+          "price": 504,
+          "height": 44
+        },
+        {
+          "date": "2026-03-21",
+          "price": 652,
+          "height": 36
+        },
+        {
+          "date": "2026-03-22",
+          "price": 570,
+          "height": 78
+        },
+        {
+          "date": "2026-03-23",
+          "price": 475,
+          "height": 39
+        },
+        {
+          "date": "2026-03-24",
+          "price": 410,
+          "height": 35
+        },
+        {
+          "date": "2026-03-25",
+          "price": 739,
+          "height": 58
+        },
+        {
+          "date": "2026-03-26",
+          "price": 633,
+          "height": 45
+        },
+        {
+          "date": "2026-03-27",
+          "price": 546,
+          "height": 36
+        },
+        {
+          "date": "2026-03-28",
+          "price": 515,
+          "height": 44
+        },
+        {
+          "date": "2026-03-29",
+          "price": 705,
+          "height": 53
+        },
+        {
+          "date": "2026-03-30",
+          "price": 749,
+          "height": 40
+        },
+        {
+          "date": "2026-03-31",
+          "price": 698,
+          "height": 62
+        },
+        {
+          "date": "2026-04-01",
+          "price": 720,
+          "height": 61
+        },
+        {
+          "date": "2026-04-02",
+          "price": 494,
+          "height": 55
+        },
+        {
+          "date": "2026-04-03",
+          "price": 441,
+          "height": 54
+        },
+        {
+          "date": "2026-04-04",
+          "price": 408,
+          "height": 49
+        },
+        {
+          "date": "2026-04-05",
+          "price": 690,
+          "height": 65
+        },
+        {
+          "date": "2026-04-06",
+          "price": 607,
+          "height": 80
+        },
+        {
+          "date": "2026-04-07",
+          "price": 516,
+          "height": 41
+        },
+        {
+          "date": "2026-04-08",
+          "price": 468,
+          "height": 76
+        },
+        {
+          "date": "2026-04-09",
+          "price": 650,
+          "height": 69
+        },
+        {
+          "date": "2026-04-10",
+          "price": 501,
+          "height": 57
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.191326Z"
+    },
+    {
+      "id": "deal_SHA_KIX_20260416",
+      "from": {
+        "code": "SHA",
+        "city": "上海"
+      },
+      "to": {
+        "code": "KIX",
+        "city": "大阪"
+      },
+      "airline": "吉祥航空",
+      "price": 1936,
+      "originalPrice": 3200,
+      "discount": "6.0折",
+      "tags": [
+        "直飞",
+        "不可退改"
+      ],
+      "hotTag": "⏰ 尾单特价",
+      "departDate": "2026-04-16",
+      "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800",
+      "region": "intl",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-KIX?depdate=2026-04-16",
+      "source": "携程",
+      "recommendation": "最省钱",
+      "recommendationReason": "近期低位",
+      "priceStatus": "当前价格较均价低 29%",
+      "priceStatusPercent": 14,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 1115,
+          "height": 36
+        },
+        {
+          "date": "2026-03-13",
+          "price": 1279,
+          "height": 44
+        },
+        {
+          "date": "2026-03-14",
+          "price": 1032,
+          "height": 73
+        },
+        {
+          "date": "2026-03-15",
+          "price": 1505,
+          "height": 64
+        },
+        {
+          "date": "2026-03-16",
+          "price": 1102,
+          "height": 48
+        },
+        {
+          "date": "2026-03-17",
+          "price": 1194,
+          "height": 49
+        },
+        {
+          "date": "2026-03-18",
+          "price": 950,
+          "height": 47
+        },
+        {
+          "date": "2026-03-19",
+          "price": 961,
+          "height": 48
+        },
+        {
+          "date": "2026-03-20",
+          "price": 1404,
+          "height": 49
+        },
+        {
+          "date": "2026-03-21",
+          "price": 1184,
+          "height": 50
+        },
+        {
+          "date": "2026-03-22",
+          "price": 1398,
+          "height": 60
+        },
+        {
+          "date": "2026-03-23",
+          "price": 1114,
+          "height": 77
+        },
+        {
+          "date": "2026-03-24",
+          "price": 1637,
+          "height": 43
+        },
+        {
+          "date": "2026-03-25",
+          "price": 1402,
+          "height": 59
+        },
+        {
+          "date": "2026-03-26",
+          "price": 1636,
+          "height": 67
+        },
+        {
+          "date": "2026-03-27",
+          "price": 1118,
+          "height": 65
+        },
+        {
+          "date": "2026-03-28",
+          "price": 1241,
+          "height": 48
+        },
+        {
+          "date": "2026-03-29",
+          "price": 1511,
+          "height": 68
+        },
+        {
+          "date": "2026-03-30",
+          "price": 1055,
+          "height": 76
+        },
+        {
+          "date": "2026-03-31",
+          "price": 1266,
+          "height": 69
+        },
+        {
+          "date": "2026-04-01",
+          "price": 1204,
+          "height": 55
+        },
+        {
+          "date": "2026-04-02",
+          "price": 1177,
+          "height": 70
+        },
+        {
+          "date": "2026-04-03",
+          "price": 1399,
+          "height": 58
+        },
+        {
+          "date": "2026-04-04",
+          "price": 952,
+          "height": 70
+        },
+        {
+          "date": "2026-04-05",
+          "price": 988,
+          "height": 71
+        },
+        {
+          "date": "2026-04-06",
+          "price": 1028,
+          "height": 32
+        },
+        {
+          "date": "2026-04-07",
+          "price": 1385,
+          "height": 48
+        },
+        {
+          "date": "2026-04-08",
+          "price": 1441,
+          "height": 73
+        },
+        {
+          "date": "2026-04-09",
+          "price": 1019,
+          "height": 78
+        },
+        {
+          "date": "2026-04-10",
+          "price": 1378,
+          "height": 70
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.191427Z"
+    },
+    {
+      "id": "deal_SHA_KIX_20260423",
+      "from": {
+        "code": "SHA",
+        "city": "上海"
+      },
+      "to": {
+        "code": "KIX",
+        "city": "大阪"
+      },
+      "airline": "吉祥航空",
+      "price": 1439,
+      "originalPrice": 3200,
+      "discount": "4.5折",
+      "tags": [
+        "直飞",
+        "不可退改"
+      ],
+      "hotTag": "✨ 极致性价比",
+      "departDate": "2026-04-23",
+      "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800",
+      "region": "intl",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-KIX?depdate=2026-04-23",
+      "source": "携程",
+      "recommendation": "最省钱",
+      "recommendationReason": "近期低位",
+      "priceStatus": "当前价格较均价低 32%",
+      "priceStatusPercent": 19,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 1072,
+          "height": 43
+        },
+        {
+          "date": "2026-03-13",
+          "price": 1110,
+          "height": 56
+        },
+        {
+          "date": "2026-03-14",
+          "price": 920,
+          "height": 44
+        },
+        {
+          "date": "2026-03-15",
+          "price": 1024,
+          "height": 44
+        },
+        {
+          "date": "2026-03-16",
+          "price": 1476,
+          "height": 66
+        },
+        {
+          "date": "2026-03-17",
+          "price": 1360,
+          "height": 39
+        },
+        {
+          "date": "2026-03-18",
+          "price": 1062,
+          "height": 72
+        },
+        {
+          "date": "2026-03-19",
+          "price": 907,
+          "height": 67
+        },
+        {
+          "date": "2026-03-20",
+          "price": 1054,
+          "height": 31
+        },
+        {
+          "date": "2026-03-21",
+          "price": 1050,
+          "height": 60
+        },
+        {
+          "date": "2026-03-22",
+          "price": 1460,
+          "height": 62
+        },
+        {
+          "date": "2026-03-23",
+          "price": 1628,
+          "height": 35
+        },
+        {
+          "date": "2026-03-24",
+          "price": 1572,
+          "height": 49
+        },
+        {
+          "date": "2026-03-25",
+          "price": 1072,
+          "height": 75
+        },
+        {
+          "date": "2026-03-26",
+          "price": 1610,
+          "height": 49
+        },
+        {
+          "date": "2026-03-27",
+          "price": 1298,
+          "height": 55
+        },
+        {
+          "date": "2026-03-28",
+          "price": 919,
+          "height": 69
+        },
+        {
+          "date": "2026-03-29",
+          "price": 1622,
+          "height": 65
+        },
+        {
+          "date": "2026-03-30",
+          "price": 1615,
+          "height": 77
+        },
+        {
+          "date": "2026-03-31",
+          "price": 1558,
+          "height": 32
+        },
+        {
+          "date": "2026-04-01",
+          "price": 1512,
+          "height": 79
+        },
+        {
+          "date": "2026-04-02",
+          "price": 1179,
+          "height": 73
+        },
+        {
+          "date": "2026-04-03",
+          "price": 1091,
+          "height": 60
+        },
+        {
+          "date": "2026-04-04",
+          "price": 917,
+          "height": 51
+        },
+        {
+          "date": "2026-04-05",
+          "price": 1202,
+          "height": 69
+        },
+        {
+          "date": "2026-04-06",
+          "price": 1275,
+          "height": 55
+        },
+        {
+          "date": "2026-04-07",
+          "price": 1566,
+          "height": 63
+        },
+        {
+          "date": "2026-04-08",
+          "price": 1595,
+          "height": 57
+        },
+        {
+          "date": "2026-04-09",
+          "price": 1384,
+          "height": 77
+        },
+        {
+          "date": "2026-04-10",
+          "price": 1523,
+          "height": 46
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.191586Z"
+    },
+    {
+      "id": "deal_PEK_SYD_20260419",
+      "from": {
+        "code": "PEK",
+        "city": "北京"
+      },
+      "to": {
+        "code": "SYD",
+        "city": "悉尼"
+      },
+      "airline": "南方航空",
+      "price": 2467,
+      "originalPrice": 5850,
+      "discount": "4.2折",
+      "tags": [
+        "含行李",
+        "可退改"
+      ],
+      "hotTag": "🔥 限时大促",
+      "departDate": "2026-04-19",
+      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800",
+      "region": "intl",
+      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E5%8C%97%E4%BA%AC-%E6%82%89%E5%B0%BC&departDate=2026-04-19",
+      "source": "飞猪",
+      "recommendation": "最划算",
+      "recommendationReason": "品质首选",
+      "priceStatus": "当前价格较均价低 33%",
+      "priceStatusPercent": 30,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 2155,
+          "height": 37
+        },
+        {
+          "date": "2026-03-13",
+          "price": 2715,
+          "height": 34
+        },
+        {
+          "date": "2026-03-14",
+          "price": 1868,
+          "height": 71
+        },
+        {
+          "date": "2026-03-15",
+          "price": 2596,
+          "height": 60
+        },
+        {
+          "date": "2026-03-16",
+          "price": 2046,
+          "height": 72
+        },
+        {
+          "date": "2026-03-17",
+          "price": 2927,
+          "height": 38
+        },
+        {
+          "date": "2026-03-18",
+          "price": 1931,
+          "height": 31
+        },
+        {
+          "date": "2026-03-19",
+          "price": 1914,
+          "height": 69
+        },
+        {
+          "date": "2026-03-20",
+          "price": 2856,
+          "height": 38
+        },
+        {
+          "date": "2026-03-21",
+          "price": 2322,
+          "height": 79
+        },
+        {
+          "date": "2026-03-22",
+          "price": 2823,
+          "height": 50
+        },
+        {
+          "date": "2026-03-23",
+          "price": 1952,
+          "height": 40
+        },
+        {
+          "date": "2026-03-24",
+          "price": 1851,
+          "height": 58
+        },
+        {
+          "date": "2026-03-25",
+          "price": 2567,
+          "height": 46
+        },
+        {
+          "date": "2026-03-26",
+          "price": 2124,
+          "height": 76
+        },
+        {
+          "date": "2026-03-27",
+          "price": 2131,
+          "height": 35
+        },
+        {
+          "date": "2026-03-28",
+          "price": 2082,
+          "height": 44
+        },
+        {
+          "date": "2026-03-29",
+          "price": 2024,
+          "height": 34
+        },
+        {
+          "date": "2026-03-30",
+          "price": 2739,
+          "height": 61
+        },
+        {
+          "date": "2026-03-31",
+          "price": 2253,
+          "height": 31
+        },
+        {
+          "date": "2026-04-01",
+          "price": 2500,
+          "height": 79
+        },
+        {
+          "date": "2026-04-02",
+          "price": 2449,
+          "height": 41
+        },
+        {
+          "date": "2026-04-03",
+          "price": 1800,
+          "height": 80
+        },
+        {
+          "date": "2026-04-04",
+          "price": 3008,
+          "height": 76
+        },
+        {
+          "date": "2026-04-05",
+          "price": 2497,
+          "height": 47
+        },
+        {
+          "date": "2026-04-06",
+          "price": 2214,
+          "height": 73
+        },
+        {
+          "date": "2026-04-07",
+          "price": 2587,
+          "height": 45
+        },
+        {
+          "date": "2026-04-08",
+          "price": 2999,
+          "height": 58
+        },
+        {
+          "date": "2026-04-09",
+          "price": 2268,
           "height": 70
         },
         {
           "date": "2026-04-10",
-          "price": 1026,
-          "height": 30
+          "price": 2578,
+          "height": 48
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.764840Z"
+      "updatedAt": "2026-04-11T13:07:50.191711Z"
     },
     {
-      "id": "deal_PVG_TYO_20260420",
+      "id": "deal_PEK_SYD_20260428",
+      "from": {
+        "code": "PEK",
+        "city": "北京"
+      },
+      "to": {
+        "code": "SYD",
+        "city": "悉尼"
+      },
+      "airline": "南方航空",
+      "price": 1885,
+      "originalPrice": 5850,
+      "discount": "3.2折",
+      "tags": [
+        "含行李",
+        "可退改"
+      ],
+      "hotTag": "✨ 极致性价比",
+      "departDate": "2026-04-28",
+      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800",
+      "region": "intl",
+      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E5%8C%97%E4%BA%AC-%E6%82%89%E5%B0%BC&departDate=2026-04-28",
+      "source": "飞猪",
+      "recommendation": "最划算",
+      "recommendationReason": "品质首选",
+      "priceStatus": "当前价格较均价低 18%",
+      "priceStatusPercent": 28,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 2791,
+          "height": 79
+        },
+        {
+          "date": "2026-03-13",
+          "price": 2447,
+          "height": 61
+        },
+        {
+          "date": "2026-03-14",
+          "price": 2209,
+          "height": 70
+        },
+        {
+          "date": "2026-03-15",
+          "price": 2786,
+          "height": 44
+        },
+        {
+          "date": "2026-03-16",
+          "price": 2174,
+          "height": 66
+        },
+        {
+          "date": "2026-03-17",
+          "price": 2409,
+          "height": 45
+        },
+        {
+          "date": "2026-03-18",
+          "price": 2382,
+          "height": 46
+        },
+        {
+          "date": "2026-03-19",
+          "price": 2808,
+          "height": 33
+        },
+        {
+          "date": "2026-03-20",
+          "price": 2935,
+          "height": 74
+        },
+        {
+          "date": "2026-03-21",
+          "price": 2053,
+          "height": 38
+        },
+        {
+          "date": "2026-03-22",
+          "price": 2674,
+          "height": 80
+        },
+        {
+          "date": "2026-03-23",
+          "price": 1730,
+          "height": 58
+        },
+        {
+          "date": "2026-03-24",
+          "price": 1909,
+          "height": 35
+        },
+        {
+          "date": "2026-03-25",
+          "price": 2606,
+          "height": 63
+        },
+        {
+          "date": "2026-03-26",
+          "price": 1830,
+          "height": 31
+        },
+        {
+          "date": "2026-03-27",
+          "price": 2209,
+          "height": 41
+        },
+        {
+          "date": "2026-03-28",
+          "price": 2471,
+          "height": 51
+        },
+        {
+          "date": "2026-03-29",
+          "price": 2589,
+          "height": 65
+        },
+        {
+          "date": "2026-03-30",
+          "price": 2626,
+          "height": 77
+        },
+        {
+          "date": "2026-03-31",
+          "price": 2531,
+          "height": 70
+        },
+        {
+          "date": "2026-04-01",
+          "price": 2667,
+          "height": 44
+        },
+        {
+          "date": "2026-04-02",
+          "price": 2830,
+          "height": 72
+        },
+        {
+          "date": "2026-04-03",
+          "price": 1999,
+          "height": 76
+        },
+        {
+          "date": "2026-04-04",
+          "price": 2062,
+          "height": 50
+        },
+        {
+          "date": "2026-04-05",
+          "price": 2579,
+          "height": 32
+        },
+        {
+          "date": "2026-04-06",
+          "price": 1878,
+          "height": 79
+        },
+        {
+          "date": "2026-04-07",
+          "price": 1956,
+          "height": 30
+        },
+        {
+          "date": "2026-04-08",
+          "price": 2256,
+          "height": 63
+        },
+        {
+          "date": "2026-04-09",
+          "price": 2496,
+          "height": 42
+        },
+        {
+          "date": "2026-04-10",
+          "price": 1998,
+          "height": 49
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.191821Z"
+    },
+    {
+      "id": "deal_CAN_CDG_20260420",
+      "from": {
+        "code": "CAN",
+        "city": "广州"
+      },
+      "to": {
+        "code": "CDG",
+        "city": "巴黎"
+      },
+      "airline": "东方航空",
+      "price": 4762,
+      "originalPrice": 9625,
+      "discount": "4.9折",
+      "tags": [
+        "直飞",
+        "含餐食"
+      ],
+      "hotTag": "✨ 极致性价比",
+      "departDate": "2026-04-20",
+      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
+      "region": "intl",
+      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=%E5%B9%BF%E5%B7%9E&searchArrivalAirport=%E5%B7%B4%E9%BB%8E&searchDepartureTime=2026-04-20",
+      "source": "去哪儿",
+      "recommendation": "体验好",
+      "recommendationReason": "飞行耗时短",
+      "priceStatus": "当前价格较均价低 39%",
+      "priceStatusPercent": 29,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 4151,
+          "height": 51
+        },
+        {
+          "date": "2026-03-13",
+          "price": 3036,
+          "height": 41
+        },
+        {
+          "date": "2026-03-14",
+          "price": 3409,
+          "height": 68
+        },
+        {
+          "date": "2026-03-15",
+          "price": 4441,
+          "height": 31
+        },
+        {
+          "date": "2026-03-16",
+          "price": 4521,
+          "height": 67
+        },
+        {
+          "date": "2026-03-17",
+          "price": 4793,
+          "height": 76
+        },
+        {
+          "date": "2026-03-18",
+          "price": 4019,
+          "height": 58
+        },
+        {
+          "date": "2026-03-19",
+          "price": 3557,
+          "height": 31
+        },
+        {
+          "date": "2026-03-20",
+          "price": 4825,
+          "height": 68
+        },
+        {
+          "date": "2026-03-21",
+          "price": 4351,
+          "height": 30
+        },
+        {
+          "date": "2026-03-22",
+          "price": 4770,
+          "height": 73
+        },
+        {
+          "date": "2026-03-23",
+          "price": 4689,
+          "height": 45
+        },
+        {
+          "date": "2026-03-24",
+          "price": 3012,
+          "height": 56
+        },
+        {
+          "date": "2026-03-25",
+          "price": 4675,
+          "height": 57
+        },
+        {
+          "date": "2026-03-26",
+          "price": 4593,
+          "height": 35
+        },
+        {
+          "date": "2026-03-27",
+          "price": 3809,
+          "height": 57
+        },
+        {
+          "date": "2026-03-28",
+          "price": 3102,
+          "height": 34
+        },
+        {
+          "date": "2026-03-29",
+          "price": 3727,
+          "height": 56
+        },
+        {
+          "date": "2026-03-30",
+          "price": 4248,
+          "height": 79
+        },
+        {
+          "date": "2026-03-31",
+          "price": 4367,
+          "height": 36
+        },
+        {
+          "date": "2026-04-01",
+          "price": 4654,
+          "height": 34
+        },
+        {
+          "date": "2026-04-02",
+          "price": 3281,
+          "height": 34
+        },
+        {
+          "date": "2026-04-03",
+          "price": 2934,
+          "height": 44
+        },
+        {
+          "date": "2026-04-04",
+          "price": 4526,
+          "height": 49
+        },
+        {
+          "date": "2026-04-05",
+          "price": 4271,
+          "height": 60
+        },
+        {
+          "date": "2026-04-06",
+          "price": 3985,
+          "height": 73
+        },
+        {
+          "date": "2026-04-07",
+          "price": 4805,
+          "height": 69
+        },
+        {
+          "date": "2026-04-08",
+          "price": 3565,
+          "height": 69
+        },
+        {
+          "date": "2026-04-09",
+          "price": 3833,
+          "height": 61
+        },
+        {
+          "date": "2026-04-10",
+          "price": 4967,
+          "height": 33
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.191928Z"
+    },
+    {
+      "id": "deal_CAN_CDG_20260503",
+      "from": {
+        "code": "CAN",
+        "city": "广州"
+      },
+      "to": {
+        "code": "CDG",
+        "city": "巴黎"
+      },
+      "airline": "东方航空",
+      "price": 2711,
+      "originalPrice": 9625,
+      "discount": "2.8折",
+      "tags": [
+        "直飞",
+        "含餐食"
+      ],
+      "hotTag": "",
+      "departDate": "2026-05-03",
+      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
+      "region": "intl",
+      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=%E5%B9%BF%E5%B7%9E&searchArrivalAirport=%E5%B7%B4%E9%BB%8E&searchDepartureTime=2026-05-03",
+      "source": "去哪儿",
+      "recommendation": "体验好",
+      "recommendationReason": "飞行耗时短",
+      "priceStatus": "当前价格较均价低 33%",
+      "priceStatusPercent": 39,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 3823,
+          "height": 43
+        },
+        {
+          "date": "2026-03-13",
+          "price": 3441,
+          "height": 70
+        },
+        {
+          "date": "2026-03-14",
+          "price": 3200,
+          "height": 47
+        },
+        {
+          "date": "2026-03-15",
+          "price": 3764,
+          "height": 77
+        },
+        {
+          "date": "2026-03-16",
+          "price": 4207,
+          "height": 62
+        },
+        {
+          "date": "2026-03-17",
+          "price": 2890,
+          "height": 30
+        },
+        {
+          "date": "2026-03-18",
+          "price": 4571,
+          "height": 55
+        },
+        {
+          "date": "2026-03-19",
+          "price": 2962,
+          "height": 71
+        },
+        {
+          "date": "2026-03-20",
+          "price": 4981,
+          "height": 74
+        },
+        {
+          "date": "2026-03-21",
+          "price": 4362,
+          "height": 38
+        },
+        {
+          "date": "2026-03-22",
+          "price": 3454,
+          "height": 30
+        },
+        {
+          "date": "2026-03-23",
+          "price": 4002,
+          "height": 30
+        },
+        {
+          "date": "2026-03-24",
+          "price": 4869,
+          "height": 55
+        },
+        {
+          "date": "2026-03-25",
+          "price": 4074,
+          "height": 74
+        },
+        {
+          "date": "2026-03-26",
+          "price": 2931,
+          "height": 39
+        },
+        {
+          "date": "2026-03-27",
+          "price": 5003,
+          "height": 50
+        },
+        {
+          "date": "2026-03-28",
+          "price": 3718,
+          "height": 52
+        },
+        {
+          "date": "2026-03-29",
+          "price": 4556,
+          "height": 37
+        },
+        {
+          "date": "2026-03-30",
+          "price": 4846,
+          "height": 52
+        },
+        {
+          "date": "2026-03-31",
+          "price": 4949,
+          "height": 39
+        },
+        {
+          "date": "2026-04-01",
+          "price": 4891,
+          "height": 73
+        },
+        {
+          "date": "2026-04-02",
+          "price": 3927,
+          "height": 71
+        },
+        {
+          "date": "2026-04-03",
+          "price": 4042,
+          "height": 80
+        },
+        {
+          "date": "2026-04-04",
+          "price": 4058,
+          "height": 45
+        },
+        {
+          "date": "2026-04-05",
+          "price": 2911,
+          "height": 41
+        },
+        {
+          "date": "2026-04-06",
+          "price": 3927,
+          "height": 59
+        },
+        {
+          "date": "2026-04-07",
+          "price": 2704,
+          "height": 54
+        },
+        {
+          "date": "2026-04-08",
+          "price": 3020,
+          "height": 61
+        },
+        {
+          "date": "2026-04-09",
+          "price": 4815,
+          "height": 47
+        },
+        {
+          "date": "2026-04-10",
+          "price": 2866,
+          "height": 47
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.192030Z"
+    },
+    {
+      "id": "deal_HGH_HKG_20260418",
+      "from": {
+        "code": "HGH",
+        "city": "杭州"
+      },
+      "to": {
+        "code": "HKG",
+        "city": "香港"
+      },
+      "airline": "国泰航空",
+      "price": 1335,
+      "originalPrice": 2200,
+      "discount": "6.1折",
+      "tags": [
+        "直飞",
+        "极速出票"
+      ],
+      "hotTag": "⏰ 尾单特价",
+      "departDate": "2026-04-18",
+      "imageUrl": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800",
+      "region": "intl",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-HGH-HKG?depdate=2026-04-18",
+      "source": "携程",
+      "recommendation": "超低价",
+      "recommendationReason": "说走就走",
+      "priceStatus": "当前价格较均价低 31%",
+      "priceStatusPercent": 23,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 1079,
+          "height": 58
+        },
+        {
+          "date": "2026-03-13",
+          "price": 816,
+          "height": 60
+        },
+        {
+          "date": "2026-03-14",
+          "price": 872,
+          "height": 59
+        },
+        {
+          "date": "2026-03-15",
+          "price": 789,
+          "height": 70
+        },
+        {
+          "date": "2026-03-16",
+          "price": 748,
+          "height": 68
+        },
+        {
+          "date": "2026-03-17",
+          "price": 636,
+          "height": 51
+        },
+        {
+          "date": "2026-03-18",
+          "price": 1104,
+          "height": 78
+        },
+        {
+          "date": "2026-03-19",
+          "price": 906,
+          "height": 56
+        },
+        {
+          "date": "2026-03-20",
+          "price": 891,
+          "height": 46
+        },
+        {
+          "date": "2026-03-21",
+          "price": 805,
+          "height": 35
+        },
+        {
+          "date": "2026-03-22",
+          "price": 864,
+          "height": 44
+        },
+        {
+          "date": "2026-03-23",
+          "price": 662,
+          "height": 51
+        },
+        {
+          "date": "2026-03-24",
+          "price": 801,
+          "height": 67
+        },
+        {
+          "date": "2026-03-25",
+          "price": 765,
+          "height": 73
+        },
+        {
+          "date": "2026-03-26",
+          "price": 935,
+          "height": 54
+        },
+        {
+          "date": "2026-03-27",
+          "price": 753,
+          "height": 48
+        },
+        {
+          "date": "2026-03-28",
+          "price": 1054,
+          "height": 47
+        },
+        {
+          "date": "2026-03-29",
+          "price": 844,
+          "height": 77
+        },
+        {
+          "date": "2026-03-30",
+          "price": 1005,
+          "height": 51
+        },
+        {
+          "date": "2026-03-31",
+          "price": 709,
+          "height": 80
+        },
+        {
+          "date": "2026-04-01",
+          "price": 750,
+          "height": 41
+        },
+        {
+          "date": "2026-04-02",
+          "price": 741,
+          "height": 55
+        },
+        {
+          "date": "2026-04-03",
+          "price": 900,
+          "height": 57
+        },
+        {
+          "date": "2026-04-04",
+          "price": 1086,
+          "height": 74
+        },
+        {
+          "date": "2026-04-05",
+          "price": 752,
+          "height": 77
+        },
+        {
+          "date": "2026-04-06",
+          "price": 711,
+          "height": 70
+        },
+        {
+          "date": "2026-04-07",
+          "price": 1097,
+          "height": 75
+        },
+        {
+          "date": "2026-04-08",
+          "price": 620,
+          "height": 52
+        },
+        {
+          "date": "2026-04-09",
+          "price": 1088,
+          "height": 67
+        },
+        {
+          "date": "2026-04-10",
+          "price": 814,
+          "height": 76
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.192132Z"
+    },
+    {
+      "id": "deal_HGH_HKG_20260423",
+      "from": {
+        "code": "HGH",
+        "city": "杭州"
+      },
+      "to": {
+        "code": "HKG",
+        "city": "香港"
+      },
+      "airline": "国泰航空",
+      "price": 1030,
+      "originalPrice": 2200,
+      "discount": "4.7折",
+      "tags": [
+        "直飞",
+        "极速出票"
+      ],
+      "hotTag": "✨ 极致性价比",
+      "departDate": "2026-04-23",
+      "imageUrl": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800",
+      "region": "intl",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-HGH-HKG?depdate=2026-04-23",
+      "source": "携程",
+      "recommendation": "超低价",
+      "recommendationReason": "说走就走",
+      "priceStatus": "当前价格较均价低 42%",
+      "priceStatusPercent": 28,
+      "priceHistory": [
+        {
+          "date": "2026-03-12",
+          "price": 858,
+          "height": 55
+        },
+        {
+          "date": "2026-03-13",
+          "price": 1046,
+          "height": 73
+        },
+        {
+          "date": "2026-03-14",
+          "price": 1071,
+          "height": 80
+        },
+        {
+          "date": "2026-03-15",
+          "price": 786,
+          "height": 71
+        },
+        {
+          "date": "2026-03-16",
+          "price": 766,
+          "height": 42
+        },
+        {
+          "date": "2026-03-17",
+          "price": 804,
+          "height": 49
+        },
+        {
+          "date": "2026-03-18",
+          "price": 1017,
+          "height": 66
+        },
+        {
+          "date": "2026-03-19",
+          "price": 1019,
+          "height": 74
+        },
+        {
+          "date": "2026-03-20",
+          "price": 840,
+          "height": 74
+        },
+        {
+          "date": "2026-03-21",
+          "price": 912,
+          "height": 78
+        },
+        {
+          "date": "2026-03-22",
+          "price": 1060,
+          "height": 50
+        },
+        {
+          "date": "2026-03-23",
+          "price": 686,
+          "height": 78
+        },
+        {
+          "date": "2026-03-24",
+          "price": 820,
+          "height": 76
+        },
+        {
+          "date": "2026-03-25",
+          "price": 723,
+          "height": 69
+        },
+        {
+          "date": "2026-03-26",
+          "price": 871,
+          "height": 46
+        },
+        {
+          "date": "2026-03-27",
+          "price": 621,
+          "height": 45
+        },
+        {
+          "date": "2026-03-28",
+          "price": 1036,
+          "height": 37
+        },
+        {
+          "date": "2026-03-29",
+          "price": 866,
+          "height": 78
+        },
+        {
+          "date": "2026-03-30",
+          "price": 717,
+          "height": 63
+        },
+        {
+          "date": "2026-03-31",
+          "price": 1036,
+          "height": 76
+        },
+        {
+          "date": "2026-04-01",
+          "price": 1057,
+          "height": 48
+        },
+        {
+          "date": "2026-04-02",
+          "price": 933,
+          "height": 71
+        },
+        {
+          "date": "2026-04-03",
+          "price": 1003,
+          "height": 41
+        },
+        {
+          "date": "2026-04-04",
+          "price": 689,
+          "height": 71
+        },
+        {
+          "date": "2026-04-05",
+          "price": 1106,
+          "height": 55
+        },
+        {
+          "date": "2026-04-06",
+          "price": 1109,
+          "height": 69
+        },
+        {
+          "date": "2026-04-07",
+          "price": 814,
+          "height": 45
+        },
+        {
+          "date": "2026-04-08",
+          "price": 1108,
+          "height": 75
+        },
+        {
+          "date": "2026-04-09",
+          "price": 1134,
+          "height": 44
+        },
+        {
+          "date": "2026-04-10",
+          "price": 683,
+          "height": 58
+        }
+      ],
+      "updatedAt": "2026-04-11T13:07:50.192261Z"
+    },
+    {
+      "id": "deal_PVG_TYO_20260415",
       "from": {
         "code": "PVG",
         "city": "上海"
@@ -3289,179 +3289,179 @@
         "city": "东京"
       },
       "airline": "全日空",
-      "price": 1792,
+      "price": 1715,
       "originalPrice": 3625,
-      "discount": "4.9折",
+      "discount": "4.7折",
       "tags": [
         "直飞",
         "服务佳"
       ],
       "hotTag": "⏰ 尾单特价",
-      "departDate": "2026-04-20",
+      "departDate": "2026-04-15",
       "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
       "region": "intl",
-      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E4%B8%8A%E6%B5%B7-%E4%B8%9C%E4%BA%AC&departDate=2026-04-20",
+      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E4%B8%8A%E6%B5%B7-%E4%B8%9C%E4%BA%AC&departDate=2026-04-15",
       "source": "飞猪",
       "recommendation": "樱花季",
       "recommendationReason": "热门推荐",
-      "priceStatus": "当前价格较均价低 22%",
-      "priceStatusPercent": 33,
+      "priceStatus": "当前价格较均价低 26%",
+      "priceStatusPercent": 37,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 1664,
+          "price": 1266,
           "height": 56
         },
         {
           "date": "2026-03-13",
-          "price": 1634,
-          "height": 39
+          "price": 1398,
+          "height": 50
         },
         {
           "date": "2026-03-14",
           "price": 1445,
-          "height": 80
+          "height": 67
         },
         {
           "date": "2026-03-15",
-          "price": 1440,
-          "height": 66
-        },
-        {
-          "date": "2026-03-16",
-          "price": 1229,
-          "height": 52
-        },
-        {
-          "date": "2026-03-17",
-          "price": 1148,
-          "height": 69
-        },
-        {
-          "date": "2026-03-18",
-          "price": 1032,
-          "height": 55
-        },
-        {
-          "date": "2026-03-19",
-          "price": 1703,
-          "height": 64
-        },
-        {
-          "date": "2026-03-20",
-          "price": 1587,
-          "height": 54
-        },
-        {
-          "date": "2026-03-21",
-          "price": 1321,
-          "height": 62
-        },
-        {
-          "date": "2026-03-22",
-          "price": 1819,
-          "height": 38
-        },
-        {
-          "date": "2026-03-23",
-          "price": 1217,
-          "height": 36
-        },
-        {
-          "date": "2026-03-24",
-          "price": 1250,
-          "height": 39
-        },
-        {
-          "date": "2026-03-25",
-          "price": 1287,
-          "height": 61
-        },
-        {
-          "date": "2026-03-26",
-          "price": 1358,
-          "height": 44
-        },
-        {
-          "date": "2026-03-27",
-          "price": 1333,
-          "height": 75
-        },
-        {
-          "date": "2026-03-28",
-          "price": 1281,
-          "height": 34
-        },
-        {
-          "date": "2026-03-29",
-          "price": 1111,
-          "height": 69
-        },
-        {
-          "date": "2026-03-30",
-          "price": 1563,
-          "height": 32
-        },
-        {
-          "date": "2026-03-31",
-          "price": 1547,
+          "price": 1599,
           "height": 74
         },
         {
+          "date": "2026-03-16",
+          "price": 1239,
+          "height": 44
+        },
+        {
+          "date": "2026-03-17",
+          "price": 1284,
+          "height": 54
+        },
+        {
+          "date": "2026-03-18",
+          "price": 1271,
+          "height": 31
+        },
+        {
+          "date": "2026-03-19",
+          "price": 1683,
+          "height": 53
+        },
+        {
+          "date": "2026-03-20",
+          "price": 1735,
+          "height": 61
+        },
+        {
+          "date": "2026-03-21",
+          "price": 1032,
+          "height": 42
+        },
+        {
+          "date": "2026-03-22",
+          "price": 1208,
+          "height": 49
+        },
+        {
+          "date": "2026-03-23",
+          "price": 1837,
+          "height": 60
+        },
+        {
+          "date": "2026-03-24",
+          "price": 1789,
+          "height": 79
+        },
+        {
+          "date": "2026-03-25",
+          "price": 1578,
+          "height": 68
+        },
+        {
+          "date": "2026-03-26",
+          "price": 1761,
+          "height": 43
+        },
+        {
+          "date": "2026-03-27",
+          "price": 1490,
+          "height": 54
+        },
+        {
+          "date": "2026-03-28",
+          "price": 1293,
+          "height": 36
+        },
+        {
+          "date": "2026-03-29",
+          "price": 1755,
+          "height": 57
+        },
+        {
+          "date": "2026-03-30",
+          "price": 1337,
+          "height": 48
+        },
+        {
+          "date": "2026-03-31",
+          "price": 1048,
+          "height": 61
+        },
+        {
           "date": "2026-04-01",
-          "price": 1830,
-          "height": 35
+          "price": 1253,
+          "height": 51
         },
         {
           "date": "2026-04-02",
-          "price": 1735,
+          "price": 1419,
           "height": 55
         },
         {
           "date": "2026-04-03",
-          "price": 1725,
-          "height": 63
+          "price": 1603,
+          "height": 35
         },
         {
           "date": "2026-04-04",
-          "price": 1190,
-          "height": 72
+          "price": 1545,
+          "height": 36
         },
         {
           "date": "2026-04-05",
-          "price": 1729,
-          "height": 51
+          "price": 1627,
+          "height": 59
         },
         {
           "date": "2026-04-06",
-          "price": 1359,
-          "height": 76
+          "price": 1595,
+          "height": 65
         },
         {
           "date": "2026-04-07",
-          "price": 1253,
-          "height": 80
+          "price": 1684,
+          "height": 64
         },
         {
           "date": "2026-04-08",
-          "price": 1490,
-          "height": 67
+          "price": 1708,
+          "height": 40
         },
         {
           "date": "2026-04-09",
-          "price": 1331,
-          "height": 52
+          "price": 1205,
+          "height": 67
         },
         {
           "date": "2026-04-10",
-          "price": 1698,
-          "height": 65
+          "price": 1544,
+          "height": 55
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.764936Z"
+      "updatedAt": "2026-04-11T13:07:50.192372Z"
     },
     {
-      "id": "deal_PVG_TYO_20260422",
+      "id": "deal_PVG_TYO_20260427",
       "from": {
         "code": "PVG",
         "city": "上海"
@@ -3471,176 +3471,176 @@
         "city": "东京"
       },
       "airline": "全日空",
-      "price": 1683,
+      "price": 1127,
       "originalPrice": 3625,
-      "discount": "4.6折",
+      "discount": "3.1折",
       "tags": [
         "直飞",
         "服务佳"
       ],
       "hotTag": "",
-      "departDate": "2026-04-22",
+      "departDate": "2026-04-27",
       "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
       "region": "intl",
-      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E4%B8%8A%E6%B5%B7-%E4%B8%9C%E4%BA%AC&departDate=2026-04-22",
+      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=%E4%B8%8A%E6%B5%B7-%E4%B8%9C%E4%BA%AC&departDate=2026-04-27",
       "source": "飞猪",
       "recommendation": "樱花季",
       "recommendationReason": "热门推荐",
-      "priceStatus": "当前价格较均价低 45%",
-      "priceStatusPercent": 40,
+      "priceStatus": "当前价格较均价低 35%",
+      "priceStatusPercent": 16,
       "priceHistory": [
         {
           "date": "2026-03-12",
-          "price": 1641,
-          "height": 48
+          "price": 1026,
+          "height": 41
         },
         {
           "date": "2026-03-13",
-          "price": 1542,
-          "height": 77
+          "price": 1734,
+          "height": 75
         },
         {
           "date": "2026-03-14",
-          "price": 1271,
-          "height": 42
+          "price": 1159,
+          "height": 75
         },
         {
           "date": "2026-03-15",
-          "price": 1584,
-          "height": 57
+          "price": 1527,
+          "height": 32
         },
         {
           "date": "2026-03-16",
-          "price": 1057,
-          "height": 68
-        },
-        {
-          "date": "2026-03-17",
-          "price": 1315,
-          "height": 45
-        },
-        {
-          "date": "2026-03-18",
-          "price": 1340,
-          "height": 71
-        },
-        {
-          "date": "2026-03-19",
-          "price": 1684,
-          "height": 74
-        },
-        {
-          "date": "2026-03-20",
-          "price": 1539,
-          "height": 74
-        },
-        {
-          "date": "2026-03-21",
-          "price": 1214,
-          "height": 60
-        },
-        {
-          "date": "2026-03-22",
-          "price": 1414,
-          "height": 56
-        },
-        {
-          "date": "2026-03-23",
-          "price": 1823,
-          "height": 67
-        },
-        {
-          "date": "2026-03-24",
-          "price": 1187,
-          "height": 31
-        },
-        {
-          "date": "2026-03-25",
-          "price": 1055,
-          "height": 71
-        },
-        {
-          "date": "2026-03-26",
-          "price": 1867,
-          "height": 70
-        },
-        {
-          "date": "2026-03-27",
-          "price": 1573,
-          "height": 70
-        },
-        {
-          "date": "2026-03-28",
-          "price": 1308,
-          "height": 55
-        },
-        {
-          "date": "2026-03-29",
-          "price": 1078,
-          "height": 37
-        },
-        {
-          "date": "2026-03-30",
-          "price": 1277,
-          "height": 65
-        },
-        {
-          "date": "2026-03-31",
-          "price": 1302,
-          "height": 38
-        },
-        {
-          "date": "2026-04-01",
-          "price": 1760,
+          "price": 1159,
           "height": 53
         },
         {
-          "date": "2026-04-02",
-          "price": 1846,
-          "height": 60
+          "date": "2026-03-17",
+          "price": 1529,
+          "height": 66
         },
         {
-          "date": "2026-04-03",
-          "price": 1157,
-          "height": 31
+          "date": "2026-03-18",
+          "price": 1732,
+          "height": 41
         },
         {
-          "date": "2026-04-04",
-          "price": 1667,
-          "height": 36
+          "date": "2026-03-19",
+          "price": 1497,
+          "height": 32
         },
         {
-          "date": "2026-04-05",
-          "price": 1183,
-          "height": 58
+          "date": "2026-03-20",
+          "price": 1045,
+          "height": 70
         },
         {
-          "date": "2026-04-06",
-          "price": 1138,
+          "date": "2026-03-21",
+          "price": 1203,
           "height": 64
         },
         {
-          "date": "2026-04-07",
-          "price": 1326,
-          "height": 40
+          "date": "2026-03-22",
+          "price": 1094,
+          "height": 59
         },
         {
-          "date": "2026-04-08",
-          "price": 1487,
-          "height": 77
+          "date": "2026-03-23",
+          "price": 1640,
+          "height": 75
         },
         {
-          "date": "2026-04-09",
-          "price": 1189,
+          "date": "2026-03-24",
+          "price": 1587,
+          "height": 57
+        },
+        {
+          "date": "2026-03-25",
+          "price": 1315,
+          "height": 75
+        },
+        {
+          "date": "2026-03-26",
+          "price": 1461,
+          "height": 54
+        },
+        {
+          "date": "2026-03-27",
+          "price": 1386,
+          "height": 41
+        },
+        {
+          "date": "2026-03-28",
+          "price": 1126,
+          "height": 64
+        },
+        {
+          "date": "2026-03-29",
+          "price": 1165,
           "height": 38
         },
         {
-          "date": "2026-04-10",
-          "price": 1564,
+          "date": "2026-03-30",
+          "price": 1065,
+          "height": 55
+        },
+        {
+          "date": "2026-03-31",
+          "price": 1535,
+          "height": 31
+        },
+        {
+          "date": "2026-04-01",
+          "price": 1145,
+          "height": 73
+        },
+        {
+          "date": "2026-04-02",
+          "price": 1839,
           "height": 52
+        },
+        {
+          "date": "2026-04-03",
+          "price": 1465,
+          "height": 56
+        },
+        {
+          "date": "2026-04-04",
+          "price": 1258,
+          "height": 67
+        },
+        {
+          "date": "2026-04-05",
+          "price": 1166,
+          "height": 66
+        },
+        {
+          "date": "2026-04-06",
+          "price": 1025,
+          "height": 59
+        },
+        {
+          "date": "2026-04-07",
+          "price": 1544,
+          "height": 65
+        },
+        {
+          "date": "2026-04-08",
+          "price": 1804,
+          "height": 44
+        },
+        {
+          "date": "2026-04-09",
+          "price": 1799,
+          "height": 59
+        },
+        {
+          "date": "2026-04-10",
+          "price": 1090,
+          "height": 75
         }
       ],
-      "updatedAt": "2026-04-11T12:58:09.765031Z"
+      "updatedAt": "2026-04-11T13:07:50.192486Z"
     }
   ]
 }
