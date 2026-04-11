@@ -458,13 +458,17 @@ async function doSearch() {
     bg.style.backgroundImage = `url('https://picsum.photos/seed/${seed}/1600/900')`;
     // 异步尝试换成更高质的 Unsplash（如有）
     const curatedIds = {
-      '北京': '1508804100515-570bbd72a4b0', // 故宫/长城地标
-      '上海': '1474181487828-5fe9a4ae19b2', // 外滩
-      '杭州': '1543097692-fa13c6cd8595', // 西湖
-      '东京': '1503899036084-755ad26bc2aa', // 涩谷
-      '大坂': '1540959733332-eab4deabeeaf', // 大阪城
-      '巴黎': '1502602898657-3e91760cbb34', // 埃菲尔
-      '伦敦': '1513635269975-59663e0ac1ad'  // 大本钟
+      '北京': 'plTGQdqnozA', // 故宫地标
+      '上海': 'z2Qadkv1fDc', // 外滩全景
+      '广州': 'BZG5p-u35tI', // 广州塔夜景
+      '深圳': 'xQdUIo_MSQ4', // 现代天际线
+      '成都': 'JwigqKcH2_U', // 大熊猫
+      '杭州': 'GEjGkc7Tb7Y', // 西湖美景
+      '重庆': 'PoFNeom7HC4', // 洪崖洞夜景
+      '东京': '1503899036084-755ad26bc2aa',
+      '大坂': '1540959733332-eab4deabeeaf',
+      '巴黎': '1502602898657-3e91760cbb34',
+      '伦敦': '1513635269975-59663e0ac1ad'
     };
     if (curatedIds[toCity]) {
       const img = new Image();
