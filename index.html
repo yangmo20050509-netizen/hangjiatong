@@ -237,8 +237,17 @@
     .filter-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tertiary-accent); margin-bottom: 0.25rem; }
     .filter-subtitle { font-size: 0.7rem; color: var(--outline); margin-bottom: 1.5rem; }
     .filter-group { margin-bottom: 1.75rem; }
-    .filter-group-label { display: flex; align-items: center; gap: 0.75rem; font-size: 0.825rem; font-weight: 600; color: var(--on-surface); margin-bottom: 0.5rem; cursor: pointer; padding: 0.5rem 0; }
+    .filter-group.open .filter-options { display: block; }
+    .filter-group.open .arrow-icon { transform: rotate(180deg); }
+    .filter-group-label { display: flex; align-items: center; justify-content: space-between; font-size: 0.825rem; font-weight: 600; color: var(--on-surface); margin-bottom: 0.5rem; cursor: pointer; padding: 0.5rem 0; transition: color var(--transition-fast); }
+    .filter-group-label:hover { color: var(--primary); }
+    .filter-group-label .label-left { display: flex; align-items: center; gap: 0.75rem; }
     .filter-group-label .material-symbols-outlined { font-size: 1.25rem; color: var(--outline); }
+    .filter-group-label .arrow-icon { font-size: 1.25rem; color: var(--outline); transition: transform var(--transition-fast); }
+    .filter-options { display: none; padding-top: 0.25rem; animation: slideDown 0.2s ease; }
+    .filter-check { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: var(--on-surface-variant); cursor: pointer; }
+    .filter-check input { width: 14px; height: 14px; accent-color: var(--tertiary-accent); cursor: pointer; }
+    .filter-check:last-child { margin-bottom: 0; }
     .trend-card { background: var(--surface-lowest); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-ambient); margin-bottom: 2rem; }
     .trend-conclusion { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: rgba(0,106,106,0.06); border-left: 3px solid var(--secondary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 1.25rem; font-size: 0.85rem; font-weight: 600; color: var(--secondary); }
     .trend-conclusion .material-symbols-outlined { font-size: 1.1rem; }
@@ -527,10 +536,53 @@
         <aside class="filter-panel">
           <div class="filter-title">筛选条件</div>
           <div class="filter-subtitle">精确匹配你的航程</div>
-          <div class="filter-group"><div class="filter-group-label"><span class="material-symbols-outlined">payments</span>价格区间</div></div>
-          <div class="filter-group"><div class="filter-group-label"><span class="material-symbols-outlined">flight_takeoff</span>航空公司</div></div>
-          <div class="filter-group"><div class="filter-group-label"><span class="material-symbols-outlined">connecting_airports</span>中转次数</div></div>
-          <div class="filter-group"><div class="filter-group-label"><span class="material-symbols-outlined">luggage</span>行李额度</div></div>
+          
+          <div class="filter-group open">
+            <div class="filter-group-label" onclick="this.parentElement.classList.toggle('open')">
+              <div class="label-left"><span class="material-symbols-outlined">payments</span>价格区间</div>
+              <span class="material-symbols-outlined arrow-icon">expand_more</span>
+            </div>
+            <div class="filter-options">
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>¥1000 以下</span></label>
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>¥1000 - ¥3000</span></label>
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>¥3000 以上</span></label>
+            </div>
+          </div>
+          
+          <div class="filter-group open">
+            <div class="filter-group-label" onclick="this.parentElement.classList.toggle('open')">
+              <div class="label-left"><span class="material-symbols-outlined">flight_takeoff</span>航空公司</div>
+              <span class="material-symbols-outlined arrow-icon">expand_more</span>
+            </div>
+            <div class="filter-options">
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>中国南方航空</span></label>
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>中国东方航空</span></label>
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>中国国际航空</span></label>
+            </div>
+          </div>
+
+          <div class="filter-group open">
+            <div class="filter-group-label" onclick="this.parentElement.classList.toggle('open')">
+              <div class="label-left"><span class="material-symbols-outlined">connecting_airports</span>中转次数</div>
+              <span class="material-symbols-outlined arrow-icon">expand_more</span>
+            </div>
+            <div class="filter-options">
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>直飞</span></label>
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>1 次中转</span></label>
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>2 次及以上</span></label>
+            </div>
+          </div>
+
+          <div class="filter-group open">
+            <div class="filter-group-label" onclick="this.parentElement.classList.toggle('open')">
+              <div class="label-left"><span class="material-symbols-outlined">luggage</span>行李额度</div>
+              <span class="material-symbols-outlined arrow-icon">expand_more</span>
+            </div>
+            <div class="filter-options">
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>含免费托运</span></label>
+              <label class="filter-check"><input type="checkbox" onchange="runFilterUI()"><span>仅手提行李</span></label>
+            </div>
+          </div>
         </aside>
         <div>
           <div class="trend-card" id="trend-container"><!-- JS 动态渲染 --></div>
@@ -1003,6 +1055,20 @@
       navigateTo('results');
       const data = await getSearch(from, to);
       renderFlights(data);
+    }
+
+    function runFilterUI() {
+      const container = document.getElementById('flights-container');
+      if (!container) return;
+      container.style.transition = 'opacity 0.3s ease';
+      container.style.opacity = '0.3';
+      container.style.pointerEvents = 'none';
+      
+      setTimeout(() => {
+        container.style.opacity = '1';
+        container.style.pointerEvents = 'auto';
+        showToast('筛选条件已更新');
+      }, 600);
     }
 
     async function showFlightDetail(id) {
