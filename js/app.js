@@ -152,11 +152,11 @@ function renderTrend(trend, conclusion, priceHistory) {
       <div class="price"><div class="price-label">最低价格</div><div class="price-value">¥${lowest.toLocaleString()}</div></div>
     </div>
     <div class="trend-chart">
-      ${bars.map(b => {
+      ${bars.length ? bars.map(b => {
         const p = b.price || trend.lowestPrice || 0;
         const d = b.date || b.day || '';
         return `<div class="trend-bar-wrap ${b.isToday?'today':''}"><div class="trend-bar ${b.isLowest?'lowest':''}" style="height:${b.height}%"><div class="trend-tooltip">¥${p.toLocaleString()}<br/>${d}</div></div></div>`;
-      }).join('')}
+      }).join('') : '<div style="flex:1; display:flex; align-items:center; justify-content:center; color:var(--outline); font-size:0.8rem;">正在同步最新历史价格...</div>'}
     </div>`;
 }
 
@@ -184,9 +184,9 @@ function renderFlights(data) {
       ${f.badge ? `<div class="flight-card-badge ${badgeClass}">${f.badge}</div>` : ''}
       <div class="fc-airline">
         <div class="fc-airline-logo">
-          <img src="https://img.logo.dev/航空?token=placeholder&size=100&name=${encodeURIComponent(f.airline)}" 
+          <img src="https://img.logo.dev/${encodeURIComponent(f.airline)}?token=placeholder&size=100" 
                alt="${f.airline}" class="fc-airline-img" 
-               onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\"material-symbols-outlined\" style=\"color:var(--primary);\">flight</span>';">
+               onerror="this.onerror=null; this.src='https://picsum.photos/seed/${encodeURIComponent(f.airline)}/100/100';">
         </div>
         <div>
           <div class="fc-airline-name">${f.airline}</div>
