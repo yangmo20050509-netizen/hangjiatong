@@ -79,10 +79,10 @@ def main():
     # 航线模板库（只维护结构，日期和价格由机器智能推算）
     templates = [
         # --- 国内航线 ---
-        {"from_code": "SHA", "from_city": "上海", "to_code": "HGH", "to_city": "杭州", "basePrice": 380, "source": "携程", "airline": "南方航空", "tags": ["直飞", "极速出票"], "rec": "最划算", "recReason": "高铁价优选", "img": "https://images.unsplash.com/photo-1543097692-fa13c6cd8595?w=800", "region": "domestic"},
-        {"from_code": "PEK", "from_city": "北京", "to_code": "CAN", "to_city": "广州", "basePrice": 850, "source": "飞猪", "airline": "中国国航", "tags": ["直飞", "含托运"], "rec": "最省时", "recReason": "黄金航线", "img": "https://images.unsplash.com/photo-1541444085440-424a520ff74d?w=800", "region": "domestic"},
+        {"from_code": "SHA", "from_city": "上海", "to_code": "HGH", "to_city": "杭州", "basePrice": 380, "source": "携程", "airline": "南方航空", "tags": ["直飞", "极速出票"], "rec": "最划算", "recReason": "高铁价优选", "img": "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800", "region": "domestic"}, 
+        {"from_code": "PEK", "from_city": "北京", "to_code": "CAN", "to_city": "广州", "basePrice": 850, "source": "飞猪", "airline": "中国国航", "tags": ["直飞", "含托运"], "rec": "最省时", "recReason": "黄金航线", "img": "https://images.unsplash.com/photo-1541123437220-72c5ef216306?w=800", "region": "domestic"},
         {"from_code": "CTU", "from_city": "成都", "to_code": "SZX", "to_city": "深圳", "basePrice": 620, "source": "去哪儿", "airline": "深圳航空", "tags": ["准点率高", "含餐食"], "rec": "体验好", "recReason": "宽体机执飞", "img": "https://images.unsplash.com/photo-1582234372722-50d7ccc30e5a?w=800", "region": "domestic"},
-        {"from_code": "CKG", "from_city": "重庆", "to_code": "SHA", "to_city": "上海", "basePrice": 450, "source": "携程", "airline": "春秋航空", "tags": ["低价大促", "不可退改"], "rec": "极低价", "recReason": "近期低位", "img": "https://images.unsplash.com/photo-1548919973-5cfe5d4fc494?w=800", "region": "domestic"},
+        {"from_code": "CKG", "from_city": "重庆", "to_code": "SHA", "to_city": "上海", "basePrice": 450, "source": "携程", "airline": "春秋航空", "tags": ["低价大促", "不可退改"], "rec": "极低价", "recReason": "近期低位", "img": "https://images.unsplash.com/photo-1474181487828-5fe9a4ae19b2?w=800", "region": "domestic"},
         {"from_code": "BJS", "from_city": "北京", "to_code": "HGH", "to_city": "杭州", "basePrice": 580, "source": "携程", "airline": "海航", "tags": ["直飞", "极速出票"], "rec": "西湖韵", "recReason": "美景推荐", "img": "https://images.unsplash.com/photo-1543097692-fa13c6cd8595?w=800", "region": "domestic"},
 
         # --- 国际航线 ---
