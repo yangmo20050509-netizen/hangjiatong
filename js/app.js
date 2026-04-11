@@ -11,6 +11,7 @@ const APP_STATE = {
   monitors: JSON.parse(localStorage.getItem('hjt_monitors')) || null,
   isSubscribed: localStorage.getItem('hjt_subscribed') === 'true',
   currentResults: [], 
+  currentSearchData: null, // 新增：保存完整的搜索数据（包含趋势）
   filters: { price: [], airlines: [] },
   sort: 'price-asc'
 };
@@ -457,7 +458,7 @@ async function doSearch() {
     bg.style.backgroundImage = `url('https://picsum.photos/seed/${seed}/1600/900')`;
     // 异步尝试换成更高质的 Unsplash（如有）
     const curatedIds = {
-      '北京': '1541123437220-72c5ef216306',
+      '北京': '1508804100515-570bbd72a4b0', // 故宫地标
       '上海': '1474181487828-5fe9a4ae19b2',
       '杭州': '1543097692-fa13c6cd8595',
       '东京': '1540959733332-eab4deabeeaf',
@@ -477,6 +478,7 @@ async function doSearch() {
   
   const data = await getSearch(from, to);
   APP_STATE.currentResults = data.flights; 
+  APP_STATE.currentSearchData = data; // 保存趋势数据
   applyFiltersAndSort();
 }
 
@@ -516,15 +518,19 @@ function applyFiltersAndSort() {
   // 3. 排序逻辑
   results.sort((a, b) => {
     if (APP_STATE.sort === 'price-asc') return a.price - b.price;
-    if (APP_STATE.sort === 'time-asc') return a.departTime.replace(':', '') - b.departTime.replace(':', '');
+    if (APP_STATE.sort === 'time-asc') return a.departure.time.replace(':', '') - b.departure.time.replace(':', '');
     if (APP_STATE.sort === 'duration-asc') {
-        const getMin = (s) => parseInt(s.split('h')[0])*60 + parseInt(s.includes('m') ? s.split('h')[1] : 0);
-        return getMin(a.duration) - getMin(b.duration);
+        const getMin = (s) => (parseInt(s.split('h')[0])||0)*60 + (parseInt(s.includes('分') ? s.split('时')[1] : 0)||0);
+        return getMin(a.durationText) - getMin(b.durationText);
     }
     return 0;
   });
   
-  renderFlights({ flights: results });
+  renderFlights({ 
+    flights: results, 
+    trend: APP_STATE.currentSearchData?.trend, 
+    trendConclusion: APP_STATE.currentSearchData?.trendConclusion 
+  });
 }
 
 function addMonitorFromDetail() {
