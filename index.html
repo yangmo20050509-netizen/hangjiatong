@@ -397,6 +397,21 @@
       .stats-bar { flex-direction: column; align-items: flex-start; gap: 1rem; }
       .stat-divider { display: none; }
     }
+    
+    /* ============================================ NOTIFICATION DROPDOWN ============================================ */
+    .notif-dropdown { position: absolute; top: 60px; right: 0; width: 320px; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-lift); display: none; flex-direction: column; overflow: hidden; z-index: 200; border: 1px solid var(--outline-variant); text-align: left; }
+    .notif-dropdown.show { display: flex; animation: slideDown 0.3s ease; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .notif-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--outline-variant); display: flex; justify-content: space-between; align-items: center; }
+    .notif-header h3 { font-size: 1rem; font-weight: 800; color: var(--primary); margin: 0; }
+    .notif-clear { font-size: 0.75rem; color: var(--secondary); cursor: pointer; font-weight: 600; }
+    .notif-item { padding: 1rem 1.25rem; border-bottom: 1px solid var(--surface-dim); cursor: pointer; transition: background var(--transition-fast); }
+    .notif-item:hover { background: var(--surface-low); }
+    .notif-item:last-child { border-bottom: none; }
+    .notif-item-title { font-size: 0.85rem; font-weight: 800; color: var(--on-surface); margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;}
+    .notif-item-desc { font-size: 0.75rem; color: var(--outline); line-height: 1.4;}
+    .notif-item-time { font-size: 0.65rem; color: var(--outline-variant); margin-top: 0.5rem; }
+    .notif-empty { padding: 2rem; text-align: center; color: var(--outline); font-size: 0.85rem; font-weight: 600;}
   </style>
 </head>
 
@@ -411,9 +426,32 @@
           <a id="nav-subscription" onclick="navigateTo('home'); switchTab('monitor')">我的监控</a>
         </div>
       </div>
-      <div class="nav-right">
-        <button class="nav-icon notif-badge" title="通知"><span class="material-symbols-outlined">notifications</span></button>
+      <div class="nav-right" style="position:relative;">
+        <button class="nav-icon notif-badge" id="notif-btn" title="通知" onclick="toggleNotif()"><span class="material-symbols-outlined">notifications</span></button>
         <div class="avatar"><span>Y</span></div>
+        <div class="notif-dropdown" id="notif-dropdown">
+          <div class="notif-header">
+            <h3>消息中心</h3>
+            <span class="notif-clear" onclick="clearNotifs()">全部已读</span>
+          </div>
+          <div id="notif-list">
+            <div class="notif-item" onclick="navigateTo('home'); switchTab('monitor'); toggleNotif()">
+              <div class="notif-item-title">📉 航班降价提醒</div>
+              <div class="notif-item-desc">您监控的【上海 → 东京】航线降价了！当前最低 2,450 元！</div>
+              <div class="notif-item-time">2 分钟前</div>
+            </div>
+            <div class="notif-item" onclick="showToast('优惠活动航线即将截飞'); toggleNotif()">
+              <div class="notif-item-title">🔥 热门航线即将售罄</div>
+              <div class="notif-item-desc">【北京 → 悉尼】特价票仅剩最后 3 张，点击了解详情！</div>
+              <div class="notif-item-time">1 小时前</div>
+            </div>
+            <div class="notif-item" onclick="toggleNotif()">
+              <div class="notif-item-title">✨ 系统升级通知</div>
+              <div class="notif-item-desc">航价通算法引擎已升级，为您提供更准确实时的全网比价。</div>
+              <div class="notif-item-time">昨天</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -458,7 +496,7 @@
         <div class="cta-banner">
           <h2>掌握每一场降价</h2>
           <p>订阅我们的全球航线监控，在低价出现的第一秒获取通知。再也不错过任何一个说走就走的机会。</p>
-          <div class="cta-form"><input type="email" placeholder="您的电子邮箱" /><button onclick="showToast('订阅成功！我们将第一时间通知您')">立即订阅</button></div>
+          <div class="cta-form"><input type="email" id="sub-email" placeholder="您的电子邮箱" /><button id="sub-btn" onclick="handleSubscribe()">立即订阅</button></div>
         </div>
       </div>
 
@@ -1014,6 +1052,43 @@
           observer.observe(el);
         });
       }, 100);
+    });
+
+    function toggleNotif() {
+      document.getElementById('notif-dropdown').classList.toggle('show');
+    }
+    
+    function clearNotifs() {
+      document.getElementById('notif-list').innerHTML = '<div class="notif-empty">已清空所有消息</div>';
+      document.getElementById('notif-btn').classList.remove('notif-badge');
+      setTimeout(() => {
+        document.getElementById('notif-dropdown').classList.remove('show');
+      }, 800);
+    }
+    
+    function handleSubscribe() {
+      const input = document.getElementById('sub-email');
+      const btn = document.getElementById('sub-btn');
+      if (!input.value || !input.value.includes('@')) {
+        showToast('请输入有效的邮箱地址');
+        return;
+      }
+      btn.innerText = '正在订阅...';
+      btn.style.pointerEvents = 'none';
+      setTimeout(() => {
+        btn.innerText = '已订阅';
+        btn.style.background = '#2e7d32';
+        btn.style.boxShadow = '0 4px 16px rgba(46,125,50,0.3)';
+        showToast('订阅成功！我们将第一时间通知您');
+      }, 800);
+    }
+
+    document.addEventListener('click', function(e) {
+      const dropdown = document.getElementById('notif-dropdown');
+      const btn = document.getElementById('notif-btn');
+      if (dropdown && dropdown.classList.contains('show') && !dropdown.contains(e.target) && !btn.contains(e.target)) {
+        dropdown.classList.remove('show');
+      }
     });
   </script>
 </body>
