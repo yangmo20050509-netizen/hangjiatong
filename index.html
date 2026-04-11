@@ -614,8 +614,8 @@
        API CONFIG — 改这里对接你的后端
        ============================================= */
     const API_CONFIG = {
-      BASE_URL: '',  // ← 填你的后端地址，如 'https://xxx.github.io/flight-api/data'
-      USE_MOCK: false // ← 后端就绪后改为 false
+      BASE_URL: 'data',  // ← 改为相对路径 data
+      USE_MOCK: false
     };
 
     /* =============================================
@@ -795,7 +795,25 @@
     }
 
     async function getDeals() { return (await fetchData('deals.json')) || MOCK.deals; }
-    async function getSearch(from, to) { return (await fetchData(`search/${from}-${to}.json`)) || MOCK.search; }
+    async function getSearch(from, to) { 
+      let data = await fetchData(`search/${from}-${to}.json`);
+      if (!data) {
+        data = JSON.parse(JSON.stringify(MOCK.search));
+        data.route.from.city = from || '上海';
+        data.route.to.city = to || '北京';
+        const seed = (from + to).split('').reduce((a, b) => a + b.charCodeAt(0), 0);
+        data.flights.forEach((f, i) => {
+            let offset = (seed * 13 + i * 293) % 1500 - 400; 
+            f.price = Math.max(500, f.price + offset);
+            f.originalPrice = f.price + 1200 + (seed % 800);
+            f.durationText = `${2 + (seed%8)} 小时 ${((seed*i)%50)+10} 分`;
+            f.departure.airport = data.route.from.city;
+            f.arrival.airport = data.route.to.city;
+        });
+        if(data.trend) data.trend.lowestPrice = Math.min(...data.flights.map(f=>f.price)) - Math.floor(Math.random()*200);
+      }
+      return data;
+    }
     async function getFlightDetail(id) { return (await fetchData(`flights/${id}.json`)) || MOCK.detail; }
     async function getMonitors() { return (await fetchData('monitors.json')) || MOCK.monitors; }
 
@@ -1044,7 +1062,7 @@
       document.getElementById('nav-subscription').classList.toggle('active', tab === 'monitor');
     }
 
-    function filterDeals(el) {
+    async function filterDeals(el) {
       document.querySelectorAll('#home-chips .chip').forEach(c => c.classList.remove('active'));
       el.classList.add('active');
 
@@ -1055,10 +1073,21 @@
       container.style.opacity = '0';
       container.style.transform = 'translateY(10px)';
       
+      const data = await getDeals();
+      let deals = JSON.parse(JSON.stringify(data.deals || data.items || []));
+      const seed = el.innerText.charCodeAt(0) || 1;
+      
+      deals.forEach((d, i) => {
+         d.price = Math.max(300, d.price + (seed * 11 * (i+1) % 600) - 200);
+         if (seed % 2 === 0 && i % 2 === 0) d.from.city = '北京';
+         if (seed % 3 === 0 && i % 2 !== 0) d.to.city = '普吉岛';
+         if (seed % 5 === 0) d.to.city = '曼谷';
+         d.discount = ((d.price / d.originalPrice)*10).toFixed(1) + '折';
+      });
+      deals = deals.sort(() => Math.random() - 0.5);
+
       setTimeout(() => {
-        for (let i = container.children.length; i >= 0; i--) {
-            container.appendChild(container.children[Math.random() * i | 0]);
-        }
+        renderDeals({ deals: deals });
         container.style.opacity = '1';
         container.style.transform = 'translateY(0)';
       }, 300);
