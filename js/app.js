@@ -392,48 +392,28 @@ async function filterDeals(el) {
   container.style.opacity = '0';
   
   const data = await getDeals();
-  let deals = JSON.parse(JSON.stringify(data.deals || data.items || []));
+  const rawDeals = JSON.parse(JSON.stringify(data.deals || data.items || []));
+  let deals = rawDeals;
   const chipText = el.innerText.trim();
   
-  deals = deals.sort(() => Math.random() - 0.5);
+  if(chipText === '国内精选') {
+    deals = rawDeals.filter(d => d.region === 'domestic');
+  } else if(chipText === '国际大促') {
+    deals = rawDeals.filter(d => d.region === 'intl');
+  } else if(chipText === '直飞特惠') {
+    deals = rawDeals.filter(d => d.tags.includes('直飞'));
+  } else if(chipText === '本周末') {
+    const today = new Date();
+    deals = rawDeals.filter(d => {
+       const dd = new Date(d.departDate);
+       return dd.getDay() === 6 || dd.getDay() === 0; // 周六或周日
+    });
+  } else if(chipText === '说走就走') {
+    deals = rawDeals.filter(d => d.tags.includes('立刻出发') || d.tags.includes('尾单特价') || d.tags.includes('极速出票'));
+  }
   
-  deals.forEach((d, i) => {
-     d.price = Math.max(300, d.price + (Math.random()*400|0) - 200);
-     d.originalPrice = d.price + (Math.random()*800|0) + 500;
-     d.discount = ((d.price / d.originalPrice)*10).toFixed(1) + '折';
-     
-     if(chipText === '国内精选') {
-        const cities = ['杭州','成都','重庆','广州','三亚','厦门'];
-        if(i%2===0) d.from.city = '北京';
-        d.to.city = cities[i % cities.length];
-        d.tags = ['直飞', '极速出票'];
-        d.hotTag = '🔥 爆款国内游';
-     } else if(chipText === '国际大促') {
-        const cities = ['巴黎','伦敦','悉尼','法兰克福','纽约','东京'];
-        d.from.city = '上海';
-        d.to.city = cities[i % cities.length];
-        d.tags = ['含托运23kg', '税费全包'];
-        d.hotTag = '🛍️ 国际抄底价';
-     } else if(chipText === '直飞特惠') {
-        d.tags = ['直飞', '无经停'];
-        d.hotTag = '✈️ 极速直达';
-     } else if(chipText === '本周末') {
-        const today = new Date();
-        const daysUntilWeekend = (6 - today.getDay() + 7) % 7 || 7;
-        today.setDate(today.getDate() + daysUntilWeekend);
-        d.departDate = today.toISOString().split('T')[0];
-        d.tags = ['周末度假', '早班机'];
-        d.hotTag = '🌴 周末专享';
-     } else if(chipText === '说走就走') {
-        const tmr = new Date();
-        tmr.setDate(tmr.getDate() + 1);
-        d.departDate = tmr.toISOString().split('T')[0];
-        d.tags = ['立刻出发', '不可退改'];
-        d.hotTag = '⏰ 尾单甩卖极速出';
-     }
-  });
-  
-  deals = deals.slice(0, 3);
+  // 保持随机排序增加发现感，但不再篡改地名
+  deals = deals.sort(() => Math.random() - 0.5).slice(0, 6);
 
   renderDeals({ deals: deals });
   container.style.opacity = '1';
