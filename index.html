@@ -144,7 +144,17 @@
   <!-- PAGE 2: SEARCH RESULTS -->
   <div class="page" id="page-results">
     <div class="page-body" style="padding-top:1.5rem;">
-      <button class="back-btn" onclick="navigateTo('home')"><span class="material-symbols-outlined">arrow_back</span> 返回首页</button>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+        <button class="back-btn" onclick="navigateTo('home')" style="padding:0;"><span class="material-symbols-outlined">arrow_back</span> 返回首页</button>
+        <div class="sort-controls">
+          <span style="font-size:0.85rem;color:var(--outline);margin-right:0.5rem;">排序方式</span>
+          <select id="sort-select" onchange="runFilterUI()" style="background:var(--surface);border:1px solid var(--outline-variant);padding:0.35rem 0.75rem;border-radius:var(--radius-sm);font-size:0.85rem;color:var(--on-surface);">
+            <option value="price-asc">价格最低优先</option>
+            <option value="time-asc">起飞时间最早</option>
+            <option value="duration-asc">飞行耗时最短</option>
+          </select>
+        </div>
+      </div>
       <div class="results-layout">
         <aside class="filter-panel">
           <div class="filter-title">筛选条件</div>
@@ -266,5 +276,16 @@
 
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').then(reg => {
+          console.log('SW registered:', reg);
+        }).catch(err => {
+          console.log('SW reg failed:', err);
+        });
+      });
+    }
+  </script>
 </body>
 </html>

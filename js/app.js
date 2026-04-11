@@ -9,7 +9,10 @@ const API_CONFIG = {
 
 const APP_STATE = {
   monitors: JSON.parse(localStorage.getItem('hjt_monitors')) || null,
-  isSubscribed: localStorage.getItem('hjt_subscribed') === 'true'
+  isSubscribed: localStorage.getItem('hjt_subscribed') === 'true',
+  currentResults: [], 
+  filters: { price: [], airlines: [] },
+  sort: 'price-asc'
 };
 
 function saveAppState() {
@@ -122,23 +125,38 @@ function renderDeals(data) {
   }
 }
 
-function renderTrend(trend, conclusion) {
+function renderTrend(trend, conclusion, priceHistory) {
+  const bars = priceHistory || trend?.bars || [];
+  const hint = trend?.hint || '实时低价探测中';
+  const lowest = trend?.lowestPrice || (bars.length ? Math.min(...bars.map(b => b.price)) : 0);
+  
   return `
     ${conclusion ? `<div class="trend-conclusion"><span class="material-symbols-outlined">trending_down</span>${conclusion}</div>` : ''}
     <div class="trend-header">
-      <div><h3>价格走势</h3><div class="trend-hint">${trend.hint}</div></div>
-      <div class="price"><div class="price-label">最低价格</div><div class="price-value">¥${trend.lowestPrice.toLocaleString()}</div></div>
+      <div><h3>价格走势</h3><div class="trend-hint">${hint}</div></div>
+      <div class="price"><div class="price-label">最低价格</div><div class="price-value">¥${lowest.toLocaleString()}</div></div>
     </div>
     <div class="trend-chart">
-      ${trend.bars.map(b => `<div class="trend-bar-wrap ${b.type==='today'?'today':''}"><div class="trend-bar ${b.type}" style="height:${b.height}%"></div><div class="trend-label">${b.day}</div></div>`).join('')}
+      ${bars.map(b => `<div class="trend-bar-wrap ${b.isToday?'today':''}"><div class="trend-bar ${b.isLowest?'lowest':''}" style="height:${b.height}%"><div class="trend-tooltip">¥${b.price}<br/>${b.date}</div></div></div>`).join('')}
     </div>`;
 }
 
 function renderFlights(data) {
   const trendBox = document.getElementById('trend-container');
-  if (trendBox) trendBox.innerHTML = renderTrend(data.trend, data.trendConclusion);
+  // 优先尝试从搜索结果的第一条中提取历史（模拟真实感），或者直接用 data.trend
+  const hist = data.flights?.[0]?.priceHistory || data.priceHistory;
+  if (trendBox) trendBox.innerHTML = renderTrend(data.trend, data.trendConclusion, hist);
+  
   const container = document.getElementById('flights-container');
   if (!container) return;
+  
+  if (data.flights.length === 0) {
+    container.innerHTML = `<div style="text-align:center;padding:4rem;grid-column:1/-1;color:var(--outline);">
+      <span class="material-symbols-outlined" style="font-size:3rem;margin-bottom:1rem;opacity:0.3;">search_off</span>
+      <p>未找到符合条件的航班，请尝试调整筛选条件</p>
+    </div>`;
+    return;
+  }
   container.innerHTML = data.flights.map(f => {
     const badgeClass = f.badgeType === 'cheapest' ? 'cheapest' : (f.badgeType === 'safest' ? 'safest' : (f.badgeType === 'business' ? 'business' : ''));
     const btnText = f.source ? `去${f.source}查看 ↗` : '查看详情';
@@ -425,16 +443,57 @@ async function doSearch() {
   const from = (document.getElementById('input-from')?.value || 'SHA').trim();
   const to = (document.getElementById('input-to')?.value || 'PEK').trim();
   navigateTo('results');
+  
   const data = await getSearch(from, to);
-  renderFlights(data);
+  APP_STATE.currentResults = data.flights; // 缓存原始结果
+  applyFiltersAndSort();
 }
 
 function runFilterUI() {
-  const container = document.getElementById('flights-container');
-  if (!container) return;
-  container.style.opacity = '1';
-  container.style.pointerEvents = 'auto';
-  showToast('筛选条件已更新');
+  // 获取当前所有的筛选状态
+  const priceChecks = Array.from(document.querySelectorAll('input[type="checkbox"]')).filter(i => i.closest('.filter-group')?.innerText.includes('价格'));
+  const airlineChecks = Array.from(document.querySelectorAll('input[type="checkbox"]')).filter(i => i.closest('.filter-group')?.innerText.includes('航空'));
+  
+  APP_STATE.filters.price = priceChecks.filter(i => i.checked).map(i => i.nextElementSibling.innerText);
+  APP_STATE.filters.airlines = airlineChecks.filter(i => i.checked).map(i => i.nextElementSibling.innerText);
+  
+  const sortSelect = document.getElementById('sort-select');
+  if (sortSelect) APP_STATE.sort = sortSelect.value;
+  
+  applyFiltersAndSort();
+  showToast('结果已更新');
+}
+
+function applyFiltersAndSort() {
+  let results = [...APP_STATE.currentResults];
+  
+  // 1. 航空公司过滤
+  if (APP_STATE.filters.airlines.length > 0) {
+    results = results.filter(f => APP_STATE.filters.airlines.includes(f.airline));
+  }
+  
+  // 2. 价格区间过滤
+  if (APP_STATE.filters.price.length > 0) {
+    results = results.filter(f => {
+      if (APP_STATE.filters.price.includes('¥1000 以下') && f.price < 1000) return true;
+      if (APP_STATE.filters.price.includes('¥1000 - ¥3000') && f.price >= 1000 && f.price <= 3000) return true;
+      if (APP_STATE.filters.price.includes('¥3000 以上') && f.price > 3000) return true;
+      return false;
+    });
+  }
+  
+  // 3. 排序逻辑
+  results.sort((a, b) => {
+    if (APP_STATE.sort === 'price-asc') return a.price - b.price;
+    if (APP_STATE.sort === 'time-asc') return a.departTime.replace(':', '') - b.departTime.replace(':', '');
+    if (APP_STATE.sort === 'duration-asc') {
+        const getMin = (s) => parseInt(s.split('h')[0])*60 + parseInt(s.includes('m') ? s.split('h')[1] : 0);
+        return getMin(a.duration) - getMin(b.duration);
+    }
+    return 0;
+  });
+  
+  renderFlights({ flights: results });
 }
 
 function addMonitorFromDetail() {
