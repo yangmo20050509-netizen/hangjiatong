@@ -94,7 +94,7 @@ function renderDeals(data) {
   container.innerHTML = (data.deals || data.items || []).map(d => `
     <div class="deal-card" onclick="openBooking('${d.bookingUrl}')">
       <div class="deal-card-img">
-        <img src="${d.imageUrl}" alt="${d.to.city}" />
+        <img src="${d.imageUrl}" alt="${d.to.city}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';" />
         <span class="discount-badge">${d.discount}</span>
         <span class="source-badge">来自${d.source}</span>
       </div>
@@ -164,7 +164,7 @@ function renderFlights(data) {
     <div class="flight-card" onclick="showFlightDetail('${f.id}')">
       ${f.badge ? `<div class="flight-card-badge ${badgeClass}">${f.badge}</div>` : ''}
       <div class="fc-airline">
-        <div class="fc-airline-logo"><span class="material-symbols-outlined icon-filled">flight</span></div>
+        <div class="fc-airline-logo"><img src="${f.airlineLogo || 'https://images.unsplash.com/photo-1436491865332-7a61a109c055?w=100'}" class="fc-airline-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1436491865332-7a61a109c055?w=100';"></div>
         <div>
           <div class="fc-airline-name">${f.airline}</div>
           <div class="fc-airline-detail">${f.flightNo} | ${f.aircraft}</div>
@@ -276,7 +276,7 @@ function renderDetail(data) {
         <div class="similar-list">
           ${(f.similarRoutes||[]).map(s => `
             <div class="similar-item" onclick="openBooking('${s.bookingUrl}')">
-              <div class="similar-thumb"><img src="${s.imageUrl}" alt="${s.toCity}" /></div>
+              <div class="similar-thumb"><img src="${s.imageUrl}" alt="${s.toCity}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';" /></div>
               <div class="similar-info"><h4>${s.from} → ${s.toCity} ${s.to}</h4><p>${s.date} · ${s.info}</p></div>
               <div class="similar-price"><div class="label">起价</div><div class="value">¥${s.price.toLocaleString()}</div></div>
             </div>`).join('')}
