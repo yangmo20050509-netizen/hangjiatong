@@ -1026,9 +1026,12 @@
             </div>
             ${m.trend.length ? `<div class="monitor-trend">${m.trend.map((h,i) => `<div class="monitor-trend-bar ${i===m.trend.length-1?'current':''}" style="height:${h}%"></div>`).join('')}</div>` : ''}
             ${isHighlight ? `<div style="background:rgba(255,255,255,0.08);border-radius:var(--radius-sm);padding:0.75rem;margin-bottom:1rem;font-size:0.75rem;line-height:1.5;">接近目标价格！建议开启强提醒通知。</div>` : ''}
-            <div class="monitor-footer">
-              <span>${m.lastUpdated ? '最后更新: '+m.lastUpdated : ''}</span>
-              <span class="monitor-action" onclick="openBooking('${m.bookingUrl}')">${actionText}</span>
+            <div class="monitor-footer" style="display:flex; justify-content:space-between; width:100%">
+              <span class="monitor-action" style="color:var(--outline);font-weight:400" onclick="removeMonitor(this)">取消监控</span>
+              <div style="display:flex;gap:1rem;align-items:center">
+                <span>${m.lastUpdated ? '最后更新: '+m.lastUpdated : ''}</span>
+                <span class="monitor-action" onclick="openBooking('${m.bookingUrl}')">${actionText}</span>
+              </div>
             </div>
           </div>`;
       }).join('');
@@ -1113,6 +1116,19 @@
         container.style.pointerEvents = 'auto';
         showToast('筛选条件已更新');
       }, 600);
+    }
+
+    function removeMonitor(btn) {
+      const card = btn.closest('.monitor-card');
+      if(card) {
+        card.style.transition = 'all 0.3s ease';
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+          card.remove();
+          showToast('监控已取消');
+        }, 300);
+      }
     }
 
     async function showFlightDetail(id) {
