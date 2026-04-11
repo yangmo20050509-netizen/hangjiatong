@@ -454,8 +454,7 @@ async function doSearch() {
   // 动态设置搜索页 Hero 背景图
   const bg = document.getElementById('results-hero-bg');
   if (bg) {
-    const seed = encodeURIComponent(toCity);
-    bg.style.backgroundImage = `url('https://picsum.photos/seed/${seed}/1600/900')`;
+    bg.style.background = 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)'; // Premium fallback
     // 异步尝试换成更高质的 Unsplash（如有）
     const curatedIds = {
       '北京': '1592620540259-75b9f6500187', // 故宫
@@ -468,7 +467,6 @@ async function doSearch() {
       '东京': '1503899036084-755ad26bc2aa',
       '大坂': '1540959733332-eab4deabeeaf',
       '巴黎': '1502602898657-3e91760cbb34',
-      '伦敦': '1513635269975-59663e0ac1ad'
     };
     if (curatedIds[toCity]) {
       const img = new Image();
