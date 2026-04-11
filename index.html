@@ -1010,26 +1010,7 @@
               <div class="alert-icon"><span class="material-symbols-outlined icon-filled">notifications_active</span></div>
               <div class="alert-text"><h4>降价提醒</h4><p>该航线价格波动较大，建议开启监控</p></div>
               <div class="alert-add"><span class="material-symbols-outlined" style="font-size:1rem;">add</span></div>
-            </div>
-          </div>
         </div>
-        <script>
-          // Local helper for detail page logic if needed, but easier to use global
-          function addMonitorFromDetail() {
-            const f = window.currentDetailFlight;
-            if(f) {
-              addMonitor({
-                from: f.departure.airport,
-                fromCode: f.departure.code,
-                to: f.arrival.airport,
-                toCode: f.arrival.code,
-                airline: f.airline,
-                currentPrice: f.price,
-                targetPrice: Math.floor(f.price * 0.9)
-              });
-            }
-          }
-        </script>
         <div class="detail-bottom">
           <div class="detail-trend-card">
             <div class="trend-conclusion"><span class="material-symbols-outlined">trending_down</span>当前价格低于近 30 天均价，建议尽早锁票</div>
@@ -1200,6 +1181,21 @@
         container.style.pointerEvents = 'auto';
         showToast('筛选条件已更新');
       }, 600);
+    }
+
+    function addMonitorFromDetail() {
+      const f = window.currentDetailFlight;
+      if(f) {
+        addMonitor({
+          from: f.departure.airport || f.departure.code,
+          fromCode: f.departure.code,
+          to: f.arrival.airport || f.arrival.code,
+          toCode: f.arrival.code,
+          airline: f.airline,
+          currentPrice: f.price,
+          targetPrice: Math.floor(f.price * 0.9)
+        });
+      }
     }
 
     function addMonitor(m) {
