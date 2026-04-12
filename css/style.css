@@ -376,7 +376,7 @@ ul { list-style: none; }
 .back-btn { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--outline); font-size: 0.85rem; font-weight: 600; padding: 0.75rem 0; cursor: pointer; transition: color var(--transition-fast); }
 .back-btn:hover { color: var(--primary); }
 .tab-content.active { display: block; padding-top: 2rem; }
-#tab-monitor.active { padding-top: 4.5rem; }
+#tab-monitor.active { padding-top: 6rem; }
 .toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--primary); color: white; padding: 0.875rem 1.75rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600; box-shadow: var(--shadow-lift); transition: transform 0.4s ease; z-index: 200; }
 .toast.show { transform: translateX(-50%) translateY(0); }
 .loading-skeleton { background: linear-gradient(90deg, var(--surface-low) 25%, var(--surface-high) 50%, var(--surface-low) 75%); background-size: 200% 100%; animation: shimmer 2s infinite ease-in-out; border-radius: var(--radius-md); }
