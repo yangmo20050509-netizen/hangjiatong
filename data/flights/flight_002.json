@@ -1,0 +1,132 @@
+{
+  "updatedAt": "2026-04-12T08:28:03Z",
+  "flight": {
+    "id": "flight_002",
+    "airline": "中国国际航空",
+    "flightNo": "CA1502",
+    "aircraft": "空客 A350-900",
+    "departure": {
+      "time": "12:30",
+      "code": "SHA",
+      "airport": "上海国际机场",
+      "terminal": "T2"
+    },
+    "arrival": {
+      "time": "14:45",
+      "code": "PEK",
+      "airport": "北京国际机场",
+      "terminal": "T1"
+    },
+    "durationText": "2 小时 15 分",
+    "direct": true,
+    "price": 2620,
+    "originalPrice": 2890,
+    "cabin": "经济舱",
+    "seatsLeft": 7,
+    "priceBreakdown": {
+      "base": 2279,
+      "tax": 341,
+      "total": 2620
+    },
+    "rules": {
+      "baggage": {
+        "title": "行李额度",
+        "detail": "含免费托运",
+        "icon": "luggage"
+      },
+      "refund": {
+        "title": "退改规则",
+        "detail": "限制较少，可按平台规则改退",
+        "icon": "swap_horiz"
+      },
+      "service": {
+        "title": "机上体验",
+        "detail": "展示餐食、准点率、机上设施等决策信息",
+        "icon": "airline_seat_recline_extra"
+      }
+    },
+    "priceTrend": [
+      {
+        "height": 40,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 42,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 72,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 93,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 39,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 101,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 29,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 28,
+        "isLowest": true,
+        "isToday": false
+      },
+      {
+        "height": 38,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 96,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 83,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 33,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 97,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 73,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 90,
+        "isLowest": false,
+        "isToday": true
+      }
+    ],
+    "historicalLowest": 2405,
+    "similarRoutes": [],
+    "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-PEK?depdate=2026-04-19",
+    "source": "携程",
+    "bestPriceBadge": "最稳妥",
+    "updatedAt": "2026-04-12T08:28:03Z"
+  }
+}

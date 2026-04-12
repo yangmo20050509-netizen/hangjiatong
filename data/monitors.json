@@ -1,0 +1,85 @@
+{
+  "updatedAt": "2026-04-12T08:28:03Z",
+  "monitors": [
+    {
+      "id": "mon_001",
+      "from": {
+        "code": "SHA",
+        "city": "上海"
+      },
+      "to": {
+        "code": "HND",
+        "city": "东京"
+      },
+      "airline": "全日空航空 · 往返",
+      "targetPrice": 2800,
+      "currentPrice": 2450,
+      "status": "below_target",
+      "badge": "已低于目标价",
+      "trend": [
+        60,
+        75,
+        55,
+        80,
+        65,
+        45,
+        35
+      ],
+      "lastUpdated": "12 分钟前",
+      "highlight": false,
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-HND?depdate=2026-04-24"
+    },
+    {
+      "id": "mon_002",
+      "from": {
+        "code": "PEK",
+        "city": "北京"
+      },
+      "to": {
+        "code": "LHR",
+        "city": "伦敦"
+      },
+      "airline": "英国航空 · 单程",
+      "targetPrice": 4500,
+      "currentPrice": 5120,
+      "status": "above_target",
+      "badge": "",
+      "trend": [
+        50,
+        60,
+        55,
+        58,
+        62,
+        60,
+        58
+      ],
+      "lastUpdated": "1 小时前",
+      "highlight": false,
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-PEK-LHR?depdate=2026-04-27"
+    },
+    {
+      "id": "mon_003",
+      "from": {
+        "code": "CAN",
+        "city": "广州"
+      },
+      "to": {
+        "code": "CDG",
+        "city": "巴黎"
+      },
+      "airline": "多平台监控中",
+      "targetPrice": 3900,
+      "currentPrice": 4050,
+      "status": "near_target",
+      "badge": "接近目标",
+      "trend": [],
+      "lastUpdated": "刚刚",
+      "highlight": true,
+      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=广州&searchArrivalAirport=巴黎&searchDepartureTime=2026-05-02"
+    }
+  ],
+  "stats": {
+    "todayDeals": 428,
+    "partners": 3
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "updatedAt": "2026-04-12T08:28:03Z",
+  "route": {
+    "from": {
+      "code": "SHA",
+      "city": "上海"
+    },
+    "to": {
+      "code": "PEK",
+      "city": "北京"
+    }
+  },
+  "requestedDate": "2026-04-19",
+  "effectiveDate": "2026-04-19",
+  "notice": "已按价格、退改规则、准点率综合排序，先帮你判断值不值得点进去",
+  "trendConclusion": "已按价格、退改限制、准点率综合排序，优先展示更值得点击的选项",
+  "trend": {
+    "lowestPrice": 2571,
+    "hint": "近 15 天价格走势",
+    "bars": [
+      {
+        "date": "03-29",
+        "price": 2571,
+        "height": 30,
+        "isToday": false,
+        "isLowest": true
+      },
+      {
+        "date": "03-30",
+        "price": 2785,
+        "height": 42,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "03-31",
+        "price": 2854,
+        "height": 47,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-01",
+        "price": 3342,
+        "height": 76,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-02",
+        "price": 2996,
+        "height": 55,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-03",
+        "price": 3432,
+        "height": 82,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-04",
+        "price": 2890,
+        "height": 49,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-05",
+        "price": 3176,
+        "height": 66,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-06",
+        "price": 3480,
+        "height": 85,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-07",
+        "price": 3209,
+        "height": 68,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-08",
+        "price": 3353,
+        "height": 77,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-09",
+        "price": 2754,
+        "height": 41,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-10",
+        "price": 2746,
+        "height": 40,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-11",
+        "price": 2805,
+        "height": 44,
+        "isToday": false,
+        "isLowest": false
+      },
+      {
+        "date": "04-12",
+        "price": 3138,
+        "height": 64,
+        "isToday": true,
+        "isLowest": false
+      }
+    ]
+  },
+  "flights": [
+    {
+      "id": "flight_001",
+      "departDate": "2026-04-19",
+      "airline": "中国东方航空",
+      "flightNo": "MU5101",
+      "aircraft": "波音 777-300ER",
+      "departure": {
+        "code": "SHA",
+        "airport": "上海机场",
+        "time": "08:00"
+      },
+      "arrival": {
+        "code": "PEK",
+        "airport": "北京机场",
+        "time": "10:20"
+      },
+      "durationMin": 140,
+      "durationText": "2 小时 20 分",
+      "direct": true,
+      "stopCount": 0,
+      "onTimeRate": 94,
+      "price": 2480,
+      "originalPrice": 3180,
+      "tags": [
+        "直飞",
+        "含托运23kg",
+        "不可退改"
+      ],
+      "services": [
+        {
+          "icon": "restaurant",
+          "label": "精品正餐",
+          "available": true
+        },
+        {
+          "icon": "luggage",
+          "label": "23KG 托运",
+          "available": true
+        },
+        {
+          "icon": "wifi",
+          "label": "机上 WiFi",
+          "available": true
+        }
+      ],
+      "recommendation": "推荐优先",
+      "recommendationReason": "价格低于均价，且准点率稳定",
+      "badge": "推荐优先",
+      "badgeType": "cheapest",
+      "source": "携程",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-PEK?depdate=2026-04-19",
+      "priceHistory": [
+        {
+          "date": "03-29",
+          "price": 2571
+        },
+        {
+          "date": "03-30",
+          "price": 2785
+        },
+        {
+          "date": "03-31",
+          "price": 2854
+        },
+        {
+          "date": "04-01",
+          "price": 3342
+        },
+        {
+          "date": "04-02",
+          "price": 2996
+        },
+        {
+          "date": "04-03",
+          "price": 3432
+        },
+        {
+          "date": "04-04",
+          "price": 2890
+        },
+        {
+          "date": "04-05",
+          "price": 3176
+        },
+        {
+          "date": "04-06",
+          "price": 3480
+        },
+        {
+          "date": "04-07",
+          "price": 3209
+        },
+        {
+          "date": "04-08",
+          "price": 3353
+        },
+        {
+          "date": "04-09",
+          "price": 2754
+        },
+        {
+          "date": "04-10",
+          "price": 2746
+        },
+        {
+          "date": "04-11",
+          "price": 2805
+        },
+        {
+          "date": "04-12",
+          "price": 3138
+        }
+      ],
+      "updatedAt": "2026-04-12T08:28:03Z"
+    },
+    {
+      "id": "flight_002",
+      "departDate": "2026-04-19",
+      "airline": "中国国际航空",
+      "flightNo": "CA1502",
+      "aircraft": "空客 A350-900",
+      "departure": {
+        "code": "SHA",
+        "airport": "上海机场",
+        "time": "12:30"
+      },
+      "arrival": {
+        "code": "PEK",
+        "airport": "北京机场",
+        "time": "14:45"
+      },
+      "durationMin": 135,
+      "durationText": "2 小时 15 分",
+      "direct": true,
+      "stopCount": 0,
+      "onTimeRate": 98,
+      "price": 2620,
+      "originalPrice": 2890,
+      "tags": [
+        "直飞",
+        "含托运23kg",
+        "可改签"
+      ],
+      "services": [
+        {
+          "icon": "restaurant",
+          "label": "精致点心",
+          "available": true
+        },
+        {
+          "icon": "luggage",
+          "label": "23KG 托运",
+          "available": true
+        },
+        {
+          "icon": "bolt",
+          "label": "优先值机",
+          "available": true
+        }
+      ],
+      "recommendation": "最稳妥",
+      "recommendationReason": "准点率高，限制更少",
+      "badge": "最稳妥",
+      "badgeType": "safest",
+      "source": "携程",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-PEK?depdate=2026-04-19",
+      "priceHistory": [
+        {
+          "date": "03-29",
+          "price": 2509
+        },
+        {
+          "date": "03-30",
+          "price": 2521
+        },
+        {
+          "date": "03-31",
+          "price": 2767
+        },
+        {
+          "date": "04-01",
+          "price": 2937
+        },
+        {
+          "date": "04-02",
+          "price": 2494
+        },
+        {
+          "date": "04-03",
+          "price": 2996
+        },
+        {
+          "date": "04-04",
+          "price": 2420
+        },
+        {
+          "date": "04-05",
+          "price": 2405
+        },
+        {
+          "date": "04-06",
+          "price": 2490
+        },
+        {
+          "date": "04-07",
+          "price": 2956
+        },
+        {
+          "date": "04-08",
+          "price": 2855
+        },
+        {
+          "date": "04-09",
+          "price": 2449
+        },
+        {
+          "date": "04-10",
+          "price": 2965
+        },
+        {
+          "date": "04-11",
+          "price": 2772
+        },
+        {
+          "date": "04-12",
+          "price": 2910
+        }
+      ],
+      "updatedAt": "2026-04-12T08:28:03Z"
+    },
+    {
+      "id": "flight_003",
+      "departDate": "2026-04-19",
+      "airline": "南方航空",
+      "flightNo": "CZ3116",
+      "aircraft": "空客 A330",
+      "departure": {
+        "code": "SHA",
+        "airport": "上海机场",
+        "time": "16:45"
+      },
+      "arrival": {
+        "code": "PEK",
+        "airport": "北京机场",
+        "time": "19:15"
+      },
+      "durationMin": 150,
+      "durationText": "2 小时 30 分",
+      "direct": true,
+      "stopCount": 0,
+      "onTimeRate": 78,
+      "price": 1850,
+      "originalPrice": 2290,
+      "tags": [
+        "直飞",
+        "仅手提行李",
+        "不可退改"
+      ],
+      "services": [
+        {
+          "icon": "no_meals",
+          "label": "不含餐食",
+          "available": false
+        },
+        {
+          "icon": "luggage",
+          "label": "仅 10KG 手提",
+          "available": true
+        }
+      ],
+      "recommendation": "最低价",
+      "recommendationReason": "价格最低，但限制更多，适合轻装出行",
+      "badge": "",
+      "badgeType": "",
+      "source": "去哪儿",
+      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=上海&searchArrivalAirport=北京&searchDepartureTime=2026-04-19",
+      "priceHistory": [
+        {
+          "date": "03-29",
+          "price": 2407
+        },
+        {
+          "date": "03-30",
+          "price": 2417
+        },
+        {
+          "date": "03-31",
+          "price": 2438
+        },
+        {
+          "date": "04-01",
+          "price": 2009
+        },
+        {
+          "date": "04-02",
+          "price": 1807
+        },
+        {
+          "date": "04-03",
+          "price": 2480
+        },
+        {
+          "date": "04-04",
+          "price": 2209
+        },
+        {
+          "date": "04-05",
+          "price": 1926
+        },
+        {
+          "date": "04-06",
+          "price": 2432
+        },
+        {
+          "date": "04-07",
+          "price": 2507
+        },
+        {
+          "date": "04-08",
+          "price": 1888
+        },
+        {
+          "date": "04-09",
+          "price": 2299
+        },
+        {
+          "date": "04-10",
+          "price": 1812
+        },
+        {
+          "date": "04-11",
+          "price": 2109
+        },
+        {
+          "date": "04-12",
+          "price": 2002
+        }
+      ],
+      "updatedAt": "2026-04-12T08:28:03Z"
+    }
+  ]
+}

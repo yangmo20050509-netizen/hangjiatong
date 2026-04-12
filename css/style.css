@@ -1,5 +1,5 @@
 /* ============================================
-   DESIGN SYSTEM — Ethereal Voyager
+   DESIGN SYSTEM — Hangjiatong
    ============================================ */
 :root {
   --primary: #000666;
@@ -90,7 +90,7 @@ ul { list-style: none; }
 .avatar .material-symbols-outlined { font-size: 1.5rem; line-height: 1; display: flex; }
 .avatar:hover { transform: scale(1.05); filter: brightness(1.1); transition: all 0.2s; box-shadow: 0 0 12px rgba(0, 6, 102, 0.2); }
 .notif-badge { position: relative; }
-.notif-badge::after { content: '3'; position: absolute; top: 4px; right: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--tertiary-accent); color: white; font-size: 0.55rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.notif-badge::after { content: attr(data-badge); position: absolute; top: 4px; right: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--tertiary-accent); color: white; font-size: 0.55rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 
 /* ============================================ PAGE SYSTEM ============================================ */
 .page { display: none; min-height: 100vh; padding-top: 72px; animation: pageIn 0.4s ease; }

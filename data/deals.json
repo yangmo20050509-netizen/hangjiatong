@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-04-11T14:55:49.873671Z",
-  "count": 10,
+  "updatedAt": "2026-04-12T08:28:03Z",
+  "count": 6,
   "deals": [
     {
-      "id": "deal_SHA_HGH_20260423_7698",
+      "id": "deal_sha_hgh",
       "from": {
         "code": "SHA",
         "city": "上海"
@@ -14,85 +14,88 @@
       },
       "airline": "南方航空",
       "departDate": "2026-04-23",
-      "price": 450,
+      "price": 458,
+      "originalPrice": 618,
+      "discount": "7.4折",
       "source": "携程",
       "tags": [
         "直飞",
         "极速出票"
       ],
-      "recommendation": "最划算",
-      "recReason": "高铁价优选",
-      "img": "https://images.unsplash.com/photo-1558422719-d6982435e4e4?w=800",
+      "recommendation": "高性价比",
+      "recommendationReason": "高铁替代场景里更省时间，价格仍有优势",
+      "imageUrl": "https://images.unsplash.com/photo-1558422719-d6982435e4e4?w=800",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-HGH?depdate=2026-04-23",
       "region": "domestic",
-      "url": "https://flights.ctrip.com/online/list/oneway-SHA-HGH?depdate=2026-04-23",
-      "priceStatus": "当前价格较均价低 33%",
-      "priceStatusPercent": 33,
+      "hotTag": "本周末出发",
       "priceHistory": [
         {
-          "date": "03-27",
-          "price": 310
-        },
-        {
-          "date": "03-28",
-          "price": 389
-        },
-        {
           "date": "03-29",
-          "price": 357
+          "price": 515
         },
         {
           "date": "03-30",
-          "price": 370
+          "price": 564
         },
         {
           "date": "03-31",
-          "price": 358
+          "price": 618
         },
         {
           "date": "04-01",
-          "price": 347
+          "price": 498
         },
         {
           "date": "04-02",
-          "price": 305
+          "price": 678
         },
         {
           "date": "04-03",
-          "price": 321
+          "price": 655
         },
         {
           "date": "04-04",
-          "price": 380
+          "price": 648
         },
         {
           "date": "04-05",
-          "price": 289
+          "price": 542
         },
         {
           "date": "04-06",
-          "price": 305
+          "price": 666
         },
         {
           "date": "04-07",
-          "price": 328
+          "price": 535
         },
         {
           "date": "04-08",
-          "price": 288
+          "price": 571
         },
         {
           "date": "04-09",
-          "price": 344
+          "price": 578
         },
         {
           "date": "04-10",
-          "price": 341
+          "price": 533
+        },
+        {
+          "date": "04-11",
+          "price": 573
+        },
+        {
+          "date": "04-12",
+          "price": 598
         }
       ],
-      "updatedAt": "2026-04-11T14:55:49.873977Z"
+      "updatedAt": "2026-04-12T08:28:03Z",
+      "priceStatus": "当前价格较近两周均价低 22%",
+      "priceStatusPercent": 22
     },
     {
-      "id": "deal_PEK_CAN_20260505_6669",
+      "id": "deal_pek_can",
       "from": {
         "code": "PEK",
         "city": "北京"
@@ -102,86 +105,89 @@
         "city": "广州"
       },
       "airline": "中国国航",
-      "departDate": "2026-05-05",
-      "price": 732,
+      "departDate": "2026-04-25",
+      "price": 820,
+      "originalPrice": 1107,
+      "discount": "7.4折",
       "source": "飞猪",
       "tags": [
         "直飞",
         "含托运"
       ],
       "recommendation": "最省时",
-      "recReason": "黄金航线",
-      "img": "https://images.unsplash.com/photo-1563090162-6b4c2a20d658?w=800",
+      "recommendationReason": "热门商务线，直飞且总价压到均线下方",
+      "imageUrl": "https://images.unsplash.com/photo-1563090162-6b4c2a20d658?w=800",
+      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=北京-广州&departDate=2026-04-25",
       "region": "domestic",
-      "url": "https://www.fliggy.com/redirect?type=5&searchQuery=北京-广州&departDate=2026-05-05",
-      "priceStatus": "当前价格较均价低 32%",
-      "priceStatusPercent": 21,
+      "hotTag": "工作日低位",
       "priceHistory": [
         {
-          "date": "03-27",
-          "price": 921
-        },
-        {
-          "date": "03-28",
-          "price": 658
-        },
-        {
           "date": "03-29",
-          "price": 927
+          "price": 1048
         },
         {
           "date": "03-30",
-          "price": 600
+          "price": 1129
         },
         {
           "date": "03-31",
-          "price": 662
+          "price": 1187
         },
         {
           "date": "04-01",
-          "price": 686
+          "price": 919
         },
         {
           "date": "04-02",
-          "price": 861
+          "price": 1069
         },
         {
           "date": "04-03",
-          "price": 891
+          "price": 889
         },
         {
           "date": "04-04",
-          "price": 801
+          "price": 1140
         },
         {
           "date": "04-05",
-          "price": 735
+          "price": 907
         },
         {
           "date": "04-06",
-          "price": 661
+          "price": 1077
         },
         {
           "date": "04-07",
-          "price": 680
+          "price": 967
         },
         {
           "date": "04-08",
-          "price": 901
+          "price": 1232
         },
         {
           "date": "04-09",
-          "price": 814
+          "price": 984
         },
         {
           "date": "04-10",
-          "price": 933
+          "price": 1094
+        },
+        {
+          "date": "04-11",
+          "price": 900
+        },
+        {
+          "date": "04-12",
+          "price": 902
         }
       ],
-      "updatedAt": "2026-04-11T14:55:49.874110Z"
+      "updatedAt": "2026-04-12T08:28:03Z",
+      "priceStatus": "当前价格较近两周均价低 20%",
+      "priceStatusPercent": 20
     },
     {
-      "id": "deal_CTU_SZX_20260429_6148",
+      "id": "deal_ctu_szx",
       "from": {
         "code": "CTU",
         "city": "成都"
@@ -192,263 +198,88 @@
       },
       "airline": "深圳航空",
       "departDate": "2026-04-29",
-      "price": 701,
+      "price": 745,
+      "originalPrice": 1005,
+      "discount": "7.4折",
       "source": "去哪儿",
       "tags": [
         "准点率高",
         "含餐食"
       ],
-      "recommendation": "体验好",
-      "recReason": "宽体机执飞",
-      "img": "https://images.unsplash.com/photo-1522614288668-a697127e9b21",
+      "recommendation": "体验更稳",
+      "recommendationReason": "适合不想为了低价牺牲准点率的用户",
+      "imageUrl": "https://images.unsplash.com/photo-1522614288668-a697127e9b21?w=800",
+      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=成都&searchArrivalAirport=深圳&searchDepartureTime=2026-04-29",
       "region": "domestic",
-      "url": "#",
-      "priceStatus": "当前价格较均价低 33%",
-      "priceStatusPercent": 10,
+      "hotTag": "",
       "priceHistory": [
         {
-          "date": "03-27",
-          "price": 567
-        },
-        {
-          "date": "03-28",
-          "price": 648
-        },
-        {
           "date": "03-29",
-          "price": 469
+          "price": 1042
         },
         {
           "date": "03-30",
-          "price": 469
+          "price": 1076
         },
         {
           "date": "03-31",
-          "price": 662
+          "price": 877
         },
         {
           "date": "04-01",
-          "price": 647
+          "price": 882
         },
         {
           "date": "04-02",
-          "price": 436
+          "price": 1048
         },
         {
           "date": "04-03",
-          "price": 574
+          "price": 884
         },
         {
           "date": "04-04",
-          "price": 574
+          "price": 792
         },
         {
           "date": "04-05",
-          "price": 489
+          "price": 990
         },
         {
           "date": "04-06",
-          "price": 466
+          "price": 1066
         },
         {
           "date": "04-07",
-          "price": 466
+          "price": 1017
         },
         {
           "date": "04-08",
-          "price": 496
+          "price": 804
         },
         {
           "date": "04-09",
-          "price": 600
+          "price": 1064
         },
         {
           "date": "04-10",
-          "price": 582
+          "price": 1000
+        },
+        {
+          "date": "04-11",
+          "price": 1061
+        },
+        {
+          "date": "04-12",
+          "price": 1061
         }
       ],
-      "updatedAt": "2026-04-11T14:55:49.874260Z"
+      "updatedAt": "2026-04-12T08:28:03Z",
+      "priceStatus": "当前价格较近两周均价低 24%",
+      "priceStatusPercent": 24
     },
     {
-      "id": "deal_CKG_SHA_20260419_4981",
-      "from": {
-        "code": "CKG",
-        "city": "重庆"
-      },
-      "to": {
-        "code": "SHA",
-        "city": "上海"
-      },
-      "airline": "春秋航空",
-      "departDate": "2026-04-19",
-      "price": 374,
-      "source": "携程",
-      "tags": [
-        "低价大促",
-        "不可退改"
-      ],
-      "recommendation": "极低价",
-      "recReason": "近期低位",
-      "img": "https://images.unsplash.com/photo-1524106579294-f65588372675?w=800",
-      "region": "domestic",
-      "url": "https://flights.ctrip.com/online/list/oneway-CKG-SHA?depdate=2026-04-19",
-      "priceStatus": "当前价格较均价低 17%",
-      "priceStatusPercent": 21,
-      "priceHistory": [
-        {
-          "date": "03-27",
-          "price": 490
-        },
-        {
-          "date": "03-28",
-          "price": 484
-        },
-        {
-          "date": "03-29",
-          "price": 403
-        },
-        {
-          "date": "03-30",
-          "price": 359
-        },
-        {
-          "date": "03-31",
-          "price": 445
-        },
-        {
-          "date": "04-01",
-          "price": 365
-        },
-        {
-          "date": "04-02",
-          "price": 438
-        },
-        {
-          "date": "04-03",
-          "price": 377
-        },
-        {
-          "date": "04-04",
-          "price": 417
-        },
-        {
-          "date": "04-05",
-          "price": 406
-        },
-        {
-          "date": "04-06",
-          "price": 484
-        },
-        {
-          "date": "04-07",
-          "price": 460
-        },
-        {
-          "date": "04-08",
-          "price": 423
-        },
-        {
-          "date": "04-09",
-          "price": 417
-        },
-        {
-          "date": "04-10",
-          "price": 453
-        }
-      ],
-      "updatedAt": "2026-04-11T14:55:49.874372Z"
-    },
-    {
-      "id": "deal_BJS_HGH_20260426_7855",
-      "from": {
-        "code": "BJS",
-        "city": "北京"
-      },
-      "to": {
-        "code": "HGH",
-        "city": "杭州"
-      },
-      "airline": "海航",
-      "departDate": "2026-04-26",
-      "price": 486,
-      "source": "携程",
-      "tags": [
-        "直飞",
-        "极速出票"
-      ],
-      "recommendation": "西湖韵",
-      "recReason": "美景推荐",
-      "img": "https://images.unsplash.com/photo-1558422719-d6982435e4e4?w=800",
-      "region": "domestic",
-      "url": "https://flights.ctrip.com/online/list/oneway-BJS-HGH?depdate=2026-04-26",
-      "priceStatus": "当前价格较均价低 29%",
-      "priceStatusPercent": 24,
-      "priceHistory": [
-        {
-          "date": "03-27",
-          "price": 430
-        },
-        {
-          "date": "03-28",
-          "price": 539
-        },
-        {
-          "date": "03-29",
-          "price": 509
-        },
-        {
-          "date": "03-30",
-          "price": 448
-        },
-        {
-          "date": "03-31",
-          "price": 495
-        },
-        {
-          "date": "04-01",
-          "price": 470
-        },
-        {
-          "date": "04-02",
-          "price": 497
-        },
-        {
-          "date": "04-03",
-          "price": 587
-        },
-        {
-          "date": "04-04",
-          "price": 609
-        },
-        {
-          "date": "04-05",
-          "price": 435
-        },
-        {
-          "date": "04-06",
-          "price": 619
-        },
-        {
-          "date": "04-07",
-          "price": 525
-        },
-        {
-          "date": "04-08",
-          "price": 521
-        },
-        {
-          "date": "04-09",
-          "price": 453
-        },
-        {
-          "date": "04-10",
-          "price": 548
-        }
-      ],
-      "updatedAt": "2026-04-11T14:55:49.874482Z"
-    },
-    {
-      "id": "deal_SHA_KIX_20260416_2419",
+      "id": "deal_sha_kix",
       "from": {
         "code": "SHA",
         "city": "上海"
@@ -458,86 +289,89 @@
         "city": "大阪"
       },
       "airline": "吉祥航空",
-      "departDate": "2026-04-16",
-      "price": 1191,
+      "departDate": "2026-04-21",
+      "price": 1373,
+      "originalPrice": 1853,
+      "discount": "7.4折",
       "source": "携程",
       "tags": [
         "直飞",
         "不可退改"
       ],
       "recommendation": "最省钱",
-      "recReason": "近期低位",
-      "img": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
+      "recommendationReason": "樱花季热门线仍处于低位，适合快速锁票",
+      "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
+      "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-KIX?depdate=2026-04-21",
       "region": "intl",
-      "url": "https://flights.ctrip.com/online/list/oneway-SHA-KIX?depdate=2026-04-16",
-      "priceStatus": "当前价格较均价低 44%",
-      "priceStatusPercent": 10,
+      "hotTag": "日本线热门",
       "priceHistory": [
         {
-          "date": "03-27",
-          "price": 1001
-        },
-        {
-          "date": "03-28",
-          "price": 1098
-        },
-        {
           "date": "03-29",
-          "price": 1140
+          "price": 1995
         },
         {
           "date": "03-30",
-          "price": 936
+          "price": 2071
         },
         {
           "date": "03-31",
-          "price": 1371
+          "price": 1711
         },
         {
           "date": "04-01",
-          "price": 1251
+          "price": 1999
         },
         {
           "date": "04-02",
-          "price": 1352
+          "price": 1841
         },
         {
           "date": "04-03",
-          "price": 1122
+          "price": 2071
         },
         {
           "date": "04-04",
-          "price": 1194
+          "price": 1516
         },
         {
           "date": "04-05",
-          "price": 1372
+          "price": 1546
         },
         {
           "date": "04-06",
-          "price": 1192
+          "price": 1875
         },
         {
           "date": "04-07",
-          "price": 1170
+          "price": 1565
         },
         {
           "date": "04-08",
-          "price": 1077
+          "price": 1897
         },
         {
           "date": "04-09",
-          "price": 1008
+          "price": 1730
         },
         {
           "date": "04-10",
-          "price": 1031
+          "price": 1804
+        },
+        {
+          "date": "04-11",
+          "price": 1789
+        },
+        {
+          "date": "04-12",
+          "price": 1499
         }
       ],
-      "updatedAt": "2026-04-11T14:55:49.874585Z"
+      "updatedAt": "2026-04-12T08:28:03Z",
+      "priceStatus": "当前价格较近两周均价低 23%",
+      "priceStatusPercent": 23
     },
     {
-      "id": "deal_PEK_SYD_20260511_3127",
+      "id": "deal_pek_syd",
       "from": {
         "code": "PEK",
         "city": "北京"
@@ -547,86 +381,89 @@
         "city": "悉尼"
       },
       "airline": "南方航空",
-      "departDate": "2026-05-11",
-      "price": 2410,
+      "departDate": "2026-04-30",
+      "price": 2610,
+      "originalPrice": 3523,
+      "discount": "7.4折",
       "source": "飞猪",
       "tags": [
         "含行李",
         "可退改"
       ],
-      "recommendation": "最划算",
-      "recReason": "品质首选",
-      "img": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800",
+      "recommendation": "限制最少",
+      "recommendationReason": "长线票价有吸引力，同时退改空间更友好",
+      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800",
+      "bookingUrl": "https://www.fliggy.com/redirect?type=5&searchQuery=北京-悉尼&departDate=2026-04-30",
       "region": "intl",
-      "url": "https://www.fliggy.com/redirect?type=5&searchQuery=北京-悉尼&departDate=2026-05-11",
-      "priceStatus": "当前价格较均价低 37%",
-      "priceStatusPercent": 24,
+      "hotTag": "长线精选",
       "priceHistory": [
         {
-          "date": "03-27",
-          "price": 1964
-        },
-        {
-          "date": "03-28",
-          "price": 2205
-        },
-        {
           "date": "03-29",
-          "price": 2113
+          "price": 2993
         },
         {
           "date": "03-30",
-          "price": 1875
+          "price": 2868
         },
         {
           "date": "03-31",
-          "price": 1790
+          "price": 3345
         },
         {
           "date": "04-01",
-          "price": 1752
+          "price": 3799
         },
         {
           "date": "04-02",
-          "price": 2065
+          "price": 3261
         },
         {
           "date": "04-03",
-          "price": 2067
+          "price": 3528
         },
         {
           "date": "04-04",
-          "price": 2058
+          "price": 2814
         },
         {
           "date": "04-05",
-          "price": 2537
+          "price": 3013
         },
         {
           "date": "04-06",
-          "price": 1882
+          "price": 3069
         },
         {
           "date": "04-07",
-          "price": 1937
+          "price": 2880
         },
         {
           "date": "04-08",
-          "price": 1806
+          "price": 3886
         },
         {
           "date": "04-09",
-          "price": 1959
+          "price": 3261
         },
         {
           "date": "04-10",
-          "price": 2250
+          "price": 3100
+        },
+        {
+          "date": "04-11",
+          "price": 3599
+        },
+        {
+          "date": "04-12",
+          "price": 3685
         }
       ],
-      "updatedAt": "2026-04-11T14:55:49.874708Z"
+      "updatedAt": "2026-04-12T08:28:03Z",
+      "priceStatus": "当前价格较近两周均价低 20%",
+      "priceStatusPercent": 20
     },
     {
-      "id": "deal_CAN_CDG_20260503_1355",
+      "id": "deal_can_cdg",
       "from": {
         "code": "CAN",
         "city": "广州"
@@ -637,260 +474,85 @@
       },
       "airline": "东方航空",
       "departDate": "2026-05-03",
-      "price": 4262,
+      "price": 4263,
+      "originalPrice": 5755,
+      "discount": "7.4折",
       "source": "去哪儿",
       "tags": [
         "直飞",
         "含餐食"
       ],
-      "recommendation": "体验好",
-      "recReason": "飞行耗时短",
-      "img": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
+      "recommendation": "飞行更省心",
+      "recommendationReason": "直飞节省中转损耗，适合第一次去欧洲的用户",
+      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
+      "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=广州&searchArrivalAirport=巴黎&searchDepartureTime=2026-05-03",
       "region": "intl",
-      "url": "#",
-      "priceStatus": "当前价格较均价低 35%",
-      "priceStatusPercent": 32,
+      "hotTag": "",
       "priceHistory": [
         {
-          "date": "03-27",
-          "price": 3367
-        },
-        {
-          "date": "03-28",
-          "price": 3632
-        },
-        {
           "date": "03-29",
-          "price": 2879
+          "price": 6330
         },
         {
           "date": "03-30",
-          "price": 3862
+          "price": 5046
         },
         {
           "date": "03-31",
-          "price": 3360
+          "price": 4565
         },
         {
           "date": "04-01",
-          "price": 3941
+          "price": 6164
         },
         {
           "date": "04-02",
-          "price": 3924
+          "price": 5313
         },
         {
           "date": "04-03",
-          "price": 3421
+          "price": 6216
         },
         {
           "date": "04-04",
-          "price": 3085
+          "price": 5144
         },
         {
           "date": "04-05",
-          "price": 3038
+          "price": 5576
         },
         {
           "date": "04-06",
-          "price": 3450
+          "price": 4666
         },
         {
           "date": "04-07",
-          "price": 2724
+          "price": 6379
         },
         {
           "date": "04-08",
-          "price": 3252
+          "price": 5797
         },
         {
           "date": "04-09",
-          "price": 3011
+          "price": 5254
         },
         {
           "date": "04-10",
-          "price": 3386
+          "price": 5137
+        },
+        {
+          "date": "04-11",
+          "price": 5265
+        },
+        {
+          "date": "04-12",
+          "price": 6169
         }
       ],
-      "updatedAt": "2026-04-11T14:55:49.874812Z"
-    },
-    {
-      "id": "deal_HGH_HKG_20260417_1108",
-      "from": {
-        "code": "HGH",
-        "city": "杭州"
-      },
-      "to": {
-        "code": "HKG",
-        "city": "香港"
-      },
-      "airline": "国泰航空",
-      "departDate": "2026-04-17",
-      "price": 835,
-      "source": "携程",
-      "tags": [
-        "直飞",
-        "极速出票"
-      ],
-      "recommendation": "超低价",
-      "recReason": "说走就走",
-      "img": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800",
-      "region": "intl",
-      "url": "https://flights.ctrip.com/online/list/oneway-HGH-HKG?depdate=2026-04-17",
-      "priceStatus": "当前价格较均价低 28%",
-      "priceStatusPercent": 22,
-      "priceHistory": [
-        {
-          "date": "03-27",
-          "price": 751
-        },
-        {
-          "date": "03-28",
-          "price": 682
-        },
-        {
-          "date": "03-29",
-          "price": 830
-        },
-        {
-          "date": "03-30",
-          "price": 747
-        },
-        {
-          "date": "03-31",
-          "price": 643
-        },
-        {
-          "date": "04-01",
-          "price": 723
-        },
-        {
-          "date": "04-02",
-          "price": 855
-        },
-        {
-          "date": "04-03",
-          "price": 958
-        },
-        {
-          "date": "04-04",
-          "price": 859
-        },
-        {
-          "date": "04-05",
-          "price": 652
-        },
-        {
-          "date": "04-06",
-          "price": 747
-        },
-        {
-          "date": "04-07",
-          "price": 665
-        },
-        {
-          "date": "04-08",
-          "price": 819
-        },
-        {
-          "date": "04-09",
-          "price": 639
-        },
-        {
-          "date": "04-10",
-          "price": 721
-        }
-      ],
-      "updatedAt": "2026-04-11T14:55:49.874925Z"
-    },
-    {
-      "id": "deal_PVG_TYO_20260421_6157",
-      "from": {
-        "code": "PVG",
-        "city": "上海"
-      },
-      "to": {
-        "code": "TYO",
-        "city": "东京"
-      },
-      "airline": "全日空",
-      "departDate": "2026-04-21",
-      "price": 1573,
-      "source": "飞猪",
-      "tags": [
-        "直飞",
-        "服务佳"
-      ],
-      "recommendation": "樱花季",
-      "recReason": "热门推荐",
-      "img": "https://images.unsplash.com/photo-1503899036084-755ad26bc2aa?w=800",
-      "region": "intl",
-      "url": "https://www.fliggy.com/redirect?type=5&searchQuery=上海-东京&departDate=2026-04-21",
-      "priceStatus": "当前价格较均价低 21%",
-      "priceStatusPercent": 17,
-      "priceHistory": [
-        {
-          "date": "03-27",
-          "price": 1192
-        },
-        {
-          "date": "03-28",
-          "price": 1203
-        },
-        {
-          "date": "03-29",
-          "price": 1091
-        },
-        {
-          "date": "03-30",
-          "price": 1429
-        },
-        {
-          "date": "03-31",
-          "price": 1482
-        },
-        {
-          "date": "04-01",
-          "price": 1584
-        },
-        {
-          "date": "04-02",
-          "price": 1384
-        },
-        {
-          "date": "04-03",
-          "price": 1172
-        },
-        {
-          "date": "04-04",
-          "price": 1283
-        },
-        {
-          "date": "04-05",
-          "price": 1589
-        },
-        {
-          "date": "04-06",
-          "price": 1571
-        },
-        {
-          "date": "04-07",
-          "price": 1037
-        },
-        {
-          "date": "04-08",
-          "price": 1553
-        },
-        {
-          "date": "04-09",
-          "price": 1204
-        },
-        {
-          "date": "04-10",
-          "price": 1567
-        }
-      ],
-      "updatedAt": "2026-04-11T14:55:49.875027Z"
+      "updatedAt": "2026-04-12T08:28:03Z",
+      "priceStatus": "当前价格较近两周均价低 23%",
+      "priceStatusPercent": 23
     }
   ]
 }

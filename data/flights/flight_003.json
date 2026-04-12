@@ -1,0 +1,132 @@
+{
+  "updatedAt": "2026-04-12T08:28:03Z",
+  "flight": {
+    "id": "flight_003",
+    "airline": "南方航空",
+    "flightNo": "CZ3116",
+    "aircraft": "空客 A330",
+    "departure": {
+      "time": "16:45",
+      "code": "SHA",
+      "airport": "上海国际机场",
+      "terminal": "T2"
+    },
+    "arrival": {
+      "time": "19:15",
+      "code": "PEK",
+      "airport": "北京国际机场",
+      "terminal": "T1"
+    },
+    "durationText": "2 小时 30 分",
+    "direct": true,
+    "price": 1850,
+    "originalPrice": 2290,
+    "cabin": "经济舱",
+    "seatsLeft": 4,
+    "priceBreakdown": {
+      "base": 1609,
+      "tax": 241,
+      "total": 1850
+    },
+    "rules": {
+      "baggage": {
+        "title": "行李额度",
+        "detail": "含免费托运",
+        "icon": "luggage"
+      },
+      "refund": {
+        "title": "退改规则",
+        "detail": "限制较少，可按平台规则改退",
+        "icon": "swap_horiz"
+      },
+      "service": {
+        "title": "机上体验",
+        "detail": "展示餐食、准点率、机上设施等决策信息",
+        "icon": "airline_seat_recline_extra"
+      }
+    },
+    "priceTrend": [
+      {
+        "height": 102,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 103,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 106,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 53,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 28,
+        "isLowest": true,
+        "isToday": false
+      },
+      {
+        "height": 111,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 77,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 42,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 105,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 114,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 38,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 89,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 28,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 65,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 52,
+        "isLowest": false,
+        "isToday": true
+      }
+    ],
+    "historicalLowest": 1807,
+    "similarRoutes": [],
+    "bookingUrl": "https://flight.qunar.com/site/oneway_list.htm?searchDepartureAirport=上海&searchArrivalAirport=北京&searchDepartureTime=2026-04-19",
+    "source": "去哪儿",
+    "bestPriceBadge": "最低价",
+    "updatedAt": "2026-04-12T08:28:03Z"
+  }
+}

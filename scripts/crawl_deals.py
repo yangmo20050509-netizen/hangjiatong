@@ -1,87 +1,527 @@
 import json
 import random
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
-def generate_price_history(base_price):
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT_DIR / "data"
+SEARCH_DIR = DATA_DIR / "search"
+FLIGHTS_DIR = DATA_DIR / "flights"
+RNG = random.Random(20260412)
+
+
+def iso_now():
+    return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def date_after(days):
+    return (datetime.now(UTC) + timedelta(days=days)).strftime("%Y-%m-%d")
+
+
+def write_json(path, payload):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as handle:
+        json.dump(payload, handle, ensure_ascii=False, indent=2)
+
+
+def build_booking_url(source, from_code, to_code, from_city, to_city, depart_date):
+    if source == "飞猪":
+        return (
+            "https://www.fliggy.com/redirect?type=5&searchQuery="
+            f"{from_city}-{to_city}&departDate={depart_date}"
+        )
+    if source == "去哪儿":
+        return (
+            "https://flight.qunar.com/site/oneway_list.htm?"
+            f"searchDepartureAirport={from_city}&searchArrivalAirport={to_city}"
+            f"&searchDepartureTime={depart_date}"
+        )
+    return f"https://flights.ctrip.com/online/list/oneway-{from_code}-{to_code}?depdate={depart_date}"
+
+
+def build_price_history(base_price, days=14):
     history = []
-    today = datetime.utcnow()
-    for i in range(15, 0, -1):
-        date = (today - timedelta(days=i)).strftime('%m-%d')
-        # 模拟真实波动：在基础价格上下30%波动
-        price = int(base_price * (1 + random.uniform(-0.3, 0.1)))
-        history.append({"date": date, "price": price})
+    for offset in range(days, -1, -1):
+        date_label = (datetime.now(UTC) - timedelta(days=offset)).strftime("%m-%d")
+        wave = 0.78 + RNG.random() * 0.34
+        history.append({"date": date_label, "price": int(base_price * wave)})
     return history
 
-def get_mock_deal(template):
-    # 模拟未来 3-30 天内的出发日期
-    days_ahead = random.randint(3, 30)
-    depart_date = datetime.utcnow() + timedelta(days=days_ahead)
-    depart_str = depart_date.strftime('%Y-%m-%d')
-    
-    # 价格在模板基准价基础上浮动
-    price = int(template['basePrice'] * random.uniform(0.8, 1.2))
-    
-    # 根据来源生成模拟链接
-    url = "#"
-    if template['source'] == '携程':
-        url = f"https://flights.ctrip.com/online/list/oneway-{template['from_code']}-{template['to_code']}?depdate={depart_str}"
-    elif template['source'] == '飞猪':
-        url = f"https://www.fliggy.com/redirect?type=5&searchQuery={template['from_city']}-{template['to_city']}&departDate={depart_str}"
 
+def build_discount(price, original_price):
+    if not original_price or original_price <= price:
+        original_price = int(price * 1.25)
+    return f"{price / original_price * 10:.1f}折"
+
+
+def infer_price_status(price, history):
+    prices = [entry["price"] for entry in history] or [price]
+    avg_price = sum(prices) / len(prices)
+    delta = max(1, round((avg_price - price) / avg_price * 100))
     return {
-        "id": f"deal_{template['from_code']}_{template['to_code']}_{depart_str.replace('-','')}_{random.randint(1000,9999)}",
-        "from": { "code": template['from_code'], "city": template['from_city'] },
-        "to": { "code": template['to_code'], "city": template['to_city'] },
-        "airline": template['airline'],
-        "departDate": depart_str,
-        "price": price,
-        "source": template['source'],
-        "tags": template['tags'],
-        "recommendation": template['rec'],
-        "recReason": template['recReason'],
-        "img": template['img'],
-        "region": template['region'],
-        "url": url,
-        # 增加一些模拟的趋势数据
-        "priceStatus": f"当前价格较均价低 {random.randint(15, 45)}%",
-        "priceStatusPercent": random.randint(10, 40),
-        "priceHistory": generate_price_history(template['basePrice']),
-        "updatedAt": datetime.utcnow().isoformat() + "Z"
+        "priceStatus": f"当前价格较近两周均价低 {delta}%",
+        "priceStatusPercent": min(42, max(16, delta)),
     }
+
+
+def build_deal(template):
+    depart_date = date_after(template["offset"])
+    price = int(template["basePrice"] * template["priceFactor"])
+    original_price = template.get("originalPrice", int(price * 1.35))
+    price_history = build_price_history(original_price)
+    status_meta = infer_price_status(price, price_history)
+    return {
+        "id": template["id"],
+        "from": {"code": template["fromCode"], "city": template["fromCity"]},
+        "to": {"code": template["toCode"], "city": template["toCity"]},
+        "airline": template["airline"],
+        "departDate": depart_date,
+        "price": price,
+        "originalPrice": original_price,
+        "discount": build_discount(price, original_price),
+        "source": template["source"],
+        "tags": template["tags"],
+        "recommendation": template["recommendation"],
+        "recommendationReason": template["recommendationReason"],
+        "imageUrl": template["imageUrl"],
+        "bookingUrl": build_booking_url(
+            template["source"],
+            template["fromCode"],
+            template["toCode"],
+            template["fromCity"],
+            template["toCity"],
+            depart_date,
+        ),
+        "region": template["region"],
+        "hotTag": template.get("hotTag", ""),
+        "priceHistory": price_history,
+        "updatedAt": iso_now(),
+        **status_meta,
+    }
+
+
+def build_trend_bars(price_history):
+    prices = [entry["price"] for entry in price_history]
+    lowest = min(prices)
+    highest = max(prices)
+    spread = max(1, highest - lowest)
+    bars = []
+    for idx, entry in enumerate(price_history):
+        normalized = (entry["price"] - lowest) / spread
+        bars.append(
+            {
+                "date": entry["date"],
+                "price": entry["price"],
+                "height": 30 + int(normalized * 55),
+                "isToday": idx == len(price_history) - 1,
+                "isLowest": entry["price"] == lowest,
+            }
+        )
+    return lowest, bars
+
+
+def build_search_payload(route, flights, notice):
+    normalized_flights = []
+    for index, flight in enumerate(flights):
+        depart_date = route["departDate"]
+        booking_url = build_booking_url(
+            flight["source"],
+            route["from"]["code"],
+            route["to"]["code"],
+            route["from"]["city"],
+            route["to"]["city"],
+            depart_date,
+        )
+        price_history = build_price_history(flight["originalPrice"])
+        normalized_flights.append(
+            {
+                "id": flight["id"],
+                "departDate": depart_date,
+                "airline": flight["airline"],
+                "flightNo": flight["flightNo"],
+                "aircraft": flight["aircraft"],
+                "departure": {
+                    "code": route["from"]["code"],
+                    "airport": f'{route["from"]["city"]}机场',
+                    "time": flight["departureTime"],
+                },
+                "arrival": {
+                    "code": route["to"]["code"],
+                    "airport": f'{route["to"]["city"]}机场',
+                    "time": flight["arrivalTime"],
+                },
+                "durationMin": flight["durationMin"],
+                "durationText": flight["durationText"],
+                "direct": flight.get("direct", True),
+                "stopCount": flight.get("stopCount", 0),
+                "onTimeRate": flight["onTimeRate"],
+                "price": flight["price"],
+                "originalPrice": flight["originalPrice"],
+                "tags": flight["tags"],
+                "services": flight["services"],
+                "recommendation": flight["recommendation"],
+                "recommendationReason": flight["recommendationReason"],
+                "badge": flight.get("badge", ""),
+                "badgeType": flight.get("badgeType", ""),
+                "source": flight["source"],
+                "bookingUrl": booking_url,
+                "priceHistory": price_history,
+                "updatedAt": iso_now(),
+            }
+        )
+
+    lowest_price, bars = build_trend_bars(normalized_flights[0]["priceHistory"])
+    return {
+        "updatedAt": iso_now(),
+        "route": {"from": route["from"], "to": route["to"]},
+        "requestedDate": route["departDate"],
+        "effectiveDate": route["departDate"],
+        "notice": notice,
+        "trendConclusion": "已按价格、退改限制、准点率综合排序，优先展示更值得点击的选项",
+        "trend": {
+            "lowestPrice": lowest_price,
+            "hint": "近 15 天价格走势",
+            "bars": bars,
+        },
+        "flights": normalized_flights,
+    }
+
+
+def build_detail_payload(route, flight):
+    baggage_text = "含免费托运" if any("托运" in tag or "行李" in tag for tag in flight["tags"]) else "仅含手提行李"
+    refund_text = "限制较少，可按平台规则改退" if any("可退" in tag or "可改" in tag for tag in flight["tags"]) else "折扣票规则严格，改退前请核对平台说明"
+    price_history = flight["priceHistory"]
+    lowest_price, _ = build_trend_bars(price_history)
+    current_price = flight["price"]
+    base_amount = int(current_price * 0.87)
+    tax_amount = current_price - base_amount
+    return {
+        "updatedAt": iso_now(),
+        "flight": {
+            "id": flight["id"],
+            "airline": flight["airline"],
+            "flightNo": flight["flightNo"],
+            "aircraft": flight["aircraft"],
+            "departure": {
+                "time": flight["departure"]["time"],
+                "code": route["from"]["code"],
+                "airport": f'{route["from"]["city"]}国际机场',
+                "terminal": "T2",
+            },
+            "arrival": {
+                "time": flight["arrival"]["time"],
+                "code": route["to"]["code"],
+                "airport": f'{route["to"]["city"]}国际机场',
+                "terminal": "T1",
+            },
+            "durationText": flight["durationText"],
+            "direct": flight["direct"],
+            "price": current_price,
+            "originalPrice": flight["originalPrice"],
+            "cabin": "经济舱",
+            "seatsLeft": 3 + RNG.randint(0, 4),
+            "priceBreakdown": {"base": base_amount, "tax": tax_amount, "total": current_price},
+            "rules": {
+                "baggage": {
+                    "title": "行李额度",
+                    "detail": baggage_text,
+                    "icon": "luggage",
+                },
+                "refund": {
+                    "title": "退改规则",
+                    "detail": refund_text,
+                    "icon": "swap_horiz",
+                },
+                "service": {
+                    "title": "机上体验",
+                    "detail": "展示餐食、准点率、机上设施等决策信息",
+                    "icon": "airline_seat_recline_extra",
+                },
+            },
+            "priceTrend": [
+                {"height": 28 + int((entry["price"] - lowest_price) / max(1, flight["originalPrice"] - lowest_price) * 60), "isLowest": entry["price"] == lowest_price, "isToday": idx == len(price_history) - 1}
+                for idx, entry in enumerate(price_history)
+            ],
+            "historicalLowest": lowest_price,
+            "similarRoutes": [],
+            "bookingUrl": flight["bookingUrl"],
+            "source": flight["source"],
+            "bestPriceBadge": flight.get("badge") or flight["recommendation"],
+            "updatedAt": iso_now(),
+        }
+    }
+
+
+DEAL_TEMPLATES = [
+    {
+        "id": "deal_sha_hgh",
+        "fromCode": "SHA",
+        "fromCity": "上海",
+        "toCode": "HGH",
+        "toCity": "杭州",
+        "basePrice": 580,
+        "priceFactor": 0.79,
+        "source": "携程",
+        "airline": "南方航空",
+        "tags": ["直飞", "极速出票"],
+        "recommendation": "高性价比",
+        "recommendationReason": "高铁替代场景里更省时间，价格仍有优势",
+        "imageUrl": "https://images.unsplash.com/photo-1558422719-d6982435e4e4?w=800",
+        "region": "domestic",
+        "offset": 11,
+        "hotTag": "本周末出发",
+    },
+    {
+        "id": "deal_pek_can",
+        "fromCode": "PEK",
+        "fromCity": "北京",
+        "toCode": "CAN",
+        "toCity": "广州",
+        "basePrice": 1080,
+        "priceFactor": 0.76,
+        "source": "飞猪",
+        "airline": "中国国航",
+        "tags": ["直飞", "含托运"],
+        "recommendation": "最省时",
+        "recommendationReason": "热门商务线，直飞且总价压到均线下方",
+        "imageUrl": "https://images.unsplash.com/photo-1563090162-6b4c2a20d658?w=800",
+        "region": "domestic",
+        "offset": 13,
+        "hotTag": "工作日低位",
+    },
+    {
+        "id": "deal_ctu_szx",
+        "fromCode": "CTU",
+        "fromCity": "成都",
+        "toCode": "SZX",
+        "toCity": "深圳",
+        "basePrice": 920,
+        "priceFactor": 0.81,
+        "source": "去哪儿",
+        "airline": "深圳航空",
+        "tags": ["准点率高", "含餐食"],
+        "recommendation": "体验更稳",
+        "recommendationReason": "适合不想为了低价牺牲准点率的用户",
+        "imageUrl": "https://images.unsplash.com/photo-1522614288668-a697127e9b21?w=800",
+        "region": "domestic",
+        "offset": 17,
+    },
+    {
+        "id": "deal_sha_kix",
+        "fromCode": "SHA",
+        "fromCity": "上海",
+        "toCode": "KIX",
+        "toCity": "大阪",
+        "basePrice": 2180,
+        "priceFactor": 0.63,
+        "source": "携程",
+        "airline": "吉祥航空",
+        "tags": ["直飞", "不可退改"],
+        "recommendation": "最省钱",
+        "recommendationReason": "樱花季热门线仍处于低位，适合快速锁票",
+        "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
+        "region": "intl",
+        "offset": 9,
+        "hotTag": "日本线热门",
+    },
+    {
+        "id": "deal_pek_syd",
+        "fromCode": "PEK",
+        "fromCity": "北京",
+        "toCode": "SYD",
+        "toCity": "悉尼",
+        "basePrice": 4580,
+        "priceFactor": 0.57,
+        "source": "飞猪",
+        "airline": "南方航空",
+        "tags": ["含行李", "可退改"],
+        "recommendation": "限制最少",
+        "recommendationReason": "长线票价有吸引力，同时退改空间更友好",
+        "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800",
+        "region": "intl",
+        "offset": 18,
+        "hotTag": "长线精选",
+    },
+    {
+        "id": "deal_can_cdg",
+        "fromCode": "CAN",
+        "fromCity": "广州",
+        "toCode": "CDG",
+        "toCity": "巴黎",
+        "basePrice": 6990,
+        "priceFactor": 0.61,
+        "source": "去哪儿",
+        "airline": "东方航空",
+        "tags": ["直飞", "含餐食"],
+        "recommendation": "飞行更省心",
+        "recommendationReason": "直飞节省中转损耗，适合第一次去欧洲的用户",
+        "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
+        "region": "intl",
+        "offset": 21,
+    },
+]
+
+
+SEARCH_SCENARIOS = [
+    {
+        "fileName": "SHA-PEK.json",
+        "route": {
+            "from": {"code": "SHA", "city": "上海"},
+            "to": {"code": "PEK", "city": "北京"},
+            "departDate": date_after(7),
+        },
+        "notice": "已按价格、退改规则、准点率综合排序，先帮你判断值不值得点进去",
+        "flights": [
+            {
+                "id": "flight_001",
+                "airline": "中国东方航空",
+                "flightNo": "MU5101",
+                "aircraft": "波音 777-300ER",
+                "departureTime": "08:00",
+                "arrivalTime": "10:20",
+                "durationMin": 140,
+                "durationText": "2 小时 20 分",
+                "price": 2480,
+                "originalPrice": 3180,
+                "source": "携程",
+                "tags": ["直飞", "含托运23kg", "不可退改"],
+                "services": [
+                    {"icon": "restaurant", "label": "精品正餐", "available": True},
+                    {"icon": "luggage", "label": "23KG 托运", "available": True},
+                    {"icon": "wifi", "label": "机上 WiFi", "available": True},
+                ],
+                "recommendation": "推荐优先",
+                "recommendationReason": "价格低于均价，且准点率稳定",
+                "badge": "推荐优先",
+                "badgeType": "cheapest",
+                "onTimeRate": 94,
+            },
+            {
+                "id": "flight_002",
+                "airline": "中国国际航空",
+                "flightNo": "CA1502",
+                "aircraft": "空客 A350-900",
+                "departureTime": "12:30",
+                "arrivalTime": "14:45",
+                "durationMin": 135,
+                "durationText": "2 小时 15 分",
+                "price": 2620,
+                "originalPrice": 2890,
+                "source": "携程",
+                "tags": ["直飞", "含托运23kg", "可改签"],
+                "services": [
+                    {"icon": "restaurant", "label": "精致点心", "available": True},
+                    {"icon": "luggage", "label": "23KG 托运", "available": True},
+                    {"icon": "bolt", "label": "优先值机", "available": True},
+                ],
+                "recommendation": "最稳妥",
+                "recommendationReason": "准点率高，限制更少",
+                "badge": "最稳妥",
+                "badgeType": "safest",
+                "onTimeRate": 98,
+            },
+            {
+                "id": "flight_003",
+                "airline": "南方航空",
+                "flightNo": "CZ3116",
+                "aircraft": "空客 A330",
+                "departureTime": "16:45",
+                "arrivalTime": "19:15",
+                "durationMin": 150,
+                "durationText": "2 小时 30 分",
+                "price": 1850,
+                "originalPrice": 2290,
+                "source": "去哪儿",
+                "tags": ["直飞", "仅手提行李", "不可退改"],
+                "services": [
+                    {"icon": "no_meals", "label": "不含餐食", "available": False},
+                    {"icon": "luggage", "label": "仅 10KG 手提", "available": True},
+                ],
+                "recommendation": "最低价",
+                "recommendationReason": "价格最低，但限制更多，适合轻装出行",
+                "badge": "",
+                "badgeType": "",
+                "onTimeRate": 78,
+            },
+        ],
+    },
+]
+
+
+MONITORS_PAYLOAD = {
+    "updatedAt": iso_now(),
+    "monitors": [
+        {
+            "id": "mon_001",
+            "from": {"code": "SHA", "city": "上海"},
+            "to": {"code": "HND", "city": "东京"},
+            "airline": "全日空航空 · 往返",
+            "targetPrice": 2800,
+            "currentPrice": 2450,
+            "status": "below_target",
+            "badge": "已低于目标价",
+            "trend": [60, 75, 55, 80, 65, 45, 35],
+            "lastUpdated": "12 分钟前",
+            "highlight": False,
+            "bookingUrl": build_booking_url("携程", "SHA", "HND", "上海", "东京", date_after(12)),
+        },
+        {
+            "id": "mon_002",
+            "from": {"code": "PEK", "city": "北京"},
+            "to": {"code": "LHR", "city": "伦敦"},
+            "airline": "英国航空 · 单程",
+            "targetPrice": 4500,
+            "currentPrice": 5120,
+            "status": "above_target",
+            "badge": "",
+            "trend": [50, 60, 55, 58, 62, 60, 58],
+            "lastUpdated": "1 小时前",
+            "highlight": False,
+            "bookingUrl": build_booking_url("携程", "PEK", "LHR", "北京", "伦敦", date_after(15)),
+        },
+        {
+            "id": "mon_003",
+            "from": {"code": "CAN", "city": "广州"},
+            "to": {"code": "CDG", "city": "巴黎"},
+            "airline": "多平台监控中",
+            "targetPrice": 3900,
+            "currentPrice": 4050,
+            "status": "near_target",
+            "badge": "接近目标",
+            "trend": [],
+            "lastUpdated": "刚刚",
+            "highlight": True,
+            "bookingUrl": build_booking_url("去哪儿", "CAN", "CDG", "广州", "巴黎", date_after(20)),
+        },
+    ],
+    "stats": {"todayDeals": 428, "partners": 3},
+}
+
 
 def main():
-    print("航价通 - 爬虫与数据聚合节点启动...")
-    
-    # 航线模板库（只维护结构，日期和价格由机器智能推算）
-    templates = [
-        # --- 国内航线 (全部使用验证过的长 ID) ---
-        {"from_code": "SHA", "from_city": "上海", "to_code": "HGH", "to_city": "杭州", "basePrice": 380, "source": "携程", "airline": "南方航空", "tags": ["直飞", "极速出票"], "rec": "最划算", "recReason": "高铁价优选", "img": "https://images.unsplash.com/photo-1558422719-d6982435e4e4?w=800", "region": "domestic"}, 
-        {"from_code": "PEK", "from_city": "北京", "to_code": "CAN", "to_city": "广州", "basePrice": 850, "source": "飞猪", "airline": "中国国航", "tags": ["直飞", "含托运"], "rec": "最省时", "recReason": "黄金航线", "img": "https://images.unsplash.com/photo-1563090162-6b4c2a20d658?w=800", "region": "domestic"},
-        {"from_code": "CTU", "from_city": "成都", "to_code": "SZX", "to_city": "深圳", "basePrice": 620, "source": "去哪儿", "airline": "深圳航空", "tags": ["准点率高", "含餐食"], "rec": "体验好", "recReason": "宽体机执飞", "img": "https://images.unsplash.com/photo-1522614288668-a697127e9b21", "region": "domestic"},
-        {"from_code": "CKG", "from_city": "重庆", "to_code": "SHA", "to_city": "上海", "basePrice": 450, "source": "携程", "airline": "春秋航空", "tags": ["低价大促", "不可退改"], "rec": "极低价", "recReason": "近期低位", "img": "https://images.unsplash.com/photo-1524106579294-f65588372675?w=800", "region": "domestic"},
-        {"from_code": "BJS", "from_city": "北京", "to_code": "HGH", "to_city": "杭州", "basePrice": 580, "source": "携程", "airline": "海航", "tags": ["直飞", "极速出票"], "rec": "西湖韵", "recReason": "美景推荐", "img": "https://images.unsplash.com/photo-1558422719-d6982435e4e4?w=800", "region": "domestic"},
+    print("航价通 - 生成演示数据契约...")
 
-        # --- 国际航线 ---
-        {"from_code": "SHA", "from_city": "上海", "to_code": "KIX", "to_city": "大阪", "basePrice": 1280, "source": "携程", "airline": "吉祥航空", "tags": ["直飞", "不可退改"], "rec": "最省钱", "recReason": "近期低位", "img": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800", "region": "intl"},
-        {"from_code": "PEK", "from_city": "北京", "to_code": "SYD", "to_city": "悉尼", "basePrice": 2340, "source": "飞猪", "airline": "南方航空", "tags": ["含行李", "可退改"], "rec": "最划算", "recReason": "品质首选", "img": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800", "region": "intl"},
-        {"from_code": "CAN", "from_city": "广州", "to_code": "CDG", "to_city": "巴黎", "basePrice": 3850, "source": "去哪儿", "airline": "东方航空", "tags": ["直飞", "含餐食"], "rec": "体验好", "recReason": "飞行耗时短", "img": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800", "region": "intl"},
-        {"from_code": "HGH", "from_city": "杭州", "to_code": "HKG", "to_city": "香港", "basePrice": 880, "source": "携程", "airline": "国泰航空", "tags": ["直飞", "极速出票"], "rec": "超低价", "recReason": "说走就走", "img": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800", "region": "intl"},
-        {"from_code": "PVG", "from_city": "上海", "to_code": "TYO", "to_city": "东京", "basePrice": 1450, "source": "飞猪", "airline": "全日空", "tags": ["直飞", "服务佳"], "rec": "樱花季", "recReason": "热门推荐", "img": "https://images.unsplash.com/photo-1503899036084-755ad26bc2aa?w=800", "region": "intl"}
-    ]
-    
-    deals_data = {
-        "updatedAt": datetime.utcnow().isoformat() + "Z",
-        "count": len(templates),
-        "deals": []
-    }
-    
-    for t in templates:
-        deals_data['deals'].append(get_mock_deal(t))
-        
-    with open('data/deals.json', 'w', encoding='utf-8') as f:
-        json.dump(deals_data, f, ensure_ascii=False, indent=2)
-    
-    print(f"数据抓取完成！成功写入 {len(deals_data['deals'])} 条特价信息到 data/deals.json")
+    deals = [build_deal(template) for template in DEAL_TEMPLATES]
+    deals_payload = {"updatedAt": iso_now(), "count": len(deals), "deals": deals}
+    write_json(DATA_DIR / "deals.json", deals_payload)
+
+    all_detail_payloads = []
+    for scenario in SEARCH_SCENARIOS:
+        payload = build_search_payload(scenario["route"], scenario["flights"], scenario["notice"])
+        write_json(SEARCH_DIR / scenario["fileName"], payload)
+        for flight in payload["flights"]:
+            detail_payload = build_detail_payload(payload["route"], flight)
+            all_detail_payloads.append(detail_payload)
+            write_json(FLIGHTS_DIR / f'{flight["id"]}.json', detail_payload)
+
+    write_json(DATA_DIR / "monitors.json", MONITORS_PAYLOAD)
+
+    print(f"已生成 {len(deals)} 条特价航线")
+    print(f"已生成 {len(SEARCH_SCENARIOS)} 个搜索场景")
+    print(f"已生成 {len(all_detail_payloads)} 个航班详情文件")
+    print("演示数据已写入 data/ 目录")
+
 
 if __name__ == "__main__":
     main()

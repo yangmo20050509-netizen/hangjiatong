@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>航价通 — 全网低价航班发现平台</title>
-  <meta name="description" content="高效发现和选择特价机票，聚合全网低价信息，价格透明，规则清晰，让每一次出行都物超所值。" />
+  <title>航价通 — 特价机票决策助手</title>
+  <meta name="description" content="帮你先判断一张低价机票值不值得看，再决定是否跳转到下游平台购买。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -25,48 +25,34 @@
         </div>
       </div>
       <div class="nav-right" style="position:relative;">
-        <button class="nav-icon notif-badge" id="notif-btn" title="消息通知" onclick="toggleNotif()"><span class="material-symbols-outlined">notifications</span></button>
+        <button class="nav-icon notif-badge" id="notif-btn" title="数据状态" onclick="toggleNotif()"><span class="material-symbols-outlined">notifications</span></button>
         <button class="avatar" id="user-menu-btn" onclick="toggleUserMenu()"><span class="material-symbols-outlined">person</span></button>
         <div class="notif-dropdown" id="user-dropdown" style="right: -4px;">
            <div class="notif-header">
-             <h3>个人中心</h3>
+             <h3>快捷操作</h3>
            </div>
            <div>
+             <div class="notif-item" onclick="navigateTo('home'); switchTab('monitor'); toggleUserMenu()">
+               <div class="notif-item-title"><span class="material-symbols-outlined" style="font-size:1.1rem;">notifications_active</span> 查看监控</div>
+               <div class="notif-item-desc">看目标价与当前价的距离，决定是继续等还是现在看票</div>
+             </div>
              <div class="notif-item" onclick="navigateTo('profile'); toggleUserMenu()">
-               <div class="notif-item-title"><span class="material-symbols-outlined" style="font-size:1.1rem;">person</span> 个人空间</div>
-               <div class="notif-item-desc">管理您的航线监控、偏好设置与订阅情况</div>
+               <div class="notif-item-title"><span class="material-symbols-outlined" style="font-size:1.1rem;">tips_and_updates</span> 使用说明</div>
+               <div class="notif-item-desc">解释推荐逻辑、数据更新时间和这份作业的产品取舍</div>
              </div>
-             <div class="notif-item" onclick="showToast('设置功能开发中一线'); toggleUserMenu()">
-               <div class="notif-item-title"><span class="material-symbols-outlined" style="font-size:1.1rem;">settings</span> 系统设置</div>
-               <div class="notif-item-desc">管理通知提醒及账户安全选项</div>
-             </div>
-             <div class="notif-item" onclick="showToast('正在退出...'); setTimeout(()=>location.reload(),800)">
-               <div class="notif-item-title" style="color:var(--error);"><span class="material-symbols-outlined" style="font-size:1.1rem;">logout</span> 退出登录</div>
-               <div class="notif-item-desc">安全清除本次会话并返回至首页</div>
+             <div class="notif-item" onclick="resetExperience(); toggleUserMenu()">
+               <div class="notif-item-title" style="color:var(--error);"><span class="material-symbols-outlined" style="font-size:1.1rem;">restart_alt</span> 重置体验数据</div>
+               <div class="notif-item-desc">清空本地监控与订阅状态，回到初始演示状态</div>
              </div>
            </div>
         </div>
         <div class="notif-dropdown" id="notif-dropdown">
           <div class="notif-header">
-            <h3>消息中心</h3>
+            <h3>数据状态</h3>
             <span class="notif-clear" onclick="clearNotifs()">全部已读</span>
           </div>
           <div id="notif-list">
-            <div class="notif-item" onclick="navigateTo('home'); switchTab('monitor'); toggleNotif()">
-              <div class="notif-item-title">📉 航班降价提醒</div>
-              <div class="notif-item-desc">您监控的【上海 → 东京】航线降价了！当前最低 2,450 元！</div>
-              <div class="notif-item-time">2 分钟前</div>
-            </div>
-            <div class="notif-item" onclick="showToast('优惠活动航线即将截飞'); toggleNotif()">
-              <div class="notif-item-title">🔥 热门航线即将售罄</div>
-              <div class="notif-item-desc">【北京 → 悉尼】特价票仅剩最后 3 张，点击了解详情！</div>
-              <div class="notif-item-time">1 小时前</div>
-            </div>
-            <div class="notif-item" onclick="toggleNotif()">
-              <div class="notif-item-title">✨ 系统升级通知</div>
-              <div class="notif-item-desc">航价通算法引擎已升级，为您提供更准确实时的全网比价。</div>
-              <div class="notif-item-time">昨天</div>
-            </div>
+            <div class="notif-item"><div class="notif-item-title">正在加载状态...</div></div>
           </div>
         </div>
       </div>
@@ -77,12 +63,12 @@
   <div class="page active" id="page-home">
     <div class="hero-gradient">
       <div class="hero-inner">
-        <h1 class="hero-title">发现全球特价机票</h1>
-        <p class="hero-subtitle">聚合各大 OTA 平台和航司的低价信息，帮你省时省力，告别反复比价</p>
+        <h1 class="hero-title">发现值得出手的低价机票</h1>
+        <p class="hero-subtitle">先看推荐理由、票规和价格走势，再决定要不要跳去下游平台</p>
         <div class="search-card">
           <div class="search-field"><span class="material-symbols-outlined">flight_takeoff</span><input type="text" placeholder="出发城市" id="input-from" /></div>
           <div class="search-field"><span class="material-symbols-outlined">flight_land</span><input type="text" placeholder="目的城市" id="input-to" /></div>
-          <div class="search-field"><span class="material-symbols-outlined">calendar_today</span><input type="text" placeholder="出发日期" id="input-date" /></div>
+          <div class="search-field"><span class="material-symbols-outlined">calendar_today</span><input type="text" placeholder="出发日期，如 2026-04-20" id="input-date" /></div>
           <button class="btn-search" onclick="doSearch()">搜索航程</button>
         </div>
       </div>
@@ -101,8 +87,8 @@
       <!-- EXPLORE TAB -->
       <div class="tab-content active" id="tab-explore">
         <div class="section-header">
-          <div><h2>今日必看特价</h2><p>为您精选全球最低折扣航线</p></div>
-          <a class="section-link" href="#" onclick="navigateTo('results')">查看全部 <span class="material-symbols-outlined">arrow_forward</span></a>
+          <div><h2>今日必看特价</h2><p>每张卡片都先告诉你为什么值得看，而不是只展示一个低价数字</p></div>
+          <a class="section-link" href="#" onclick="showRecommendedRoute()">查看热门路线 <span class="material-symbols-outlined">arrow_forward</span></a>
         </div>
         <div class="deals-grid" id="deals-container">
           <!-- SKELETON LOADERS -->
@@ -112,8 +98,8 @@
         </div>
         <div class="data-time" id="deals-update-time"></div>
         <div class="cta-banner">
-          <h2>掌握每一场降价</h2>
-          <p>订阅我们的全球航线监控，在低价出现的第一秒获取通知。再也不错过任何一个说走就走的机会。</p>
+          <h2>先设目标价，再等低价靠近</h2>
+          <p>如果你还不确定要不要买，先把心理价位留下来。价格接近目标时，再回来做最终判断。</p>
           <div class="cta-form"><input type="email" id="sub-email" placeholder="您的电子邮箱" /><button id="sub-btn" onclick="handleSubscribe()">立即订阅</button></div>
         </div>
       </div>
@@ -121,8 +107,8 @@
       <!-- MONITOR TAB -->
       <div class="tab-content" id="tab-monitor">
         <div class="section-header">
-          <div><h2>订阅中心</h2><p>实时追踪您心仪航线的价格波动</p></div>
-          <button class="btn-search" style="padding:0.75rem 1.75rem;font-size:0.875rem;" onclick="showToast('添加监控功能即将上线')">
+          <div><h2>监控中心</h2><p>保存目标价，让系统只负责提醒，不替你冲动下单</p></div>
+          <button class="btn-search" style="padding:0.75rem 1.75rem;font-size:0.875rem;" onclick="addQuickMonitor()">
             <span style="display:flex;align-items:center;gap:0.35rem;"><span class="material-symbols-outlined" style="font-size:1.1rem;">add_circle</span>添加新监控</span>
           </button>
         </div>
@@ -151,7 +137,7 @@
         </div>
         <div class="results-hero-content">
           <h2 id="results-title">上海 (SHA) → 北京 (PEK)</h2>
-          <p class="results-summary" id="results-count">找到 3 个航班 · 数据来自各大主流平台</p>
+          <p class="results-summary" id="results-count">共 3 个结果 · 已按推荐优先排序</p>
         </div>
       </div>
     </div>
@@ -159,6 +145,7 @@
         <div class="sort-controls">
           <span style="font-size:0.85rem;color:var(--outline);margin-right:0.5rem;">排序方式</span>
           <select id="sort-select" onchange="runFilterUI()" style="background:var(--surface);border:1px solid var(--outline-variant);padding:0.35rem 0.75rem;border-radius:var(--radius-sm);font-size:0.85rem;color:var(--on-surface);">
+            <option value="recommend" selected>推荐优先</option>
             <option value="price-asc">价格最低优先</option>
             <option value="time-asc">起飞时间最早</option>
             <option value="duration-asc">飞行耗时最短</option>
@@ -236,8 +223,8 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-links"><a href="#">隐私政策</a><a href="#">服务条款</a><a href="#">价格说明</a><a href="#">联系我们</a></div>
-    <p>© 2026 航价通 · 聚合全网低价，让出行更省心</p>
-    <p style="margin-top:0.35rem;font-size:0.7rem;opacity:0.6;">本站仅提供信息聚合服务，不直接销售机票。所有价格以下游平台实时页为准。</p>
+    <p>© 2026 航价通 · 帮你更快判断一张低价机票值不值得看</p>
+    <p style="margin-top:0.35rem;font-size:0.7rem;opacity:0.6;">本站只做信息整理与决策辅助，不直接销售机票。最终价格与票规以下游平台实时页为准。</p>
   </footer>
 
 
@@ -246,7 +233,7 @@
       <div class="page-body" style="max-width: 800px; padding-top: 3.5rem;">
         <div class="back-btn" onclick="navigateTo('home')"><span class="material-symbols-outlined">arrow_back</span> 返回首页</div>
         <div class="section-header" style="margin-top: 1.5rem;">
-          <div><h2>个人空间</h2><p>管理您的出行偏好与专属订阅</p></div>
+          <div><h2>使用说明</h2><p>这份作业不做假会员系统，只聚焦“特价票值不值得买”这一件事</p></div>
         </div>
         
         <div class="price-card" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 2rem; padding: 2rem; border: 1px solid var(--outline-variant);">
@@ -256,27 +243,28 @@
           <div style="flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               <div>
-                <h3 style="font-size: 1.5rem; color: var(--primary);">用户 18550</h3>
-                <p style="color: var(--outline); font-size: 0.85rem; margin-top: 0.25rem;">尊贵会员 · 2026年加入航价通</p>
+                <h3 style="font-size: 1.5rem; color: var(--primary);">航价通是一个低价航班决策助手</h3>
+                <p style="color: var(--outline); font-size: 0.85rem; margin-top: 0.25rem;">不直接卖票，只帮你更快判断是否值得点进下游平台</p>
               </div>
-              <button class="chip" style="background: var(--primary-container); color: var(--primary);">编辑资料</button>
+              <button class="chip" style="background: var(--primary-container); color: var(--primary);" onclick="navigateTo('home'); switchTab('monitor')">查看监控</button>
             </div>
           </div>
         </div>
 
         <div class="rules-section" style="margin-top: 0;">
-          <div class="rules-title"><span class="material-symbols-outlined">analytics</span> 数据统计</div>
+          <div class="rules-title"><span class="material-symbols-outlined">analytics</span> 这份作业重点解决什么</div>
           <div class="rules-grid">
-            <div class="rule-card"><h4>监控航线</h4><p style="font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-top: 0.5rem;" id="prof-monitors">3 条</p></div>
-            <div class="rule-card"><h4>累计为您节省</h4><p style="font-size: 1.5rem; font-weight: 800; color: var(--tertiary-accent); margin-top: 0.5rem;">¥1,240</p></div>
-            <div class="rule-card"><h4>已订阅特刊</h4><p style="font-size: 1.5rem; font-weight: 800; color: var(--secondary); margin-top: 0.5rem;" id="prof-sub">未开启</p></div>
+            <div class="rule-card"><h4>当前监控</h4><p style="font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-top: 0.5rem;" id="prof-monitors">0 条</p></div>
+            <div class="rule-card"><h4>推荐因素</h4><p style="font-size: 1.5rem; font-weight: 800; color: var(--tertiary-accent); margin-top: 0.5rem;" id="prof-score">价格 / 退改 / 准点</p></div>
+            <div class="rule-card"><h4>最近同步</h4><p style="font-size: 1.5rem; font-weight: 800; color: var(--secondary); margin-top: 0.5rem;" id="prof-sync">等待加载</p></div>
           </div>
         </div>
 
         <div style="margin-top: 3rem; background: var(--surface-low); border-radius: var(--radius-lg); padding: 2rem; text-align: center;">
-          <h4 style="margin-bottom: 0.5rem;">高级会员特权</h4>
-          <p style="color: var(--outline); font-size: 0.825rem; margin-bottom: 1.5rem;">解锁历史 12 个月价格走势、微信强提醒通知、多平台比价插件</p>
-          <button class="btn-search" onclick="showToast('会员系统对接中')">立即升级体验</button>
+          <h4 style="margin-bottom: 0.5rem;">推荐使用方式</h4>
+          <p style="color: var(--outline); font-size: 0.825rem; margin-bottom: 0.75rem;">1. 搜路线 2. 看推荐理由与票规 3. 如果还不确定，就先加到目标价监控</p>
+          <p style="color: var(--outline); font-size: 0.8rem; margin-bottom: 1.5rem;" id="guide-last-sync-desc">页面加载后会显示最近同步时间</p>
+          <button class="btn-search" onclick="showRecommendedRoute()">查看热门路线</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,132 @@
+{
+  "updatedAt": "2026-04-12T08:28:03Z",
+  "flight": {
+    "id": "flight_001",
+    "airline": "中国东方航空",
+    "flightNo": "MU5101",
+    "aircraft": "波音 777-300ER",
+    "departure": {
+      "time": "08:00",
+      "code": "SHA",
+      "airport": "上海国际机场",
+      "terminal": "T2"
+    },
+    "arrival": {
+      "time": "10:20",
+      "code": "PEK",
+      "airport": "北京国际机场",
+      "terminal": "T1"
+    },
+    "durationText": "2 小时 20 分",
+    "direct": true,
+    "price": 2480,
+    "originalPrice": 3180,
+    "cabin": "经济舱",
+    "seatsLeft": 3,
+    "priceBreakdown": {
+      "base": 2157,
+      "tax": 323,
+      "total": 2480
+    },
+    "rules": {
+      "baggage": {
+        "title": "行李额度",
+        "detail": "含免费托运",
+        "icon": "luggage"
+      },
+      "refund": {
+        "title": "退改规则",
+        "detail": "限制较少，可按平台规则改退",
+        "icon": "swap_horiz"
+      },
+      "service": {
+        "title": "机上体验",
+        "detail": "展示餐食、准点率、机上设施等决策信息",
+        "icon": "airline_seat_recline_extra"
+      }
+    },
+    "priceTrend": [
+      {
+        "height": 28,
+        "isLowest": true,
+        "isToday": false
+      },
+      {
+        "height": 49,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 55,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 103,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 69,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 112,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 59,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 87,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 117,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 90,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 105,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 46,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 45,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 51,
+        "isLowest": false,
+        "isToday": false
+      },
+      {
+        "height": 83,
+        "isLowest": false,
+        "isToday": true
+      }
+    ],
+    "historicalLowest": 2571,
+    "similarRoutes": [],
+    "bookingUrl": "https://flights.ctrip.com/online/list/oneway-SHA-PEK?depdate=2026-04-19",
+    "source": "携程",
+    "bestPriceBadge": "推荐优先",
+    "updatedAt": "2026-04-12T08:28:03Z"
+  }
+}

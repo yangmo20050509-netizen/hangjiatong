@@ -1,10 +1,14 @@
-const CACHE_NAME = 'ethereal-voyager-v2';
+const CACHE_NAME = 'hangjiatong-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
   '/css/style.css',
   '/js/app.js',
   '/js/data.js',
+  '/data/deals.json',
+  '/data/monitors.json',
+  '/data/search/SHA-PEK.json',
+  '/data/flights/flight_001.json',
   'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap',
   'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'
 ];
